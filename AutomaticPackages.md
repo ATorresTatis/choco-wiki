@@ -60,50 +60,50 @@ Al crear los paquetes, no utilice `--auto`. AU no utiliza el reemplazo de tokens
 AU mantiene su propia documentación [aquí](https://github.com/majkinetor/au/blob/master/README.md).
 
 
-## Chocolatey Package Updater aka chocopkgup [DEPRECATED]
+## Chocolatey Package Updater también conocido como chocopkgup [OBSOLETO]
 <a name="chocolatey-package-updater-aka-chocopkgup"></a>
 http://chocolatey.org/packages/ChocolateyPackageUpdater
 
-The tool that accomplishes this process is known as [chocopkgup](https://chocolatey.org/packages/ChocolateyPackageUpdater) (Chocolatey Package Updater). It is a free tool (unless you want to use it for uploads to somewhere other than chocolatey.org).
+La herramienta que realiza este proceso se conoce como [chocopkgup](https://chocolatey.org/packages/ChocolateyPackageUpdater) (Chocolatey Package Updater). Es una herramienta gratuita (a menos que desee utilizarla para cargar archivos a otro lugar que no sea chocolatey.org).
 
-### Licensing
-Check the license at http://realdimensions.net/licenses/chocolateypackageupdater/license.txt to be sure that it applies to you.
+### Licenciamiento
+Verifique la licencia en http://realdimensions.net/licenses/chocolateypackageupdater/license.txt para asegurarse de que le aplica.
 
-Basically it boils down to this: if you want to use chocopkgup privately, you will need to pay for it. As long as you are publishing to chocolatey.org, the tool is completely free! The license does expire every once in awhile, but if you are keeping up on your chocolatey updates locally, you won't even notice (`cup all`, remember?).
+Básicamente se reduce a esto: si desea utilizar chocopkgup en privado, tendrá que pagar. ¡Mientras este publicando en chocolatey.org, la herramienta es gratis! La licencia caduca de vez en cuando, pero si se mantiene al día con sus actualizaciones de chocolate localmente, ni lo notará (Utilizar `cup all` ¿recuerda?).
 
-### Credits
-This tool makes use of [Ketarin](https://chocolatey.org/packages/ketarin). Ketarin is an awesome tool that helps chocopkgup accomplish its tasks.
+### Créditos
+Esta herramienta hace uso de [Ketarin](https://chocolatey.org/packages/ketarin). Ketarin es una herramienta increíble que ayuda a chocopkgup a realizar sus tareas.
 
-### Requirements
+### Requerimientos
 
-* A Windows box somewhere - to run the updater on
+* Una ventana de tiempo en algún lugar - para ejecutar el actualizador
 * [Ketarin](https://chocolatey.org/packages/ketarin)
 * [Chocolatey Package Updater](https://chocolatey.org/packages/chocolateypackageupdater)
 
-### Setup
+### Preparación
 
-1. Fork [`chocolatey-packages-template`](https://github.com/chocolatey/chocolatey-packages-template#fork-destination-box) and rename it to something like `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
-1. Clone the repo locally.
-1. Install chocopkgup (which will install ketarin and nuget.commandline). `choco install chocolateypackageupdater`.
-1. Check the config in `$env:ChocolateyInstall\lib\ChocolateyPackageUpdater\tools\chocopkgup\chocopkgup.exe.config`. The `PackagesFolder` key should point to where your repository is located.
-1. Create a scheduled task (in Windows). This is the command (edit the path to `cmd.exe` accordingly): `C:\Windows\System32\cmd.exe /c c:\tools\chocolateypackageupdater\ketarinupdate.cmd`
-1. Alternatively to stop the command window from opening on Windows, you can create a VBS script as well and put the path to the `.vbs` file instead of `ketarinupdate.cmd` as the command to run. The file should have the following:
+1. Bifurque  [`chocolatey-packages-template`](https://github.com/chocolatey/chocolatey-packages-template#fork-destination-box) y cámbiele el nombre a algo como `chocolatey-packages` (En GitHub: vaya a Configuración, nombre del repositorio y renombrar).
+2. Clone el repositorio localmente.
+3. Instale chocopkgup (que instalará ketarin y nuget.commandline). `choco install chocolateypackageupdater`.
+4. Compruebe la configuración en `$env:ChocolateyInstall\lib\ChocolateyPackageUpdater\tools\chocopkgup\chocopkgup.exe.config`. La entrada `PackagesFolder` debe apuntar a donde se encuentra su repositorio.
+5. Cree una tarea programada (en Windows). Este es el comando (editar la ruta de acceso de`cmd.exe` en consecuencia): `C:\Windows\System32\cmd.exe /c c:\tools\chocolateypackageupdater\ketarinupdate.cmd`
+6. Alternativamente para evitar que la ventana de comandos se abra en Windows, puede crear un script de VBS y poner la ruta al archivo  `.vbs` en lugar de ejecutar el comando `ketarinupdate.cmd`.El archivo debe tener lo siguiente:
 
     ~~~vb
     Set objShell = WScript.CreateObject("WScript.Shell")
     objShell.Run("C:\tools\ChocolateyPackageUpdater\ketarinupdate.cmd"), 0, True
     ~~~
 
-1. Choose a schedule for the task. Some folks run the task about once an hour to catch updates as quickly as they happen.
-1. Open Ketarin. Choose `File` –> `Settings`.
-1. Now Click Import...
-1. Choose [setup/KetarinSettings.xml](https://github.com/chocolatey/chocolatey-packages-template/blob/master/setup/KetarinSettings.xml) from the repo folder. This is going to add everything in that you will need for settings.
-1. Click on Global Variables. Ensure all of the variables are set appropriately.
+7. Elija un horario para la tarea. Algunas personas ejecutan la tarea aproximadamente una vez por hora para detectar las actualizaciones tan pronto como ocurren.
+8. Abra Ketarin. Elija `File` –> `Settings`.
+9. Ahora haga clic en Importar.
+10. Elija [setup/KetarinSettings.xml](https://github.com/chocolatey/chocolatey-packages-template/blob/master/setup/KetarinSettings.xml) en la carpeta de repositorio. Esto agregará toda la configuración necesaria.
+11. Haga clic en Variables globales y asegúrese de que todas las variables se configuran adecuadamente.
 ![Ketarin Global Variables](images/chocopkgup/KetarinGlobalVariables.png)
 
-This gets Ketarin all set up with a global command for all packages we create.
+Esto hace que Ketarin se configure con un comando global para todos los paquetes que creamos.
 
-*NOTE*: This has set up global commands for "Before updating an application" and "After updating an application". Those should not need adjusting, however if you do, please be sure to export the settings again.
+*NOTA*: Esto ha configurado comandos globales para "Antes de actualizar una aplicación" y "Después de actualizar una aplicación". No debería necesitar ajustes adicionales, sin embargo, si lo hace, asegúrese de volver a exportar la configuración.
 
 ### Create an Automatic Package
 Preferably you are taking an existing package that you have tested and converting it to an automatic package.
