@@ -1,63 +1,63 @@
-# Automatic Packaging for Maintenance
-Automatic packaging is a process that **package maintainers can run on *their own* to keep the packages they maintain up to date**. It is not a required step for maintaining packages on the community feed (https://chocolatey.org/packages), but it is recommended you find a way to automate the delivery of packages to the community feed when there are updates if you are going to maintain more than 5 packages and you are not the software vendor for the packages you maintain.
+# Empaquetado Automático para Mantenimiento
+El empaquetado automático es un proceso que los **mantenedores de paquetes pueden ejecutar por su cuenta** para mantener actualizados sus paquetes. No es un paso forzoso para mantener los paquetes en la fuente de la comunidad (https://chocolatey.org/packages), pero se recomienda que encuentre una forma de automatizar el despliegue de paquetes cuando haya actualizaciones, si va a mantener más de 5 paquetes y usted no es el proveedor de software para estos paquetes.
 
-**NOTE:** Not to be confused with the automatic package creation feature in [Chocolatey for Business](https://chocolatey.org/pricing) - that feature creates packages directly from software installer files. This feature is for package maintenance of existing packages on the community feed.
+**NOTA:** No debe confundirse con la función de creación automática de paquetes en [Chocolatey for Business](https://chocolatey.org/pricing) - esa función crea paquetes directamente desde los archivos del instalador. La funcionalidad descrita a continuación, es para el mantenimiento de paquetes de paquetes existentes en el feed de la comunidad.
 
 <!-- TOC -->
 
-- [Automatic update methods](#automatic-update-methods)
-- [Automatic Updater (AU)](#automatic-updater-au)
-  - [Credits](#credits)
-  - [Requirements](#requirements)
-  - [Setup](#setup)
-  - [Everything Related to AU](#everything-related-to-au)
-- [Chocolatey Package Updater aka chocopkgup [DEPRECATED]](#chocolatey-package-updater-aka-chocopkgup-deprecated)
-  - [Licensing](#licensing)
-  - [Credits](#credits-1)
-  - [Requirements](#requirements-1)
-  - [Setup](#setup-1)
-  - [Create an Automatic Package](#create-an-automatic-package)
-    - [Create a package for automatic packaging](#create-a-package-for-automatic-packaging)
+- [Métodos de actualización automática](#automatic-update-methods)
+- [Actualizador automático (AU)](#automatic-updater-au)
+  - [Créditos](#credits)
+  - [Requerimientos](#requirements)
+  - [Preparación](#setup)
+  - [Todo lo relacionado con UA](#everything-related-to-au)
+- [Chocolatey Package Updater también conocido como chocopkgup [OBSOLETO]](#chocolatey-package-updater-aka-chocopkgup-deprecated)
+  - [Licenciamiento](#licensing)
+  - [Créditos](#credits-1)
+  - [Requerimientos](#requirements-1)
+  - [Preparación](#setup-1)
+  - [Creación de un paquete automático](#create-an-automatic-package)
+    - [Creación de un paquete para el empaquetado automático](#create-a-package-for-automatic-packaging)
     - [Ketarin](#ketarin)
-  - [Notes about tri-packages (meta/virtual aka *, *.install, and *.portable)](#notes-about-tri-packages-metavirtual-aka--install-and-portable)
-  - [Testing Ketarin/ChocoPkgUp:](#testing-ketarinchocopkgup)
-  - [Troubleshooting/Notes](#troubleshootingnotes)
-  - [Important notes for files hosted on SourceForge](#important-notes-for-files-hosted-on-sourceforge)
+  - [Notas sobre los tri-paquetes (meta/virtual aka *, * .install y * .portable)](#notes-about-tri-packages-metavirtual-aka--install-and-portable)
+  - [Pruebas de Ketarin/ChocoPkgUp:](#testing-ketarinchocopkgup)
+  - [Solución de problemas/Notas](#troubleshootingnotes)
+  - [Notas importantes para los archivos alojados en SourceForge](#important-notes-for-files-hosted-on-sourceforge)
 
 <!-- /TOC -->
 
-## Automatic update methods
+## Métodos de actualización automática
 
-There are currently two methods that can be used to maintain automatic packages:
+Actualmente hay dos métodos que se pueden utilizar para mantener de forma automática los paquetes:
 
-- RECOMMENDED - Using only Powershell via [Automatic Update module AU](https://github.com/majkinetor/au).
-- DEPRECATED - Using [Chocolatey Package Updater](https://chocolatey.org/packages/ChocolateyPackageUpdater) with 3rd party tool [Ketarin](https://chocolatey.org/packages/ketarin).
+- RECOMENDADO - Usar solo Powershell a través del [módulo de actualización automática AU](https://github.com/majkinetor/au).
+- OBSOLTEO - Usar  [Chocolatey Package Updater](https://chocolatey.org/packages/ChocolateyPackageUpdater) en combinación con la  herramienta de terceros [Ketarin](https://chocolatey.org/packages/ketarin).
 
 
-## Automatic Updater (AU)
+## Actualizador automático (AU)
 
-You can learn more about the AU updater via its [documentation](https://github.com/majkinetor/au/blob/master/README.md). It is a PowerShell module, so you are doing everything with PowerShell scripts. You can also run everything on AppVeyor so you are not required to schedule updater on your own machine.
+Puede obtener más información sobre el actualizador de AU a través de su [documentación](https://github.com/majkinetor/au/blob/master/README.md). Es un módulo de PowerShell, por lo que hará todo el trabajo utilizando scripts de PowerShell. También puede ejecutar todo en AppVeyor, por lo que no es necesario que programe el actualizador en su propia máquina.
 
-### Credits
+### Créditos
 
-AU is brought to you by a Chocolatey community member [Miodrag Milic](https://github.com/majkinetor) and it is becoming more awesome all the time.
+[Miodrag Milic](https://github.com/majkinetor), miembro de la comunidad de Chocolatey, ofrece AU que se está volviendo cada vez más impresionante.
 
-### Requirements
+### Requerimientos
 
 * PowerShell v5+.
-* The [AU module](https://chocolatey.org/packages/au).
+* [El modulo AU](https://chocolatey.org/packages/au).
 
-### Setup
+### Preparación
 
-1. Fork [`chocolatey-packages-template`](https://github.com/chocolatey/chocolatey-packages-template#fork-destination-box) and rename it to something like `chocolatey-packages` (on GitHub - go into Settings, Repository name and rename).
-1. Clone the repo locally.
-1. Head into the setup folder and look for `au_setup.ps1`. Review that file and then run it.
-1. Follow the [README](https://github.com/chocolatey/chocolatey-packages-template/blob/master/setup/README.md) in the setup folder.
+1. Bifurque  [`chocolatey-packages-template`](https://github.com/chocolatey/chocolatey-packages-template#fork-destination-box) y cámbiele el nombre a algo como `chocolatey-packages` (en GitHub: vaya a Configuración, nombre del repositorio, renombrar).
+2. Clone el repositorio localmente.
+3. Vaya a la carpeta de configuración y busque el archivo `au_setup.ps1`. Revíselo y luego ejecútelo.
+4. Siga las instrucciones en el archivo [README](https://github.com/chocolatey/chocolatey-packages-template/blob/master/setup/README.md) en la carpeta de configuración.
 
-When creating packages, do not use `--auto` as AU doesn't use token replacement for updating packages, it replaces the xml elements and code directly.
+Al crear los paquetes, no utilice `--auto`. AU no utiliza el reemplazo de tokens para actualizar paquetes. En su lugar, reemplaza los elementos xml y el código directamente.
 
-### Everything Related to AU
-AU maintains its own documentation at [documentation](https://github.com/majkinetor/au/blob/master/README.md).
+### Todo lo relacionado con UA
+AU mantiene su propia documentación [aquí](https://github.com/majkinetor/au/blob/master/README.md).
 
 
 ## Chocolatey Package Updater aka chocopkgup [DEPRECATED]
