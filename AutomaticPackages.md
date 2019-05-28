@@ -141,13 +141,13 @@ Cuando esté creando paquetes, debe asegurarse de estar en la última versión d
 16. Haga clic en **OK** de nuevo.
 
 
-### Notes about tri-packages (meta/virtual aka *, *.install, and *.portable)
+### Notas sobre los tri-paquetes (meta/virtual aka *, * .install y * .portable)
 
-**UPDATE AUG 2016:** This may no longer be true. Just set up three jobs.
+**ACTUALIZACIÓN AGO 2016:** Esto ya no puede ser cierto. Sólo configure tres trabajos.
 
-When you have the three packages, you should set up only two jobs, one for *.install and one for *.portable.
+Cuando tenga los tres paquetes, debe configurar solo dos trabajos, uno para _*.install_ y otro para _*.portable_.
 
-In whichever job the meta package points to, you should add a command to that like you did for the settings for all jobs in ketarin.
+En cualquiera de los trabajos a los que apunte el paquete meta, debe agregar un comando como lo hizo para la configuración de todos los trabajos en ketarin.
 
 1. Click on the **Commands Tab** and set **Edit command for event** to “Before updating an application”.
 ![Ketarin Settings](images/chocopkgup/KetarinJobSettings.png "Ketarin Settings")
