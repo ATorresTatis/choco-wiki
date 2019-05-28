@@ -105,40 +105,40 @@ Esto hace que Ketarin se configure con un comando global para todos los paquetes
 
 *NOTA*: Esto ha configurado comandos globales para "Antes de actualizar una aplicación" y "Después de actualizar una aplicación". No debería necesitar ajustes adicionales, sin embargo, si lo hace, asegúrese de volver a exportar la configuración.
 
-### Create an Automatic Package
-Preferably you are taking an existing package that you have tested and converting it to an automatic package.
+### Crear un paquete de forma automática
+Preferiblemente, tomar un paquete existente que ya se ha probado y convirtiéndolo en un paquete automático.
 
-#### Create a package for automatic packaging
-When you are creating packages, you should ensure you are on the latest version of Chocolatey. This means you have the latest fixes to packaging templates and latest and greatest in the way of automation.
+#### Crear un paquete para el empaquetado automático
+Cuando esté creando paquetes, debe asegurarse de estar en la última versión de Chocolatey. Esto significa que tiene las últimas correcciones para las plantillas de empaquetado y las mejores formas de automatización.
 
-1. Ensuring you are on the latest version of Chocolatey - `choco upgrade chocolatey`.
-1. Open PowerShell (or cmd.exe) and head to the automatic package folder you are using. This should be "repolocation\automatic".
-1. Run `choco new <name> --auto [options]`. You can use a different package template if you have those installed - see https://chocolatey.org/docs/commands-new for all options or run `choco new -?`. For package templates, see https://chocolatey.org/docs/how-to-create-custom-package-templates.
-1. Inspect the output. Merge in your existing package logic if you have an existing package you are converting.
-1. Ensure that `checksumType` and `checksumType64` is `sha256` as this is the type the updater will generate.
-1. Make any adjustments you need to the package to prepare for packaging.
+1. Asegurándose de que esta en la última versión de Chocolatey - `choco upgrade chocolatey`.
+2. Abra PowerShell (o cmd.exe) y diríjase a la carpeta de paquetes que este automatizando. Algo como "repolocation\automatic".
+3. Ejecute `choco new <name> --auto [options]`. Puede usar una plantilla de paquete diferente si las tiene instaladas - vea https://chocolatey.org/docs/commands-new para listar todas las opciones o ejecute `choco new -?`. Para plantillas de paquetes vea https://chocolatey.org/docs/how-to-create-custom-package-templates.
+4. Inspeccione la salida. Combine la lógica de su paquete existente si tiene uno que está convirtiendo.
+5. Asegúrese que `checksumType` y `checksumType64` está configurado como `sha256` ya que este es el tipo de actualización que generará.
+6. Realice los ajustes que necesite en el paquete para preparar el empaquetado.
 
 #### Ketarin
 
-1. Open Ketarin. Choose `File` –> `Import…`
-1. Choose [ketarin/_KetarinChocolateyTemplate.xml](https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml) from the repo folder.
-1. Answer the questions. This will create a new job for Ketarin to check.
-1. One important thing to keep in mind is that **the name of the job needs to match the name of the package folder and nuspec *exactly*.**
-1. Right click on that new job and select `Edit`. Take a look at the following:
+1. Abrir Ketarin. Choose `File` –> `Import…`
+2. Elija [ketarin/_KetarinChocolateyTemplate.xml](https://github.com/chocolatey/chocolatey-packages-template/blob/master/ketarin/_KetarinChocolateyTemplate.xml) de la carpeta repo.
+3. Responda a las preguntas. Esto creará un nuevo trabajo para verificar en Ketarin.
+4. Una cosa importante a tener en cuenta es que el nombre del trabajo **debe coincidir *exactamente* con el nombre de la carpeta del paquete y nuspec**.
+5. Haga clic derecho en ese nuevo trabajo y seleccione `Edit`. Verifique lo siguiente
 ![Ketarin Job Main](images/chocopkgup/KetarinMain.png "Ketarin Job Main")
-1. Click on `Variables` on the right of URL
+6. Clic en `Variables` a la derecha de la URL
 ![Ketarin Job Variables](images/chocopkgup/KetarinSetVariables.png "Ketarin Job Variables")
-1. On the left side you should see a variable for **version** and one for **url64**. Click on **version**.
-1. Choose the appropriate method for you. Here I’ve chosen **Content from URL (start/end)**.
-1. Enter the URL for versioning information.
+7. En el lado izquierdo debería ver una variable para la **versión** y una para **url64** . Haga clic en **versión**
+8. Elija el método apropiado para usted. En este ejemplo he elegido **Content from URL (start/end)**.
+9. Ingrese la URL para obtener información sobre las versiones.
 ![Ketarin Job Variables](images/chocopkgup/KetarinVariables.png "Ketarin Job Variables")
-1. In the contents itself, highlight enough good information before a version to be able to select it uniquely during updates (but not so much it doesn’t work every time as the page changes). Click on **Use selection as start**.
-1. Now observe that it didn’t jump back too far.
-1. Do the same with the ending part, keeping in mind that this side doesn’t need to be too much because it is found AFTER the start. Once selected click on **Use selection as end**.
-1. It should look somewhat similar to have is presented in the picture above.
-1. If you have a 64bit url you want to get, do the same for the url64 variable.
-1. When all of this is good, click **OK**.
-1. Click **OK** again.
+10. En el contenido en sí, resalte suficiente información para evaluar antes de una versión y de esta forma poder seleccionarla únicamente durante las actualizaciones (pero no tanta información como para que se detecte un cambio cada vez que cambia la página). Haga clic en **Usar selección como punto de inicio**.
+11. Ahora observe que no fue demasiado lejos.
+12. Haga lo mismo con la parte final, teniendo en cuenta que este lado no necesita ser demasiado porque se encuentra DESPUÉS del comienzo. Una vez seleccionado, haga clic en **Usar selección como punto final**.
+13. Debería parecer algo similar a lo que se presenta en la imagen de arriba.
+14. Si tiene una URL de 64 bits que desea procesar, haga lo mismo con la variable url64.
+15. Cuando haya finalizado, haga clic en **OK**.
+16. Haga clic en **OK** de nuevo.
 
 
 ### Notes about tri-packages (meta/virtual aka *, *.install, and *.portable)
