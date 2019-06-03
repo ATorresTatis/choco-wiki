@@ -149,45 +149,43 @@ Cuando tenga los tres paquetes, debe configurar solo dos trabajos, uno para _*.i
 
 En cualquiera de los trabajos a los que apunte el paquete meta, debe agregar un comando como lo hizo para la configuración de todos los trabajos en ketarin.
 
-1. Click on the **Commands Tab** and set **Edit command for event** to “Before updating an application”.
+1. Haga clic en la pestaña **Comandos** y establezca el comando **Editar evento para "Antes de actualizar una aplicación"**.
 ![Ketarin Settings](images/chocopkgup/KetarinJobSettings.png "Ketarin Settings")
-1. Add the following text (replace `name` with the actual name of the meta package folder):
+2. Agregue el siguiente texto (reemplace `name` con  real de la carpeta del meta paquete)::
 
     ~~~cmd
     chocopkgup /p name /v {version} /u "{preupdate-url}" /u64 "{url64}" /pp "{file}" /c "{Checksum}" /c64 "{Checksumx64}"
     REM /disablepush
     ~~~
 
-1. Check the bottom of this section to be sure it set to **Command**.
+3. Revise la parte inferior de esta sección para asegurarse de que esté establecido en **Comando**.
 ![Ketarin Settings Command](images/chocopkgup/KetarinCustomCommand.png "Ketarin Settings Command")
 
-### Testing Ketarin/ChocoPkgUp:
+### Prueba de Ketarin/ChocoPkgUp:
 
-1. We need to get a good idea of whether this will work or not.
-1. Open a command line and type `ketarin`.
-1. Once Ketarin opens, open [global options](#setup) (steps 8 and 11), go to Global Variables and set `cscript` to `1` instead of `2` so that it only goes as far as creating packages.
-1. Find your job, and right click -> Update.  If everything is set good, in moments you will have a Chocolatey package in the folder you set under `{PackagesFolder}\_output`, where `{PackagesFolder}` is the path you set in the course of the [*Setup*](#setup) section of this article.
-1. Inspect the resulting Chocolatey package(s) for any issues.
-1. You should also test the scheduled task works appropriately.
+1. Necesitamos tener una buena idea de si esto funcionará o no.
+2. Abra la línea de comando y escriba ketarin.
+3. Una vez que se abre Ketarin, abra las opciones globales (pasos 8 y 11), vaya a Variables globales y configúralo `cscript` para `1` en lugar de `2` para que solo llegue hasta la creación de paquetes.
+4. Encuentre su trabajo y haga clic derecho -> Actualizar. Si todo está bien configurado, en un momento tendrá un paquete Chocolatey en la carpeta que configuró `{PackagesFolder}\_output`, donde `{PackagesFolder}` está la ruta que estableció en la sección 5 de configuración de este artículo.
+6. Inspeccione el (los) paquete (s) resultante de Chocolatey para cualquier problema.
+7. También debe probar las tareas programadas de forma adecuada.
 
-### Troubleshooting/Notes
+### Solución de problemas/Notas
 
-* Ketarin comes with a logging facility so you can see what it is doing. It’s under View –> Show Log.
-* In the top level folder for chocopkgup (in program data), we log what we receive from Ketarin as well and the process of putting together a package.
-* The name of the application in ketarin matches exactly that of the folder that is in the automatic packages folder.
-* Every once in awhile you want to look in Ketarin to see what jobs might be failing. Then figure out why.
-* Every once in awhile you will want to inspect the chocopkgupfolder to see if there are any packages that did not make it up for some reason or another and then upload them.
-* If the downloaded application/installer has not changed, the package will not be generated. Delete the files in the download location specified in [*Ketarin*](#ketarin) and try again.
+* Ketarin viene con una instalación de registro para que pueda ver lo que está haciendo. Está en el menú Ver -> Mostrar registro.
+* En la carpeta de nivel superior para chocopkgup (en datos del programa o program data), también se registra lo que  se recibe de Ketarin durante el proceso de armar un paquete.
+* Verifique que el nombre de la aplicación en ketarin coincide exactamente con el de la carpeta que se encuentra en la carpeta de paquetes automáticos.
+* De vez en cuando busque en Ketarin para ver qué trabajos podrían estar fallando. Averigue el por qué.
+* De vez en cuando, querrá inspeccionar la carpeta `chocopkgup` para ver si hay algún paquete que no haya sido creado por alguna razón u otra y luego cargarlos.
+* Si la aplicación/instalador descargado no ha cambiado, el paquete no se generará. Elimine los archivos en la ubicación de descarga especificada en [*Ketarin*](#ketarin) e intente nuevamente.
 
-### Important notes for files hosted on SourceForge
-Try this first:
-* In advanced settings, ensure the user agent is `chocolatey command line`. This will allow ketarin to behave similarly to how Chocolatey does.
+### Notas importantes para los archivos alojados en SourceForge
+Pruebe esto primero:
+* En la configuración avanzada, asegúrese de que el agente de usuario es chocolatey command line. Esto permitirá que ketarine se comporte de manera similar a como lo hace Chocolatey.
 ![Ketarin Job Advanced Settings](https://cloud.githubusercontent.com/assets/63502/7350038/b1928aaa-ecc2-11e4-8abe-af9e7c65c82a.png)
 
-It isn’t uncommon that certain SorceForge mirrors go offline or are extremely slow because of overload. Thus it is not recommended to use direct mirror links (e.&nbsp;g. `http://heanet.dl.sourceforge.net/project/…`) in your `chocolateyInstall.ps1` file, because this will frequently break your package and makes it unreliable.
-To avoid this, use the following convention for files hosted on SourceForge:
-* Don’t use `{{DownloadUrl}}` and `{{DownloadUrlx64}}` in your `chocolateyInstall.ps1` file, but use this instead (example of the app nomacs):
-`$url = 'http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x86.exe/download'`
-and
-`$url64 = 'http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x64.exe/download'`
-For other applications obviously you have to use the actual application/file names. Important is that you use `{{PackageVersion}}` and don’t use any direct links which include SourceForge mirrors.
+No es raro que ciertos espejos de SorceForge se desconecten o sean extremadamente lentos debido a la sobrecarga. Por lo tanto, no se recomienda utilizar enlaces directos de espejo (por ejemplo, http://heanet.dl.sourceforge.net/project/…) en su archivo `chocolateyInstall.ps1`, ya que con frecuencia esto romperá su paquete y lo hará poco confiable. 
+
+Para evitar esto, use la siguiente convención para los archivos alojados en SourceForge:
+
+No use `{{DownloadUrl}}` y `{{DownloadUrlx64}}` en su archivo `chocolateyInstall.ps1`, en esto su lugar (ejemplo de nomacs de la aplicación): $url = 'http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x86.exe/download' y $url64 = 'http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x64.exe/download' para otras aplicaciones, obviamente, tiene que usar los nombres reales de la aplicación/archivo. Es importante que use {{PackageVersion}} y no use ningún enlace directo que incluya los espejos de SourceForge.
