@@ -1,62 +1,62 @@
-# Chocolatey Configuration
+# Configuración de Chocolatey
 
-There are settings and features that can customize the way that Chocolatey works for you. The following is a list of config settings and features and their default values.
+Hay configuraciones y características que pueden personalizar la forma en que Chocolatey funciona. La siguiente es una lista de las configuraciones y características de configuración y sus valores predeterminados.
 
 <!-- TOC -->
 
-- [Config Settings](#config-settings)
+- [Configuraciones globales](#config-settings)
   - [General](#general)
   - [Proxy](#proxy)
   - [Timeouts](#timeouts)
-  - [Other](#other)
-- [Config Settings - Licensed Edition](#config-settings---licensed-edition)
+  - [Otros](#other)
+- [Configuraciones globales - Edición con licencia](#config-settings---licensed-edition)
   - [Chocolatey Central Management](#chocolatey-central-management)
-  - [Package Throttle](#package-throttle)
-  - [Windows Services Installation](#windows-services-installation)
-  - [Self-Service / Background Mode](#self-service--background-mode)
-  - [Virus Checking](#virus-checking)
+  - [Paquete acelerador](#package-throttle)
+  - [Instalación de servicios de Windows](#windows-services-installation)
+  - [Auto-servicio / Background Mode](#self-service--background-mode)
+  - [Comprobación de virus](#virus-checking)
   - [Timeouts](#timeouts-1)
-- [Features](#features)
+- [Características](#features)
   - [General](#general-1)
-  - [Automatic Uninstaller](#automatic-uninstaller)
-  - [Exit Codes](#exit-codes)
-  - [Flow Control](#flow-control)
-  - [Security](#security)
-  - [Other](#other-1)
-- [Features - Licensed Edition](#features---licensed-edition)
+  - [Desinstalador automático](#automatic-uninstaller)
+  - [Códigos de salida](#exit-codes)
+  - [Control de flujo](#flow-control)
+  - [Seguridad](#security)
+  - [Otros](#other-1)
+- [Características - Edición con licencia](#features---licensed-edition)
   - [General](#general-2)
-  - [Access Control / Security](#access-control--security)
+  - [Control de Acceso/Seguridad](#access-control--security)
   - [Chocolatey Central Management](#chocolatey-central-management-1)
-  - [Package Internalizer](#package-internalizer)
-  - [Package Reducer](#package-reducer)
-  - [Package Synchronization](#package-synchronization)
-  - [Self-Service / Background Mode](#self-service--background-mode-1)
-  - [Virus Checking](#virus-checking-1)
-  - [Other](#other-2)
+  - [Internalizador de paquetes](#package-internalizer)
+  - [Reductor de paquetes](#package-reducer)
+  - [Sincronización de paquetes](#package-synchronization)
+  - [Autoservicio  / Background Mode](#self-service--background-mode-1)
+  - [Comprobación de virus](#virus-checking-1)
+  - [Otros](#other-2)
 
 <!-- /TOC -->
 
 
-## Config Settings
+## Configuraciones globales
 
-Config settings are adjusted using `choco config set --name="'<nameFromBelow>'" --value="'<value>'"` and set back to default with `choco config unset --name="'<nameFromBelow>'"`. For more information see [[`choco config` command|CommandsConfig]] or run `choco config -?`.
+Los ajustes de configuración se establecen usando `choco config set --name="'<nameFromBelow>'" --value="'<value>'"`y se reestablecen a los valores predeterminados con `choco config unset --name="'<nameFromBelow>'"`. Para más información, vea [[ choco configcommand | CommandsConfig]] o ejecute `choco config -?`.
 
 ### General
-* `cacheLocation` = **' '** - Cache location if not TEMP folder. Replaces `$env:TEMP` value.  It is highly recommended this be set to make Chocolatey more deterministic in cleanup.
+* `cacheLocation` = **' '** - Ubicación del caché cuando no se quiere utilizar la carpeta TEMP. Reemplaza el valor de `$env:TEMP`. Se recomienda encarecidamente que este ajuste se realice para que Chocolatey sea más determinista en la limpieza.
 
 ### Proxy
-* `proxy` = **' '** - Explicit proxy location. Available in 0.9.9.9+.
-* `proxyUser` = **' '** - Optional proxy user. Available in 0.9.9.9+.
-* `proxyPassword` = **' '**  - Optional proxy password. Encrypted. Available in 0.9.9.9+.
-* `proxyBypassList` = **' '** - Optional proxy bypass list. Comma separated. Available in 0.10.4+.
-* `proxyBypassOnLocal` = **'true '** - Bypass proxy for local connections. Available in 0.10.4+.
+* `proxy` = **' '** - Ubicación de proxy explícita. Disponible desde la versión 0.9.9.9+.
+* `proxyUser` = **' '** - Usuario proxy opcional. Disponible desde la versión 0.9.9.9+.
+* `proxyPassword` = **' '**  - Contraseña de proxy opcional. Encriptada. Disponible desde la versión 0.9.9.9+.
+* `proxyBypassList` = **' '** - Lista de omisión de proxy opcional. Separado por comas. Disponible desde la versión 0.10.4+.
+* `proxyBypassOnLocal` = **'true '** - Omitir proxy para conexiones locales. Disponible desde la versión 0.10.4+.
 
 ### Timeouts
-* `commandExecutionTimeoutSeconds` = **'2700'** - Default timeout for command execution. '0' for infinite (starting in 0.10.4). It is recommended that organizations bump this up to at least 4 hours (14400).
-* `webRequestTimeoutSeconds` = **'45'** - Default timeout for web requests. Available in 0.9.10+.
+* `commandExecutionTimeoutSeconds` = **'2700'** - Tiempo de espera predeterminado para la ejecución del comando. '0' para infinito (Disponible desde la versión 0.10.4). Se recomienda que las organizaciones establezcan esto hasta por lo menos 4 horas (14400).
+* `webRequestTimeoutSeconds` = **'45'** - Tiempo de espera predeterminado para solicitudes web. Disponible desde la versión 0.9.10+.
 
-### Other
-* `containsLegacyPackageInstalls` = **'true'** - Install has packages installed prior to 0.9.9 series.
+### Otros
+* `containsLegacyPackageInstalls` = **'true'** - La instalación tiene paquetes instalados anteriores a la versión 0.9.9.
 
 ## Config Settings - Licensed Edition
 ### Chocolatey Central Management
