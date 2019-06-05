@@ -58,20 +58,25 @@ Los ajustes de configuración se establecen usando `choco config set --name="'<n
 ### Otros
 * `containsLegacyPackageInstalls` = **'true'** - La instalación tiene paquetes instalados anteriores a la versión 0.9.9.
 
-## Config Settings - Licensed Edition
+## Configuraciones para las ediciones con licencia
 ### Chocolatey Central Management
-* `centralManagementServiceUrl` = **' '** - The URL that should be used to communicate with Chocolatey Central Management. It should look something like https://servicemachineFQDN:24020/ChocolateyCentralManagement.  See https://chocolatey.org/docs/features-chocolatey-central-management#fqdn-usage.  Available in business editions v2.0.0+ only.
-* `centralManagementReportPackagesTimerIntervalInSeconds` = **'1800'** - Amount of time, in seconds, between each execution of the background service to report installed and outdated packages to Chocolatey Central Management.  Available in business editions v2.0.0+ only.
-* `centralManagementReceiveTimeoutInSeconds` = **'30'** - The amount of time, in seconds, that the background agent should wait to receive information from Chocolatey Central Management.  Available in business editions v2.0.0+ only.
-* `centralManagementSendTimeoutInSeconds` = **'30'** - The amount of time, in seconds, that the background agent should wait to send information to Chocolatey Central Management.  Available in business editions v2.0.0+ only.
-* `centralManagementCertificateValidationMode` = **'PeerOrChainTrust'** - The certificate mode that is used in communication to Chocolatey Central Management.  Available in business editions v2.0.0+ only.
+* `centralManagementServiceUrl` = **' '** - La URL que se debe utilizar para comunicarse con Chocolatey Central Management. Debería verse parecida a https://servicemachineFQDN:24020/ChocolateyCentralManagement. Más detalles en https://chocolatey.org/docs/features-chocolatey-central-management#fqdn-usage . Disponible en las ediciones de negocios v2.0.0 o superiores.
 
-### Package Throttle
-* `maximumDownloadRateBitsPerSecond` = **' '** - The maximum download rate in bits per second. '0' or empty means no maximum. A number means that will be the maximum download rate in bps. Defaults to ''. Available in licensed editions v1.10+ only. See https://chocolatey.org/docs/features-download-throttle
+* `centralManagementReportPackagesTimerIntervalInSeconds` = **'1800'** - Cantidad de tiempo, en segundos, entre cada ejecución del servicio en segundo plano para informar los paquetes instalados y desactualizados a Chocolatey Central Management. Disponible en las ediciones de negocios v2.0.0 o superiores.
 
-### Windows Services Installation
-* `serviceInstallsDefaultUserName` = **'ChocolateyLocalAdmin'** - The default user name to use for installing services when one is not specified. Defaults to 'ChocolateyLocalAdmin'. The feature 'useLocalSystemForServiceInstalls' must be set to 'false' to use this field. Available in business editions v1.12.0+ only.
-* `serviceInstallsDefaultUserPassword` = **' '** - The default user password to use for installing services when one is not specified. Defaults to ''. When '', the value will be generated as encrypted hash specific to the machine and will not be known. The feature 'useLocalSystemForServiceInstalls' must be set to 'false' to use this field. Available in business editions v1.12.0+ only.
+* `centralManagementReceiveTimeoutInSeconds` = **'30'** - Cantidad de tiempo, en segundos, que el agente en segundo plano debe esperar para recibir información de Chocolatey Central Management. Disponible en las ediciones de negocios v2.0.0 o superiores.
+
+* `centralManagementSendTimeoutInSeconds` = **'30'** - la cantidad de tiempo, en segundos, que el agente en segundo plano debe esperar para enviar información a Chocolatey Central Management. Disponible en las ediciones de negocios v2.0.0 o superiores.
+
+* `centralManagementCertificateValidationMode` = **'PeerOrChainTrust'** - el modo del certificado que se usa en la comunicación con Chocolatey Central Management. Disponible en las ediciones de negocios v2.0.0 o superiores.
+
+### Acelerador
+* `maximumDownloadRateBitsPerSecond` = **' '** - La velocidad máxima de descarga en bits por segundo. '0' o vacío significa que no hay límite máximo. Un número significa que será la velocidad de descarga máxima en bps. El valor predeterminado es ''. Disponible solo en ediciones licenciadas 1.10 o superiores. Más detalles en  https://chocolatey.org/docs/features-download-throttle
+
+### Instalación de Windows Services
+* `serviceInstallsDefaultUserName` = **'ChocolateyLocalAdmin'** - el nombre de usuario predeterminado que se utiliza al instalar servicios cuando no se especifica uno. El valor predeterminado es 'ChocolateyLocalAdmin'. La característica 'useLocalSystemForServiceInstalls' debe configurarse en 'falso' para usar este campo. Disponible en ediciones de negocios 1.12.0 o superiores.
+
+* `serviceInstallsDefaultUserPassword` = **' '** La contraseña de usuario predeterminada que se utiliza para instalar servicios cuando no se especifica una. El valor predeterminado es ''. Cuando es '', se generará un valor como un hash cifrado específico de la máquina. No hay forma de conocer este valor. La característica 'useLocalSystemForServiceInstalls' debe configurarse en 'falso' para usar este campo. Disponible en ediciones de negocios 1.12.0 o superior.
 
 ### Self-Service / Background Mode
 * `backgroundServiceAllowedCommands` = **'install,upgrade'** - Background Service Allowed Commands - The different commands that will direct through the background service separated with comma or semi-colon. Supported across all operational commands, not supported with commands that change configuration (config, source, feature, apikey, etc). Defaults to 'install,upgrade'. Available in business editions v1.12.4+ only.
