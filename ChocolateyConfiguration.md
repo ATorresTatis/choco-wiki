@@ -78,15 +78,19 @@ Los ajustes de configuración se establecen usando `choco config set --name="'<n
 
 * `serviceInstallsDefaultUserPassword` = **' '** La contraseña de usuario predeterminada que se utiliza para instalar servicios cuando no se especifica una. El valor predeterminado es ''. Cuando es '', se generará un valor como un hash cifrado específico de la máquina. No hay forma de conocer este valor. La característica 'useLocalSystemForServiceInstalls' debe configurarse en 'falso' para usar este campo. Disponible en ediciones de negocios 1.12.0 o superior.
 
-### Self-Service / Background Mode
-* `backgroundServiceAllowedCommands` = **'install,upgrade'** - Background Service Allowed Commands - The different commands that will direct through the background service separated with comma or semi-colon. Supported across all operational commands, not supported with commands that change configuration (config, source, feature, apikey, etc). Defaults to 'install,upgrade'. Available in business editions v1.12.4+ only.
+### Auto-Servicio / Segundo plano
+* `backgroundServiceAllowedCommands` = **'install,upgrade'** - Comandos permitidos del servicio en segundo plano: los diferentes comandos que se dirigirán a través del servicio en segundo plano separados por coma o punto y coma. Compatible con todos los comandos operativos. No compatible con comandos que cambian la configuración (config, source, feature, apikey, etc.) El valor predeterminado es 'install, upgrade'. Disponible solo en las ediciones de negocios 1.12.4 o superior.
 
-### Virus Checking
-* `virusCheckMinimumPositives` = **'4'** - Minimum number of scan result positives before flagging a binary as a possible virus. Used when virusScannerType is VirusTotal. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-virus-check
-* `virusScannerType` = **'VirusTotal'** - Virus Scanner Type (Generic or VirusTotal). Defaults to VirusTotal for Pro. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-virus-check
-* `genericVirusScannerPath` = **' '** - The full path to the command line virus scanner executable. Used when virusScannerType is Generic. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-virus-check
-* `genericVirusScannerArgs` = **'[[File]]'** - The arguments to pass to the generic virus scanner. Use [[File]] for the file path placeholder. Used when virusScannerType is Generic. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-virus-check
-* `genericVirusScannerValidExitCodes` = **'0'** - The exit codes for the generic virus scanner when a file is not flagged. Separate with comma, defaults to 0. Used when virusScannerType is Generic. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-virus-check
+### Comprobación de virus
+* `virusCheckMinimumPositives` = **'4'** - Número mínimo de resultados positivos de escaneo antes de marcar un binario como un posible virus. Se utiliza cuando `virusScannerType` es `VirusTotal`. Disponible en versiones 0.9.10 o superiores, pero solo para ediciones con licencia. Más información en https://chocolatey.org/docs/features-virus-check
+
+* `virusScannerType` = **'VirusTotal'** - Tipo de escáner de virus (Generic o VirusTotal). El valor predeterminado es VirusTotal para las ediciones Pro. Disponible en versiones 0.9.10 o superiores, pero solo para ediciones con licencia. Más información https://chocolatey.org/docs/features-virus-check
+
+* `genericVirusScannerPath` = **' '** - La ruta completa al ejecutable del escáner de virus de la línea de comandos. Se utiliza cuando `virusScannerType` es `Generic`. Disponible en versiones 0.9.10 o superiores, pero solo para ediciones con licencia. Más información https://chocolatey.org/docs/features-virus-check
+
+* `genericVirusScannerArgs` = **'[[File]]'** - los argumentos para pasar al analizador genérico de virus. Utilice [[File]] como marcador de posición de la ruta del archivo a analizar. Se utiliza cuando `virusScannerType` es `Generic`. Disponible en versiones 0.9.10 o superiores, pero solo para ediciones con licencia. Más información https://chocolatey.org/docs/features-virus-check
+
+* `genericVirusScannerValidExitCodes` = **'0'** - los códigos de salida del antivirus genérico cuando un archivo no está marcado como virus. Puede separar una lista de valores con coma, el valor predeterminado es 0. Se utiliza cuando `virusScannerType` es `Generic`. Disponible en versiones 0.9.10 o superiores, pero solo para ediciones con licencia. Más información https://chocolatey.org/docs/features-virus-check
 
 ### Timeouts
 * `centralManagementReceiveTimeoutInSeconds` = **'30'** - The amount of time, in seconds, that the background agent should wait to receive information from Chocolatey Central Management.  Available in business editions v2.0.0+ only.
