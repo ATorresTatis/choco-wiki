@@ -93,29 +93,29 @@ Los ajustes de configuración se establecen usando `choco config set --name="'<n
 * `genericVirusScannerValidExitCodes` = **'0'** - los códigos de salida del antivirus genérico cuando un archivo no está marcado como virus. Puede separar una lista de valores con coma, el valor predeterminado es 0. Se utiliza cuando `virusScannerType` es `Generic`. Disponible en versiones 0.9.10 o superiores, pero solo para ediciones con licencia. Más información https://chocolatey.org/docs/features-virus-check
 
 ### Timeouts
-* `centralManagementReceiveTimeoutInSeconds` = **'30'** - The amount of time, in seconds, that the background agent should wait to receive information from Chocolatey Central Management.  Available in business editions v2.0.0+ only.
-* `centralManagementSendTimeoutInSeconds` = **'30'** - The amount of time, in seconds, that the background agent should wait to send information to Chocolatey Central Management.  Available in business editions v2.0.0+ only.
+0* `centralManagementReceiveTimeoutInSeconds` = **'30'** - la cantidad de tiempo, en segundos, que el agente de fondo debe esperar para recibir información de Chocolatey Central Management. Disponible en versiones 2.0.0 o superiores, pero solo para ediciones Bussiness.
+* `centralManagementSendTimeoutInSeconds` = **'30'** -  la cantidad de tiempo, en segundos, que el agente de fondo debe esperar para enviar información a Chocolatey Central Management.  Disponible en versiones 2.0.0 o superiores, pero solo para ediciones Bussiness
 
 
-## Features
+## Caracteristicas
 
-Features are adjusted using `choco feature enable|disable --name="'<nameFromBelow>'"`. For more information see [[`choco feature` command|CommandsFeature]] or run `choco feature -?`.
+Las características se ajustan utilizando  `choco feature enable|disable --name="'<nameFromBelow>'"`. Para obtener más información, vea [`choco feature` command|CommandsFeature] o ejecute `choco feature -?`.
 
-A checkbox means this feature is turned on by default.
+Una casilla de verificación significa que esta función está activada de forma predeterminada.
 
 ### General
-* [ ] `logWithoutColor` - Log without color - Do not show colorization in logging output. Available in 0.10.9+.
-* [ ] `logEnvironmentValues` - Log Environment Values - will log values of environment before and after install (could disclose sensitive data). Available in 0.9.10+.
-* [x] `showNonElevatedWarnings` - Show Non-Elevated Warnings - Display non-elevated warnings. Available in 0.10.4+.
-* [x] `showDownloadProgress` - Show Download Progress - Show download progress percentages in the CLI. Available in 0.10.4+.
-* [ ] `useRememberedArgumentsForUpgrades` - Use Remembered Arguments For Upgrades - when running upgrades, use arguments for upgrade that were used for installation ('remembered'). This is helpful when running upgrade for all packages. Available in 0.10.4+. This is considered in preview for 0.10.4 and will be flipped to on by default in a future release.
-* [ ] `logValidationResultsOnWarnings` - Log validation results on warnings - Should the validation results be logged if there are warnings? Available in 0.10.12+.
+* [ ] `logWithoutColor` - Registro sin color: no muestra colorización en la salida de registro. Disponible a partir de las versiones 0.10.9 o superior.
+* [ ] `logEnvironmentValues` - Valores del entorno de registro: registrará los valores del entorno antes y después de la instalación (podría divulgar algunos datos confidenciales). Disponible a partir de las versiones 0.10.9 o superior.
+* [x] `showNonElevatedWarnings` - Mostrar advertencias no elevadas - Mostrar advertencias no elevadas. Disponible a partir de las versiones 0.10.4 o superior.
+* [x] `showDownloadProgress` - Mostrar progreso de descarga - Mostrar porcentajes de progreso de descarga en la CLI.  Disponible a partir de las versiones 0.10.4 o superior.
+* [ ] `useRememberedArgumentsForUpgrades` - Usar argumentos recordados para actualizaciones: al ejecutar actualizaciones, usa los mismo argumentos para la actualización que se usaron para la instalación ("recordados"). Esto puede ser útil cuando se ejecuta la actualización para todos los paquetes. Disponible a partir de las versiones 0.10.4 o superior. Se activará de forma predeterminada en una versión futura.
+* [ ] `logValidationResultsOnWarnings` - Registra los resultados de la validación en las advertencias - ¿Se deben registrar los resultados de validaciones si hay advertencias?  Disponible a partir de las versiones 0.10.12 o superior.
 
-### Automatic Uninstaller
-* [x] `autoUninstaller` - Uninstall from programs and features without requiring an explicit uninstall script.
-* [ ] `failOnAutoUninstaller` - Fail if automatic uninstaller fails.
+### Desinstalador automático
+* [x] `autoUninstaller` -  Desinstalar desde programas y características sin requerir un script de desinstalación explícito.
+* [ ] `failOnAutoUninstaller` - Fallar si el desinstalador automático también falla.
 
-### Exit Codes
+### Códigos de salida
 * [x] `usePackageExitCodes` - Use Package Exit Codes - Package scripts can provide exit codes. With this on, package exit codes will be what choco uses for exit when non-zero (this value can come from a dependency package). Chocolatey defines valid exit codes as 0, 1605, 1614, 1641, 3010. With this feature off, choco will exit with 0, 1, or -1 (matching previous behavior). Available in 0.9.10+.
 * [ ] `useEnhancedExitCodes` - Use Enhanced Exit Codes - Chocolatey is able to provide enhanced exit codes surrounding list, search, info, outdated and other commands that don't deal directly with package operations. To see enhanced exit codes and their meanings, please run `choco [cmdname] -?`. With this feature off, choco will exit with 0, 1, or -1  (matching previous behavior). Available in 0.10.12+. Default off in 0.10.14+.
 * [ ] `exitOnRebootDetected` - Exit On Reboot Detected - Stop running install, upgrade, or uninstall when a reboot request is detected. Requires 'usePackageExitCodes' feature to be turned on. Will exit with either 350 or 1604. When it exits with 350, it means pending reboot discovered prior to running operation. When it exits with 1604, it means some work completed prior to reboot request being detected. Available in 0.10.12+.
