@@ -138,13 +138,17 @@ Una casilla de verificación significa que esta función está activada de forma
 * [ ] `ignoreUnfoundPackagesOnUpgradeOutdated` - Ignorar paquetes sin encontrar en actualizaciones desactualizadas: cuando se comprueban los datos obsoletos o de actualizaciones, si no se encuentra un paquete contra las fuentes especificadas, no informa el paquete en absoluto. Disponible a partir de las versiones 0.10.9 o superior.
 
 ### Seguridad
-* [ ] `useFipsCompliantChecksums` - Use FIPS Compliant Checksums - Ensure checksumming done by choco uses FIPS compliant algorithms. Not recommended unless required by FIPS Mode. Enabling on an existing installation could have unintended consequences related to upgrades/uninstalls. Available in 0.9.10+.
-* [x] `checksumFiles` - Checksum files when pulled in from internet (based on package).
-* [ ] `allowEmptyChecksums` - Allow packages to have empty/missing checksums for downloaded resources from non-secure locations (HTTP, FTP). Enabling is not recommended if using sources that download resources from the internet. Available in 0.10.0+.
-* [x] `allowEmptyChecksumsSecure` - Allow packages to have empty/missing checksums for downloaded resources from secure locations (HTTPS). Available in 0.10.0+.
-* [ ] `allowGlobalConfirmation` - Prompt for confirmation in scripts or bypass.
+* [ ] `useFipsCompliantChecksums` - Usar sumas de control compatibles con FIPS - Asegúrese de que la suma de comprobación realizada por choco utiliza algoritmos compatibles con FIPS. No se recomienda a menos que sea requerido por el modo FIPS. La habilitación en una instalación existente podría tener consecuencias no deseadas relacionadas con las actualizaciones/desinstalaciones. Disponible en versiones 0.9.10 o superior.
 
-### Other
+* [x] `checksumFiles` - Verificar la suma de comprobación cuando se extraen datos de Internet (según el paquete).
+
+* [ ] `allowEmptyChecksums` - Permitir que los paquetes tengan sumas de comprobación vacías/faltantes para los recursos descargados desde ubicaciones no seguras (HTTP, FTP). No se recomienda habilitar si se utilizan fuentes que descargan recursos de Internet. Disponible en versiones 0.10.0 o superior.
+
+* [x] `allowEmptyChecksumsSecure` - Permitir que los paquetes tengan sumas de comprobación vacías/faltantes para los recursos descargados desde ubicaciones seguras (HTTPS). Disponible en versiones 0.10.0 o superior.
+
+* [ ] `allowGlobalConfirmation` - Solicita la confirmación para la ejecución de scripts.
+
+### Otros
 * [x] `powershellHost` - Use Chocolatey's built-in PowerShell host. Available in 0.9.10+.
 * [ ] `scriptsCheckLastExitCode` - Scripts Check $LastExitCode (external commands) - Leave this off unless you absolutely need it while you fix your package scripts  to use `throw 'error message'` or `Set-PowerShellExitCode #` instead of `exit #`. This behavior started in 0.9.10 and produced hard to find bugs. If the last external process exits successfully but with an exit code of not zero, this could cause hard to detect package failures. Available in 0.10.3+. Will be removed in 0.11.0.
 * [ ] `removePackageInformationOnUninstall` - Remove Stored Package Information On Uninstall - When a package is uninstalled, should the stored package information also be removed?  Available in 0.10.9+.
