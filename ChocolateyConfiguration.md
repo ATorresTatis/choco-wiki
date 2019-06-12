@@ -116,20 +116,28 @@ Una casilla de verificación significa que esta función está activada de forma
 * [ ] `failOnAutoUninstaller` - Fallar si el desinstalador automático también falla.
 
 ### Códigos de salida
-* [x] `usePackageExitCodes` - Use Package Exit Codes - Package scripts can provide exit codes. With this on, package exit codes will be what choco uses for exit when non-zero (this value can come from a dependency package). Chocolatey defines valid exit codes as 0, 1605, 1614, 1641, 3010. With this feature off, choco will exit with 0, 1, or -1 (matching previous behavior). Available in 0.9.10+.
-* [ ] `useEnhancedExitCodes` - Use Enhanced Exit Codes - Chocolatey is able to provide enhanced exit codes surrounding list, search, info, outdated and other commands that don't deal directly with package operations. To see enhanced exit codes and their meanings, please run `choco [cmdname] -?`. With this feature off, choco will exit with 0, 1, or -1  (matching previous behavior). Available in 0.10.12+. Default off in 0.10.14+.
-* [ ] `exitOnRebootDetected` - Exit On Reboot Detected - Stop running install, upgrade, or uninstall when a reboot request is detected. Requires 'usePackageExitCodes' feature to be turned on. Will exit with either 350 or 1604. When it exits with 350, it means pending reboot discovered prior to running operation. When it exits with 1604, it means some work completed prior to reboot request being detected. Available in 0.10.12+.
+* [x] `usePackageExitCodes` - Usar códigos de salida del paquete: los scripts del paquete pueden proporcionar códigos de salida. Con esto activado, los códigos de salida del paquete serán los que utilice Choco para salir cuando no el valor sea diferente de cero (este valor puede provenir de un paquete dependiente). Chocolatey define los códigos de salida válidos como 0, 1605, 1614, 1641, 3010. Con esta función desactivada, choco saldrá con 0, 1 o -1 (comportamiento anterior coincidente). Disponible a partir de las versiones 0.9.10 o superior.
 
-### Flow Control
-* [ ] `failOnInvalidOrMissingLicense` - Fail On Invalid Or Missing License - allows knowing when a license is expired or not applied to a machine. Available in 0.9.10+.
-* [x] `ignoreInvalidOptionsSwitches` - Ignore Invalid Options/Switches - If a switch or option is passed that is not recognized, should choco fail? Available in 0.9.10+.
-* [ ] `failOnStandardError` - Fail if install provider writes to stderr. Not recommended for use. Available in 0.9.10+.
-* [ ] `failOnAutoUninstaller` - Fail if automatic uninstaller fails.
-* [ ] `stopOnFirstPackageFailure` - Stop On First Package Failure - stop running install, upgrade or uninstall on first package failure instead of continuing with others. As this will affect upgrade all, it is normally recommended to leave this off. Available in 0.10.4+.
-* [ ] `skipPackageUpgradesWhenNotInstalled` - Skip Packages Not Installed During Upgrade - if a package is not installed, do not install it during the upgrade process. Available in 0.10.12+.
-* [ ] `ignoreUnfoundPackagesOnUpgradeOutdated` - Ignore Unfound Packages On Upgrade Outdated - When checking outdated or upgrades, if a package is not found against sources specified, don't report the package at all. Available in 0.10.9+.
+* [ ] `useEnhancedExitCodes` - Usar códigos de salida mejorados: Chocolatey puede proporcionar códigos de salida mejorados que rodean la lista, búsqueda, información, comandos obsoletos y otros que se no tratan directamente con las operaciones de paquetes. Para ver los códigos de salida mejorados y sus significados, ejecute `choco [cmdname]-?`. Con esta función desactivada, choco finalizará con 0, 1 o -1 (coincidiendo con el comportamiento anterior). Disponible a partir de las versiones 0.10.12 o superior. Valor predeterminado desactivado en las versiones 0.10.14 o superior.
 
-### Security
+* [ ] `exitOnRebootDetected` - Salir en reinicio detectado: deja de ejecutar la instalación, actualización o desinstalación cuando se detecta una solicitud de reinicio pendiente. Requiere que la característica 'usePackageExitCodes' esté activada. Finalizará con 350 o 1604. Cuando finaliza con 350, significa que se debe reiniciar el sistema antes de ejecutar la operación. Cuando finaliza con 1604, significa que se ha completado algún trabajo antes de que se detectará la solicitud de reinicio. Disponible a partir de las versiones 0.10.12 o superior.
+
+### Control de flujo
+* [ ] `failOnInvalidOrMissingLicense` - Licencia no válida o faltante: permite saber cuándo una licencia está vencida o no se aplica a una máquina. Disponible a partir de las versiones 0.9.10 o superior.
+
+* [x] `ignoreInvalidOptionsSwitches` - Ignorar opciones/interruptores no válidos - Si se pasa un interruptor o una opción que no se reconoce, ¿debería fallar choco? Disponible a partir de las versiones 0.9.10 o superior.
+
+* [ ] `failOnStandardError` - Fallo si el proveedor de instalación escribe en stderr. No se recomienda su uso. Disponible a partir de las versiones 0.9.10 o superior.
+
+* [ ] `failOnAutoUninstaller` - Fallar si falla el desinstalador automático.
+
+* [ ] `stopOnFirstPackageFailure` - Detener en primer error de paquete: deja de ejecutar instalar, actualizar o desinstalar en el primer error de paquete en lugar de intentar continuar. Como esto afectará a la actualización de todos los paquetes, normalmente se recomienda dejarlo apagado. Disponible a partir de las versiones 0.10.4 o superior.
+
+* [ ] `skipPackageUpgradesWhenNotInstalled` - Omitir paquetes no instalados durante la actualización: si un paquete no está instalado, no lo instale durante el proceso de actualización. Disponible a partir de las versiones 0.10.12 o superior.
+
+* [ ] `ignoreUnfoundPackagesOnUpgradeOutdated` - Ignorar paquetes sin encontrar en actualizaciones desactualizadas: cuando se comprueban los datos obsoletos o de actualizaciones, si no se encuentra un paquete contra las fuentes especificadas, no informa el paquete en absoluto. Disponible a partir de las versiones 0.10.9 o superior.
+
+### Seguridad
 * [ ] `useFipsCompliantChecksums` - Use FIPS Compliant Checksums - Ensure checksumming done by choco uses FIPS compliant algorithms. Not recommended unless required by FIPS Mode. Enabling on an existing installation could have unintended consequences related to upgrades/uninstalls. Available in 0.9.10+.
 * [x] `checksumFiles` - Checksum files when pulled in from internet (based on package).
 * [ ] `allowEmptyChecksums` - Allow packages to have empty/missing checksums for downloaded resources from non-secure locations (HTTP, FTP). Enabling is not recommended if using sources that download resources from the internet. Available in 0.10.0+.
