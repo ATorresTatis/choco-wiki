@@ -149,11 +149,13 @@ Una casilla de verificación significa que esta función está activada de forma
 * [ ] `allowGlobalConfirmation` - Solicita la confirmación para la ejecución de scripts.
 
 ### Otros
-* [x] `powershellHost` - Use Chocolatey's built-in PowerShell host. Available in 0.9.10+.
-* [ ] `scriptsCheckLastExitCode` - Scripts Check $LastExitCode (external commands) - Leave this off unless you absolutely need it while you fix your package scripts  to use `throw 'error message'` or `Set-PowerShellExitCode #` instead of `exit #`. This behavior started in 0.9.10 and produced hard to find bugs. If the last external process exits successfully but with an exit code of not zero, this could cause hard to detect package failures. Available in 0.10.3+. Will be removed in 0.11.0.
-* [ ] `removePackageInformationOnUninstall` - Remove Stored Package Information On Uninstall - When a package is uninstalled, should the stored package information also be removed?  Available in 0.10.9+.
+* [x] `powershellHost` - Utilizar el host PowerShell incorporado de Chocolate. Disponible en versiones 0.9.10 o superior.
 
-## Features - Licensed Edition
+* [ ] `scriptsCheckLastExitCode` - Scripts Check $LastExitCode (comandos externos) - Déjelo apagado a menos que lo necesite absolutamente mientras arregla los scripts de su paquete  para usar `throw 'error message'` o `Set-PowerShellExitCode #` en lugar de  `exit #`. Este comportamiento comenzó en la versión 0.9.10 y produjo errores difíciles de encontrar. Si el último proceso externo finaliza exitosamente, pero con un código de salida que no es cero, podría causar fallas en la detección de errores en el paquete. Disponible en versiones 0.10.3 o superior. Will be removed in 0.11.0.
+
+* [ ] `removePackageInformationOnUninstall` - Eliminar información almacenada del paquete en la desinstalación: cuando se desinstala un paquete, ¿también debería eliminarse la información almacenada del paquete? Disponible en versiones 0.10.9 o superior.
+
+## Características - Ediciones con licencia
 ### General
 * [x] `downloadCache` - Download Cache - use the private download cache if available for a package. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-private-cdn
 * [ ] `failOnInvalidOrMissingLicense` - Fail On Invalid Or Missing License - allows knowing when a license is expired or not applied to a machine. Available in 0.9.10+.
