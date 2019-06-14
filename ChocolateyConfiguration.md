@@ -157,15 +157,21 @@ Una casilla de verificación significa que esta función está activada de forma
 
 ## Características - Ediciones con licencia
 ### General
-* [x] `downloadCache` - Download Cache - use the private download cache if available for a package. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-private-cdn
-* [ ] `failOnInvalidOrMissingLicense` - Fail On Invalid Or Missing License - allows knowing when a license is expired or not applied to a machine. Available in 0.9.10+.
-* [x] `warnOnUpcomingLicenseExpiration` - Warn On Upcoming License Expiration - When a license expiration date is upcoming, should Chocolatey provide a warning? MSP and Business editions only (version 1.12.12+). Setting ignored in trial editions.
+* [x] `downloadCache` - Descargar caché: usar la caché de descarga privada si está disponible para el paquete. Disponible en versiones 0.9.10 o superior, pero solo para ediciones con licencia. Más información en  https://chocolatey.org/docs/features-private-cdn
+
+* [ ] `failOnInvalidOrMissingLicense` - Fallar si la licencia no es válida o no se encuentra: permite saber cuándo una licencia está vencida o no se aplica a una máquina. Disponible en versiones 0.9.10 o superior.
+
+* [x] `warnOnUpcomingLicenseExpiration` - Advertir sobre la próxima caducidad de la licencia: cuando llegue la fecha de caducidad de la licencia, ¿debería Chocolatey emitir una advertencia? Solo ediciones en MSP y Business 1.12.12 o superior. Configuración ignorada en las ediciones de prueba.
 
 ### Access Control / Security
-* [ ] `adminOnlyExecutionForAllChocolateyCommands` - Limit to Administrator Execution Only for All Chocolatey Commands - If enabled, only administrators will be able to run 'choco' commands. Business editions only (version 1.12.2+).
-* [ ] `adminOnlyExecutionForNewCommand` - Limit to Administrator Execution Only for New Command - If enabled, only administrators will be able to run 'choco new'. Business editions only (version 1.10.0+).
-* [ ] `adminOnlyExecutionForDownloadCommand` - Limit to Administrator Execution Only for Download Command - If enabled, only administrators will be able to run 'choco download'. Business editions only (version 1.10.0+).
+* [ ] `adminOnlyExecutionForAllChocolateyCommands` - Limitar la ejecución de comandos de Chocolatey solo para administradores: si está habilitado, solo los administradores podrán ejecutar los comandos 'choco'. Disponible solo para ediciones de negocios en versiones 1.12.2 o superior.
+
+* [ ] `adminOnlyExecutionForNewCommand` - Limitar a la ejecución del administrador solo para el nuevo comando: si está habilitado, solo los administradores podrán ejecutar `choco new`. Disponible solo para ediciones de negocios en versiones 1.10 o superior.
+
+* [ ] `adminOnlyExecutionForDownloadCommand` - Limitar a la ejecución del administrador solo para el comando de descarga: si está habilitado, solo los administradores podrán ejecutar `choco download`. Disponible solo para ediciones de negocios en versiones 1.10 o superior.
+
 * [ ] `useBackgroundServiceWithNonAdministratorsOnly` - Use Background Service With Non-Administrators Only - When using Self-Service, only execute background mode for non-administrators. Business editions only (version 1.12.0+).
+
 * [x] `useLocalSystemForServiceInstalls` - Use LocalSystem For Service Installs - When installing services that don't indicate a user/password, use the LocalSystem for those installations. When turned off, Chocolatey will manage a local admin with a password unique to the machine but will never know it. Business editions only (version 1.12.0+).
 
 ### Chocolatey Central Management
