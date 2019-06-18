@@ -190,7 +190,7 @@ Una casilla de verificación significa que esta función está activada de forma
 
 * [ ] `showAllPackagesInProgramsAndFeatures` - Mostrar los paquetes del Sincronizador de paquetes en programas y características: muestra todos los paquetes en el Panel de control >> Programas y características, no solo los paquetes que usan un instalador nativo. Solo disponible en ediciones de negocios versión 1.10.0 o superior.
 
-### Autoservicio / Modo de fondo
+### Autoservicio / Servicio en segundo plano
 * [x] `useBackgroundService` - Use Background Service (Self-Service Installer) - For some commands like install and upgrade, use a background service instead of running the command directly. Business editions only (licensed version 1.8.4+). Uninstall requires Chocolatey v0.10.4. Requires the package chocolatey-agent (choco install chocolatey-agent). See https://chocolatey.org/docs/features-agent-service
 * [x] `useBackgroundServiceWithSelfServiceSourcesOnly` - Use Background Service With Self-Service Sources Only - When using Self-Service, opt-in only sources configured to be used with self-service. This allows for other sources only an admin can use. Business editions only (version 1.10+). Requires Chocolatey 0.10.4+ for enabling sources with self-service only.
 * [x] `useBackgroundServiceWithNonAdministratorsOnly` - Use Background Service With Non-Administrators Only - When using Self-Service, only execute background mode for non-administrators. Business editions only (version 1.12.0+).
