@@ -177,18 +177,20 @@ Una casilla de verificación significa que esta función está activada de forma
 ### Chocolatey Central Management
 * [ ] `useChocolateyCentralManagement` - Usar Chocolatey Central Management - Las listas de paquetes instalados y desactualizados se informará al servidor elegido de Chocolatey Central Management. Disponible solo para ediciones de negocios en versiones 2.0 o superior. Más información en https://chocolatey.org/docs/features-chocolatey-central-management
 
-### Package Internalizer
-* [x] `internalizeAppendUseOriginalLocation` - Append UseOriginalLocation with Package Internalizer - When `Install-ChocolateyPackage` is internalized, append the `-UseOriginalLocation` parameter to the function. Business editions (version 1.7.0+) and MSP editions (version 1.12.1+) only. Requires at least Chocolatey v0.10.1 for `Install-ChocolateyPackage` to recognize the switch appropriately. See https://chocolatey.org/docs/features-automatically-recompile-packages
+### Internalizador de paquetes
+* [x] `internalizeAppendUseOriginalLocation` - Agregar la ubicación original de uso con el internalizador de paquete: cuando `Install-ChocolateyPackage` se internaliza, agregue el parámetro `-UseOriginalLocation` a la función. Disponible solo en ediciones comerciales (versión 1.7.0+) y ediciones MSP (versión 1.12.1+). Requiere al menos Chocolatey v0.10.1 para que `Install-ChocolateyPackage` reconozca el interruptor adecuadamente. Más información en https://chocolatey.org/docs/features-automatically-recompile-packages
 
-### Package Reducer
-* [x] `reduceInstalledPackageSpaceUsage` - Reduce Installed Package Size (Package Reducer) - Reduce size of the nupkg file to very small and remove extracted archives and installers. Licensed editions only (version 1.12.0+). See https://chocolatey.org/docs/features-package-reducer
-* [ ] `reduceOnlyNupkgSize` - Reduce Only Nupkg File Size - reduce only the size of nupkg file when using Package Reducer. Licensed editions only (version 1.12.0+). Also requires 'reduceInstalledPackageSpaceUsage' to be enabled. See https://chocolatey.org/docs/features-package-reducer
+### Reductor de paquetes
+* [x] `reduceInstalledPackageSpaceUsage` - Reducir el tamaño del paquete instalado (Package Reducer) - Reducir el tamaño del archivo nupkg a muy pequeño y eliminar los archivos extraídos y los instaladores. Disponible solo en ediciones con licencia (versión 1.12.0+). Más información en https://chocolatey.org/docs/features-package-reducer
 
-### Package Synchronization
-* [x] `allowSynchronization` - Synchronization - Keep installed Chocolatey packages in sync with changes in Programs and Features. Available in 0.9.10+. Licensed editions only. See https://chocolatey.org/docs/features-synchronize
-* [ ] `showAllPackagesInProgramsAndFeatures` - Package Synchronizer's Packages In Programs And Features Synchronization - Show all packages in Programs and Features, not just packages that use a native installer. Business editions only (version 1.10.0+).
+* [ ] `reduceOnlyNupkgSize` - Reducir solo el tamaño del archivo Nupkg: reduzca solo el tamaño del archivo nupkg cuando se usa Package Reducer. Disponible solo en ediciones con licencia (versión 1.12.0+). También requiere que 'reduceInstalledPackageSpaceUsage' esté habilitado. Más información en https://chocolatey.org/docs/features-package-reducer
 
-### Self-Service / Background Mode
+### Sincronización de paquetes
+* [x] `allowSynchronization` - Sincronización: mantenga los paquetes Chocolatey instalados sincronizados con los cambios en Programas y características. Disponible en ediciones con licencia 0.9.10 o superior. Más información  https://chocolatey.org/docs/features-synchronize
+
+* [ ] `showAllPackagesInProgramsAndFeatures` - Mostrar los paquetes del Sincronizador de paquetes en programas y características: muestra todos los paquetes en el Panel de control >> Programas y características, no solo los paquetes que usan un instalador nativo. Solo disponible en ediciones de negocios versión 1.10.0 o superior.
+
+### Autoservicio / Modo de fondo
 * [x] `useBackgroundService` - Use Background Service (Self-Service Installer) - For some commands like install and upgrade, use a background service instead of running the command directly. Business editions only (licensed version 1.8.4+). Uninstall requires Chocolatey v0.10.4. Requires the package chocolatey-agent (choco install chocolatey-agent). See https://chocolatey.org/docs/features-agent-service
 * [x] `useBackgroundServiceWithSelfServiceSourcesOnly` - Use Background Service With Self-Service Sources Only - When using Self-Service, opt-in only sources configured to be used with self-service. This allows for other sources only an admin can use. Business editions only (version 1.10+). Requires Chocolatey 0.10.4+ for enabling sources with self-service only.
 * [x] `useBackgroundServiceWithNonAdministratorsOnly` - Use Background Service With Non-Administrators Only - When using Self-Service, only execute background mode for non-administrators. Business editions only (version 1.12.0+).
