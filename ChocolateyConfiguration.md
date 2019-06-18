@@ -170,12 +170,12 @@ Una casilla de verificación significa que esta función está activada de forma
 
 * [ ] `adminOnlyExecutionForDownloadCommand` - Limitar a la ejecución del administrador solo para el comando de descarga: si está habilitado, solo los administradores podrán ejecutar `choco download`. Disponible solo para ediciones de negocios en versiones 1.10 o superior.
 
-* [ ] `useBackgroundServiceWithNonAdministratorsOnly` - Use Background Service With Non-Administrators Only - When using Self-Service, only execute background mode for non-administrators. Business editions only (version 1.12.0+).
+* [ ] `useBackgroundServiceWithNonAdministratorsOnly` - Usar el servicio en segundo plano solo para usuario no administradores: cuando use el autoservicio, solo ejecute el modo en segundo plano para los no administradores. Disponible solo para ediciones de negocios en versiones 1.12 o superior.
 
-* [x] `useLocalSystemForServiceInstalls` - Use LocalSystem For Service Installs - When installing services that don't indicate a user/password, use the LocalSystem for those installations. When turned off, Chocolatey will manage a local admin with a password unique to the machine but will never know it. Business editions only (version 1.12.0+).
+* [x] `useLocalSystemForServiceInstalls` - Usar LocalSystem para instalaciones de servicio: cuando instale servicios que no indiquen un usuario/contraseña, use LocalSystem para esas instalaciones. Cuando está apagado, Chocolatey creará un administrador local con una contraseña única para la máquina, pero nunca sabrá la contraseña. Disponible solo para ediciones de negocios en versiones 1.12 o superior.
 
 ### Chocolatey Central Management
-* [ ] `useChocolateyCentralManagement` - Use Chocolatey Central Management - Lists of installed and outdated packages will be reported to the chosen Chocolatey Central Management server.  Business editions only (version 2.0.0+). See https://chocolatey.org/docs/features-chocolatey-central-management
+* [ ] `useChocolateyCentralManagement` - Usar Chocolatey Central Management - Las listas de paquetes instalados y desactualizados se informará al servidor elegido de Chocolatey Central Management. Disponible solo para ediciones de negocios en versiones 2.0 o superior. Más información en https://chocolatey.org/docs/features-chocolatey-central-management
 
 ### Package Internalizer
 * [x] `internalizeAppendUseOriginalLocation` - Append UseOriginalLocation with Package Internalizer - When `Install-ChocolateyPackage` is internalized, append the `-UseOriginalLocation` parameter to the function. Business editions (version 1.7.0+) and MSP editions (version 1.12.1+) only. Requires at least Chocolatey v0.10.1 for `Install-ChocolateyPackage` to recognize the switch appropriately. See https://chocolatey.org/docs/features-automatically-recompile-packages
