@@ -87,73 +87,73 @@
 ## General
 
 <a id="markdown-cant-find-your-answer-here" name="cant-find-your-answer-here"></a>
-### Can't find your answer here?
-Feel free to reach out to us on [Gitter](https://gitter.im/chocolatey/choco) or by the [email distribution list / forum](https://groups.google.com/group/chocolatey).
+### ¿No encuentra su respuesta aquí?
+No dude en comunicarse con nosotros en [Gitter](https://gitter.im/chocolatey/choco) o por la [lista de distribución de correo electrónico/foro](https://groups.google.com/group/chocolatey)
 
 <a id="markdown-what-is-chocolatey" name="what-is-chocolatey"></a>
-### What is Chocolatey?
-Chocolatey is kind of like apt-get, but for Windows (with Windows comes limitations). It is a machine level package manager that is built on top of nuget command line and the nuget infrastructure.
-[[More behind the name|History]]
+### ¿Qué es chocolatey?
+Chocolatey es algo así como apt-get, pero para Windows (con Windows vienen algunas limitaciones). Es un administrador de paquetes a nivel de máquina que se construye sobre la línea de comandos nuget y la infraestructura de nuget.
+[[Más detrás del nombre |Historia]]
 
-"Okay, machine package manager, that's nice. What does that mean though?" It means you can simply install software with a few keystrokes and go get coffee while your co-workers are downloading and running an install manually (and I do mean something like an MSI).
+"OK, un administrador de paquetes de la máquina, eso es bueno, pero ¿qué significa?" Significa que simplemente puede instalar el software con algunas pulsaciones de teclas e ir a tomar un café mientras sus compañeros de trabajo están descargando y ejecutando una instalación manualmente (y quiero decir algo así como un MSI).
 
-How about updates? Wouldn't it be nice to update nearly everything on your machine with a few simple keystrokes? We think so, too. Chocolatey does that. `choco upgrade all -y`
+¿Qué hay de las actualizaciones? ¿No sería bueno actualizar casi todo en su máquina con unas pocas y sencillas pulsaciones? Nosotros también lo creemos. Chocolatey hace eso `choco upgrade all -y`
 
 <a id="markdown-i-need-a-tool-that-manages-software---using-scripts-to-work-with-those-unattended-installs-is-that-chocolatey" name="i-need-a-tool-that-manages-software---using-scripts-to-work-with-those-unattended-installs-is-that-chocolatey"></a>
-### I need a tool that manages software - using scripts to work with those unattended installs. Is that Chocolatey?
-Yes, in a nutshell that is what Chocolatey does. Nearly exactly what you may already be doing, except wrapped up into a package file that allows you to modularize and easily manage order with dependencies on other packages.
+### Necesito una herramienta que administre software: usar scripts para trabajar con esas instalaciones desatendidas. ¿Eso es chocolate?
+Sí, en pocas palabras, eso es lo que hace Chocolatey. Casi exactamente lo que ya está haciendo, excepto que está envuelto en un archivo de paquete que le permite modularizar y administrar fácilmente el pedido con dependencias de otros paquetes.
 
 <a id="markdown-what-is-the-purpose-of-chocolatey" name="what-is-the-purpose-of-chocolatey"></a>
-### What is the purpose of Chocolatey?
+### ¿Cuál es el propósito de Chocolatey?
 
-Great question! See [[The purpose of Chocolatey|Why#what-is-the-purpose-of-chocolatey]]
+Gran pregunta ! Vea[[El propósito de Chocolatey|Why#what-is-the-purpose-of-chocolatey]]
 
 <a id="markdown-how-does-chocolatey-work" name="how-does-chocolatey-work"></a>
-### How does Chocolatey work?
+### ¿Cómo funciona Chocolatey?
 
-See [[What is Chocolatey?|Why#what-is-chocolatey]]
+Vea [[¿Qué es Chocolatey?|Why#what-is-chocolatey]]
 
 <a id="markdown-why-chocolatey" name="why-chocolatey"></a>
-### Why Chocolatey?
-First a [[story|ChocolateyStory]]. Then [[Why Chocolatey?|Why]]
+### ¿Por qué Chocolatey?
+Primero una [[Historia|ChocolateyStory]]. y luego [[¿Por qué Chocolatey?|Why]]
 
 <a id="markdown-can-i-use-chocolatey-at-my-organization" name="can-i-use-chocolatey-at-my-organization"></a>
-### Can I use Chocolatey at my organization?
-Absolutely! The licensing is very business friendly (plus we have [paid options](https://chocolatey.org/compare) to better help organizations - *hint, hint*). We typically recommend organizations depending Chocolatey look to managing their own packaging as opposed to using the Community Package Repository (https://chocolatey.org/packages) - packages there are not 100% reliable due to distribution rights with publicly available packages (which causes a major failure point). See the next question for details.
+### ¿Puedo usar Chocolatey en mi organización?
+¡Absolutamente! La licencia es muy amigable para los negocios (además, tenemos [opciones de pago](https://chocolatey.org/compare) para ayudar mejor a las organizaciones: *sugerido*, *sugerido*). Por lo general, recomendamos que las organizaciones que dependen de Chocolatey manejen su propio empaquetado en lugar de usar el [Community Package Repository](https://chocolatey.org/packages) – ya que los paquetes puede que no sean 100% confiables debido a los derechos de distribución relacionados con paquetes disponibles públicamente (lo que haría un punto de falla importante). Vea la siguiente pregunta para más detalles.
 
 <a id="markdown-are-you-redistributing-software" name="are-you-redistributing-software"></a>
-### Are you redistributing software?
-No. Packages on Chocolatey's community repository (https://chocolatey.org/packages) are publicly available and as such they are subject to software distribution rights. With those packages the following applies:
+### ¿Están redistribuyendo software?
+No. Los paquetes en el [repositorio comunitario de Chocolatey](https://chocolatey.org/packages) están disponibles públicamente y, como tales, están sujetos a los derechos de distribución de software. Con esos paquetes se aplica lo siguiente
 
-> Chocolatey does the same thing that you would do based on the package instructions. This usually means going out and downloading an installer from the official distribution point and then silently installing it on your machine. With most packages this means Chocolatey is not redistributing software because they are going to the same distribution point that you yourself would go get the software if you were performing this process manually.
+> Chocolatey hace lo mismo que usted haría en base a las instrucciones del paquete. Por lo general, esto significa ir a Internet y descargar un instalador desde el punto de distribución oficial para luego instalarlo silenciosamente en su máquina. Con la mayoría de los paquetes, esto significa que Chocolatey no está redistribuyendo el software porque va al mismo punto de distribución al que usted mismo iría a obtener el software si estuviera realizando este proceso manualmente
 
-To put it another way, Microsoft would be quite upset if the Office 365 packages on the community repository actually contained the Office 365 binaries. This is not something organizations would be subject to when hosting their own internal package.
+Para decirlo de otra manera, Microsoft estaría bastante molesto si los paquetes de Office 365 en el repositorio de la comunidad contuvieran los binarios de Office 365. Esto no es algo a lo que las organizaciones estarían sujetas cuando alojan su propio paquete interno.
 
-When you host internal packages, those packages can embed software and/or point to internal shares. You are not subject to software distribution rights, thus you can create packages that are more reliable, offline, and secure. See [[What are Chocolatey Packages|GettingStarted#what-are-chocolatey-packages]] for more details.
+Cuando aloja sus propios paquetes internos, esos paquetes pueden incrustar software y/o apuntar a recursos compartidos internos. De esta forma no está sujeto a derechos de distribución de software, por lo que puede crear paquetes que sean más confiables, sin conexión y seguros. Consulte [[Qué son los paquetes de Chocolatey|GettingStarted#what-are-chocolatey-packages]] para más detalles.
 
-For more information on organizational cautions about the community package repository, see [[the community repository disclaimer|CommunityPackagesDisclaimer]].
+Para obtener más información sobre las advertencias organizativas sobre el repositorio de paquetes de la comunidad, consulte  [[exención de responsabilidad del repositorio de la comunidad|CommunityPackagesDisclaimer]].
 
 <a id="markdown-where-does-chocolatey-install-by-default" name="where-does-chocolatey-install-by-default"></a>
-### Where does Chocolatey install by default?
-As of version 0.9.8.24, binaries, libraries and Chocolatey components install in ```C:\ProgramData\chocolatey``` (environment variable %ProgramData%) by default. This reduces the attack surface on a local installation of Chocolatey and limits who can make changes to the directory.
+### ¿Dónde se instala Chocolatey por defecto?
+A partir de la versión 0.9.8.24, los binarios, bibliotecas y componentes de Chocolatey se instalan en ```C:\ProgramData\chocolatey``` (variable de entorno% ProgramData%) de forma predeterminada. Esto reduce la superficie de ataque en una instalación local de Chocolatey y limita quién puede realizar cambios en el directorio.
 
-**NOTE:** Historically, Chocolatey installed to ```C:\Chocolatey``` and currently, performing an update of Chocolatey doesn't change the installation location, except for when the install path is `C:\chocolatey`. It will upgrade that path and all variables automatically.  For more information about why Chocolatey used ```C:\Chocolatey``` as the default location, look here - [[Default Install Reasoning|DefaultChocolateyInstallReasoning]]
+
+**NOTA:** Históricamente, Chocolatey se instalaba en ```C:\Chocolatey``` pero actualmente, realizando una actualización de Chocolatey se cambia la ubicación de la instalación, excepto cuando la ruta de instalación es ```C:\chocolatey```. Se actualizará esa ruta y todas las variables de forma automática. Para obtener más información sobre por qué se usó Chocolatey C:\Chocolatey como la ubicación predeterminada, consulte aquí [[Razonamiento de instalación|DefaultChocolateyInstallReasoning]]
 
 <a id="markdown-what-kind-of-package-types-does-chocolatey-support" name="what-kind-of-package-types-does-chocolatey-support"></a>
-### What kind of package types does Chocolatey support?
-* Binary Packages – Installable/portable applications – This is 98% of the Chocolatey packages – most are pointers to the real deal native installers and/or zipped software.
-* PowerShell Command Packages – Packages that have the suffix **.powershell** will install PowerShell scripts as commands for you to call from anywhere.
-* Development Packages – Packages that have the suffix **.dev**. For instance [dropkick.dev](http://nuget.org/list/packages/dropkick.dev).
-* Roadmap – Virtual Packages – Packages that are like a category, and you just want one package from that category. [Read more …](https://github.com/chocolatey/chocolatey/issues/7)
+### ¿Qué tipo de paquetes soporta Chocolatey?
+* Paquetes binarios: aplicaciones instalables/portátiles: esto es el 98% de los paquetes Chocolatey. La mayoría son indicadores de los instaladores nativos y/ o del software comprimido.
+* Paquetes de comandos de PowerShell: los paquetes que tienen el sufijo **.powershell** instalarán los scripts de PowerShell como comandos para que pueda llamarlos desde cualquier lugar.
+* Paquetes de desarrollo - Paquetes que tienen el sufijo **.dev**. Por ejemplo [dropkick.dev](http://nuget.org/list/packages/dropkick.dev).
+* Hojas de ruta - Paquetes virtuales - Paquetes que son como una categoría y solo desea un paquete de esa categoría. [Lea más aquí](https://github.com/chocolatey/chocolatey/issues/7)
 
 <a id="markdown-do-you-have-a-roadmap-i-can-see" name="do-you-have-a-roadmap-i-can-see"></a>
-### Do you have a roadmap I can see?
-We do, take a look at the [[roadmap|Roadmap]]
-
+### ¿Tienen una hoja de ruta que puedo ver?
+Sí, echa un vistazo a [[roadmap|Roadmap]]
 
 
 <a id="markdown-security" name="security"></a>
-## Security
+## Seguridad
 
 <a id="markdown-is-chocolatey-secure" name="is-chocolatey-secure"></a>
 ### Is Chocolatey secure?
