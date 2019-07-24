@@ -106,16 +106,16 @@ Sí, en pocas palabras, eso es lo que hace Chocolatey. Casi exactamente lo que y
 <a id="markdown-what-is-the-purpose-of-chocolatey" name="what-is-the-purpose-of-chocolatey"></a>
 ### ¿Cuál es el propósito de Chocolatey?
 
-Gran pregunta ! Vea[[El propósito de Chocolatey|Why#what-is-the-purpose-of-chocolatey]]
+Gran pregunta ! Vea[El propósito de Chocolatey|(Why#what-is-the-purpose-of-chocolatey)
 
 <a id="markdown-how-does-chocolatey-work" name="how-does-chocolatey-work"></a>
 ### ¿Cómo funciona Chocolatey?
 
-Vea [¿Qué es Chocolatey?|Why#what-is-chocolatey]
+Vea [¿Qué es Chocolatey?|(Why#what-is-chocolatey)
 
 <a id="markdown-why-chocolatey" name="why-chocolatey"></a>
 ### ¿Por qué Chocolatey?
-Primero una [Historia|ChocolateyStory]]. y luego [¿Por qué Chocolatey?]|(Why)
+Primero una [Historia|(ChocolateyStory). y luego [¿Por qué Chocolatey?](Why)
 
 <a id="markdown-can-i-use-chocolatey-at-my-organization" name="can-i-use-chocolatey-at-my-organization"></a>
 ### ¿Puedo usar Chocolatey en mi organización?
