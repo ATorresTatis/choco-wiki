@@ -129,16 +129,16 @@ No. Los paquetes en el [repositorio comunitario de Chocolatey](https://chocolate
 
 Para decirlo de otra manera, Microsoft estaría bastante molesto si los paquetes de Office 365 en el repositorio de la comunidad contuvieran los binarios de Office 365. Esto no es algo a lo que las organizaciones estarían sujetas cuando alojan su propio paquete interno.
 
-Cuando aloja sus propios paquetes internos, esos paquetes pueden incrustar software y/o apuntar a recursos compartidos internos. De esta forma no está sujeto a derechos de distribución de software, por lo que puede crear paquetes que sean más confiables, sin conexión y seguros. Consulte [[Qué son los paquetes de Chocolatey|GettingStarted#what-are-chocolatey-packages]] para más detalles.
+Cuando aloja sus propios paquetes internos, esos paquetes pueden incrustar software y/o apuntar a recursos compartidos internos. De esta forma no está sujeto a derechos de distribución de software, por lo que puede crear paquetes que sean más confiables, sin conexión y seguros. Consulte [[Qué son los paquetes de Chocolatey]|(GettingStarted#what-are-chocolatey-packages) para más detalles.
 
-Para obtener más información sobre las advertencias organizativas sobre el repositorio de paquetes de la comunidad, consulte [exención de responsabilidad del repositorio de la comunidad|(CommunityPackagesDisclaimer).
+Para obtener más información sobre las advertencias organizativas sobre el repositorio de paquetes de la comunidad, consulte [exención de responsabilidad del repositorio de la comunidad]|(CommunityPackagesDisclaimer).
 
 <a id="markdown-where-does-chocolatey-install-by-default" name="where-does-chocolatey-install-by-default"></a>
 ### ¿Dónde se instala Chocolatey por defecto?
 A partir de la versión 0.9.8.24, los binarios, bibliotecas y componentes de Chocolatey se instalan en ```C:\ProgramData\chocolatey``` (variable de entorno% ProgramData%) de forma predeterminada. Esto reduce la superficie de ataque en una instalación local de Chocolatey y limita quién puede realizar cambios en el directorio.
 
 
-**NOTA:** Históricamente, Chocolatey se instalaba en ```C:\Chocolatey``` pero actualmente, realizando una actualización de Chocolatey se cambia la ubicación de la instalación, excepto cuando la ruta de instalación es ```C:\chocolatey```. Se actualizará esa ruta y todas las variables de forma automática. Para obtener más información sobre por qué se usó Chocolatey C:\Chocolatey como la ubicación predeterminada, consulte aquí [Razonamiento de instalación]|(DefaultChocolateyInstallReasoning)
+**NOTA:** Históricamente, Chocolatey se instalaba en ```C:\Chocolatey``` pero actualmente, realizando una actualización de Chocolatey se cambia la ubicación de la instalación, excepto cuando la ruta de instalación es ```C:\chocolatey```. Se actualizará esa ruta y todas las variables de forma automática. Para obtener más información sobre por qué se usó Chocolatey C:\Chocolatey como la ubicación predeterminada, consulte aquí [Razonamiento de instalación](DefaultChocolateyInstallReasoning)
 
 <a id="markdown-what-kind-of-package-types-does-chocolatey-support" name="what-kind-of-package-types-does-chocolatey-support"></a>
 ### ¿Qué tipo de paquetes soporta Chocolatey?
@@ -149,7 +149,7 @@ A partir de la versión 0.9.8.24, los binarios, bibliotecas y componentes de Cho
 
 <a id="markdown-do-you-have-a-roadmap-i-can-see" name="do-you-have-a-roadmap-i-can-see"></a>
 ### ¿Tienen una hoja de ruta que puedo ver?
-Sí, echa un vistazo a [roadmap]|(Roadmap)
+Sí, echa un vistazo a [roadmap](Roadmap)
 
 
 <a id="markdown-security" name="security"></a>
