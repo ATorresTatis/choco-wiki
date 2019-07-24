@@ -2,18 +2,18 @@
 <!-- TOC insertAnchor:true -->
 
 - [General](#general)
-  - [Can't find your answer here?](#cant-find-your-answer-here)
-  - [What is Chocolatey?](#what-is-chocolatey)
-  - [I need a tool that manages software - using scripts to work with those unattended installs. Is that Chocolatey?](#i-need-a-tool-that-manages-software---using-scripts-to-work-with-those-unattended-installs-is-that-chocolatey)
-  - [What is the purpose of Chocolatey?](#what-is-the-purpose-of-chocolatey)
-  - [How does Chocolatey work?](#how-does-chocolatey-work)
-  - [Why Chocolatey?](#why-chocolatey)
-  - [Can I use Chocolatey at my organization?](#can-i-use-chocolatey-at-my-organization)
-  - [Are you redistributing software?](#are-you-redistributing-software)
-  - [Where does Chocolatey install by default?](#where-does-chocolatey-install-by-default)
-  - [What kind of package types does Chocolatey support?](#what-kind-of-package-types-does-chocolatey-support)
-  - [Do you have a roadmap I can see?](#do-you-have-a-roadmap-i-can-see)
-- [Security](#security)
+  - [¿No encuentra su respuesta aquí?](#cant-find-your-answer-here)
+  - [¿Qué es chocolatey?](#what-is-chocolatey)
+  - [Necesito una herramienta que administre software: usar scripts para trabajar con esas instalaciones desatendidas. ¿Eso es chocolate?](#i-need-a-tool-that-manages-software---using-scripts-to-work-with-those-unattended-installs-is-that-chocolatey)
+  - [¿Cuál es el propósito de Chocolatey?](#what-is-the-purpose-of-chocolatey)
+  - [¿Cómo funciona Chocolatey?](#how-does-chocolatey-work)
+  - [¿Por qué Chocolatey?](#why-chocolatey)
+  - [¿Puedo usar Chocolatey en mi organización?](#can-i-use-chocolatey-at-my-organization)
+  - [¿Están redistribuyendo software?](#are-you-redistributing-software)
+  - [¿Dónde se instala Chocolatey por defecto?](#where-does-chocolatey-install-by-default)
+  - [¿Qué tipo de paquetes soporta Chocolatey?](#what-kind-of-package-types-does-chocolatey-support)
+  - [¿Tienen una hoja de ruta que puedo ver?](#do-you-have-a-roadmap-i-can-see)
+- [Seguridad](#security)
   - [Is Chocolatey secure?](#is-chocolatey-secure)
   - [Why do I have to confirm packages now? Is there a way to remove this?](#why-do-i-have-to-confirm-packages-now-is-there-a-way-to-remove-this)
   - [What doesn't the website implement x security standard?](#what-doesnt-the-website-implement-x-security-standard)
@@ -111,11 +111,11 @@ Gran pregunta ! Vea[[El propósito de Chocolatey|Why#what-is-the-purpose-of-choc
 <a id="markdown-how-does-chocolatey-work" name="how-does-chocolatey-work"></a>
 ### ¿Cómo funciona Chocolatey?
 
-Vea [[¿Qué es Chocolatey?|Why#what-is-chocolatey]]
+Vea [¿Qué es Chocolatey?|Why#what-is-chocolatey]
 
 <a id="markdown-why-chocolatey" name="why-chocolatey"></a>
 ### ¿Por qué Chocolatey?
-Primero una [[Historia|ChocolateyStory]]. y luego [[¿Por qué Chocolatey?|Why]]
+Primero una [Historia|ChocolateyStory]]. y luego [¿Por qué Chocolatey?]|(Why)
 
 <a id="markdown-can-i-use-chocolatey-at-my-organization" name="can-i-use-chocolatey-at-my-organization"></a>
 ### ¿Puedo usar Chocolatey en mi organización?
@@ -131,14 +131,14 @@ Para decirlo de otra manera, Microsoft estaría bastante molesto si los paquetes
 
 Cuando aloja sus propios paquetes internos, esos paquetes pueden incrustar software y/o apuntar a recursos compartidos internos. De esta forma no está sujeto a derechos de distribución de software, por lo que puede crear paquetes que sean más confiables, sin conexión y seguros. Consulte [[Qué son los paquetes de Chocolatey|GettingStarted#what-are-chocolatey-packages]] para más detalles.
 
-Para obtener más información sobre las advertencias organizativas sobre el repositorio de paquetes de la comunidad, consulte  [[exención de responsabilidad del repositorio de la comunidad|CommunityPackagesDisclaimer]].
+Para obtener más información sobre las advertencias organizativas sobre el repositorio de paquetes de la comunidad, consulte [exención de responsabilidad del repositorio de la comunidad|(CommunityPackagesDisclaimer).
 
 <a id="markdown-where-does-chocolatey-install-by-default" name="where-does-chocolatey-install-by-default"></a>
 ### ¿Dónde se instala Chocolatey por defecto?
 A partir de la versión 0.9.8.24, los binarios, bibliotecas y componentes de Chocolatey se instalan en ```C:\ProgramData\chocolatey``` (variable de entorno% ProgramData%) de forma predeterminada. Esto reduce la superficie de ataque en una instalación local de Chocolatey y limita quién puede realizar cambios en el directorio.
 
 
-**NOTA:** Históricamente, Chocolatey se instalaba en ```C:\Chocolatey``` pero actualmente, realizando una actualización de Chocolatey se cambia la ubicación de la instalación, excepto cuando la ruta de instalación es ```C:\chocolatey```. Se actualizará esa ruta y todas las variables de forma automática. Para obtener más información sobre por qué se usó Chocolatey C:\Chocolatey como la ubicación predeterminada, consulte aquí [[Razonamiento de instalación|DefaultChocolateyInstallReasoning]]
+**NOTA:** Históricamente, Chocolatey se instalaba en ```C:\Chocolatey``` pero actualmente, realizando una actualización de Chocolatey se cambia la ubicación de la instalación, excepto cuando la ruta de instalación es ```C:\chocolatey```. Se actualizará esa ruta y todas las variables de forma automática. Para obtener más información sobre por qué se usó Chocolatey C:\Chocolatey como la ubicación predeterminada, consulte aquí [Razonamiento de instalación]|(DefaultChocolateyInstallReasoning)
 
 <a id="markdown-what-kind-of-package-types-does-chocolatey-support" name="what-kind-of-package-types-does-chocolatey-support"></a>
 ### ¿Qué tipo de paquetes soporta Chocolatey?
@@ -149,7 +149,7 @@ A partir de la versión 0.9.8.24, los binarios, bibliotecas y componentes de Cho
 
 <a id="markdown-do-you-have-a-roadmap-i-can-see" name="do-you-have-a-roadmap-i-can-see"></a>
 ### ¿Tienen una hoja de ruta que puedo ver?
-Sí, echa un vistazo a [[roadmap|Roadmap]]
+Sí, echa un vistazo a [roadmap]|(Roadmap)
 
 
 <a id="markdown-security" name="security"></a>
