@@ -185,7 +185,7 @@ Si bien nos mantenemos al día con la mayoría de los aspectos de seguridad, a v
 
 <a id="markdown-i-have-other-security-questions" name="i-have-other-security-questions"></a>
 ### Tengo otras preguntas de seguridad
-Consulte [seguridad]|(Security) o comuníquese con nosotros si no puede encontrar respuestas a lo que está buscando.
+Consulte [seguridad](Security) o comuníquese con nosotros si no puede encontrar respuestas a lo que está buscando.
 
 
 <a id="markdown-using-chocolatey" name="using-chocolatey"></a>
