@@ -16,8 +16,8 @@
 - [Seguridad](#security)
   - [¿Chocolatey es seguro?](#is-chocolatey-secure)
   - [¿Por qué tengo que confirmar los paquetes ahora? ¿Hay alguna forma de eliminar esto?](#why-do-i-have-to-confirm-packages-now-is-there-a-way-to-remove-this)
-  - [What doesn't the website implement x security standard?](#what-doesnt-the-website-implement-x-security-standard)
-  - [engo otras preguntas de seguridad](#i-have-other-security-questions)
+  - [¿Por qué no se implementa el estándar de seguridad X? ](#what-doesnt-the-website-implement-x-security-standard)
+  - [Tengo otras preguntas de seguridad](#i-have-other-security-questions)
 - [Using Chocolatey](#using-chocolatey)
   - [Can I use Chocolatey in a cmd.exe shell?](#can-i-use-chocolatey-in-a-cmdexe-shell)
   - [Tab-completion?](#tab-completion)
@@ -180,13 +180,12 @@ Algunas personas pueden encontrar el cambio bastante molesto. La perspectiva de 
 Pasamos muchos meses estresados por este cambio debido en parte a la ruptura y decidimos que no sería más fácil cambiarlo más adelante. Hemos agregado la capacidad para que vuelva a poner a Chocolatey en la forma en que estaba antes de `allowGlobalConfirmation` y si las indicaciones lo molestan, probablemente debería considerar hacer este cambio.
 
 <a id="markdown-what-doesnt-the-website-implement-x-security-standard" name="what-doesnt-the-website-implement-x-security-standard"></a>
-### What doesn't the website implement x security standard?
-While we keep up with most security aspects, sometimes we miss things. Always feel free to reach out to us if you feel there is something we should implement to make that better.
+### ¿Por qué no se implementa el estándar de seguridad X? 
+Si bien nos mantenemos al día con la mayoría de los aspectos de seguridad, a veces nos podemos perder algunas cosas. Siéntase libre de comunicarse con nosotros si siente que hay algo que debemos implementar para mejorarlo.
 
 <a id="markdown-i-have-other-security-questions" name="i-have-other-security-questions"></a>
-### I have other security questions
-Please see [[security|Security]]. Please reach out to us if you cannot find answers to what you are looking for.
-
+### Tengo otras preguntas de seguridad
+Consulte [seguridad]|(Security) o comuníquese con nosotros si no puede encontrar respuestas a lo que está buscando.
 
 
 <a id="markdown-using-chocolatey" name="using-chocolatey"></a>
