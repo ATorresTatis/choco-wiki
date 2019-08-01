@@ -1,4 +1,4 @@
-# Frequently Asked Questions
+# Preguntas frecuentes
 <!-- TOC insertAnchor:true -->
 
 - [General](#general)
@@ -156,28 +156,28 @@ Sí, echa un vistazo a [roadmap](Roadmap)
 ## Seguridad
 
 <a id="markdown-is-chocolatey-secure" name="is-chocolatey-secure"></a>
-### Is Chocolatey secure?
-Yes, it is. You can read more at [[security|Security]] to understand the important details.
+¿Chocolatey es seguro?
+Sí lo es. Puede leer más en [seguridad](Secutity) para comprender los detalles importantes.
 
 <a id="markdown-why-do-i-have-to-confirm-packages-now-is-there-a-way-to-remove-this" name="why-do-i-have-to-confirm-packages-now-is-there-a-way-to-remove-this"></a>
-### Why do I have to confirm packages now? Is there a way to remove this?
-tl;dr - Yes, completely possible. Use `-y` or turn on `allowGlobalConfirmation`.
+### ¿Por qué tengo que confirmar los paquetes ahora? ¿Hay alguna forma de eliminar esto?
+Respuesta corta sí, es completamente posible. Solo necesita establecer `allowGlobalConfirmation` o utilizar `-y`.
 
-Also check out the help menus now - `choco -h`, `choco install -h`
+Consulte también la ayuda de  - `choco -h`, `choco install -h`
 
-Longer answer, we've moved a little closer towards other package managers for security reasons, where by default we stop and confirm if you are okay with the state change. We always communicate changes in the [[release notes|ReleaseNotes]] / [Changelog](https://github.com/chocolatey/choco/blob/master/CHANGELOG.md), which also end up in the [nuspec file](https://chocolatey.org/packages/chocolatey#releasenotes), so we highly recommend folks scan at least one of those to see anything tagged breaking changes. Always scan from your current version up to the one you are upgrading to so that you catch all changes.
+Respuesta larga, nos hemos acercado un poco más a otros administradores de paquetes por razones de seguridad, donde, por defecto, nos detenemos y confirmamos si está de acuerdo con el cambio de estado. Siempre comunicamos los cambios en las [notas de liberación](ReleaseNotes)/[Changelog](https://github.com/chocolatey/choco/blob/master/CHANGELOG.md), que también terminan en el archivo [nuspec](https://chocolatey.org/packages/chocolatey#releasenotes), por lo que recomendamos encarecidamente que la gente escanee al menos uno de ellos para ver cualquier cosa etiquetada como cambios importantes. Siempre escanee desde su versión actual hasta la que está actualizando para que pueda ver todos los cambios.
 
-The one that is the most important right now is the `x.y.z` release (in this case 0.9.9), once we reach v1 we will be fully SemVer compliant and breaking changes will constitute a major version bump (we're still SemVer in a less than v1), so you can scan breaking changes and major new features in an `x` release, new compatible features in a `.y` release, and `.z` releases will only contain compatible fixes for the current release.
+El cambio más importante en este momento es el `x.y.z` lanzamiento (en este caso, 0.9.9), una vez que lleguemos a v1 seremos totalmente compatibles con SemVer y los cambios de última hora constituirán un obstáculo importante en la versión (todavía estamos en SemVer menos v1), para que pueda escanear cambios importantes y nuevas características importantes en una `x` versión, nuevas características compatibles en una `.y` versión y las versiones `.z` soo contendrán correcciones compatibles para la versión actual.
 
-0.9.9 introduced a new compiled client that was/is a total rewrite. 0.9.10 will have complete feature parity with the older client - see [FeatureParity](https://github.com/chocolatey/choco/labels/FeatureParity). Why the rewrite? For a more maintainable, faster client that can run on mono now, so you are not completely tied to Windows. We've started adding support for other install providers (like [Scriptcs](https://github.com/chocolatey/choco/issues/247)).
+0.9.9 introdujo un nuevo cliente compilado que fue/es una reescritura total. 0.9.10 y tendrá una paridad de características completa con el cliente anterior; consulte [FeatureParity](https://github.com/chocolatey/choco/labels/FeatureParity). ¿Por qué la reescritura? Para un cliente más rápido y más fácil de mantener que puede ejecutarse en mono, por lo que no está completamente vinculado a Windows. Hemos comenzado a agregar soporte para otros proveedores de instalación como [Scriptcs](https://github.com/chocolatey/choco/issues/247).
 
-The [relevant bits of the release notes](ReleaseNotes#099-march-3-2015) for the FAQ:
+[Fragmentos relevantes de las notas de la versión](ReleaseNotes#099-march-3-2015) de las preguntas frecuentes
 
- - [Security] Prompt for confirmation: For security reasons, we now stop for confirmation before changing the state of the system on most commands. You can pass `-y` to confirm any prompts or set a value in the config that will globally confirm and behave like older versions of Chocolatey (`allowGlobalConfirmation`, see `choco feature -h` for how to enable).
+ - [Seguridad] Solicitud de confirmación: por razones de seguridad, ahora nos detenemos para la confirmación antes de cambiar el estado del sistema en la mayoría de los comandos. Puede pasar -y para confirmar cualquier solicitud o establecer un valor en la configuración que lo establecerá globalmente y se comportará como en las versiones anteriores de Chocolatey (`allowGlobalConfirmation` vea `choco feature -h` para saber cómo habilitarlo).
 
-Some folks may find the change quite annoying. The perspective of some folks isn't the perspective of everyone and we have some very security-conscious folks that want a verification of what they requested is what they end up with. So this prompt is extremely important for them. We are moving to a more secure by default approach so this change was important to get us there. Security related changes are some of the only things you will see that affect Chocolatey in such a way.
+Algunas personas pueden encontrar el cambio bastante molesto. La perspectiva de algunas personas no es la perspectiva de todos y tenemos algunas personas muy conscientes de la seguridad que quieren una verificación de que lo que solicitaron, es con lo que terminan. Entonces este aviso es extremadamente importante para ellos. Nos estamos moviendo a un enfoque más seguro por defecto, por lo que este cambio fue importante para llegar allí. Los cambios relacionados con la seguridad son algunas de las únicas cosas que verá que afectan a Chocolatey de esa manera.
 
-We spent many months stressing over this change because of the breaking part and decided it wasn't going to get easier to change later. We've added the ability for you to set Chocolatey back to the way it was before with `allowGlobalConfirmation` and if the prompts annoy you, you should probably look at making this change.
+Pasamos muchos meses estresados por este cambio debido en parte a la ruptura y decidimos que no sería más fácil cambiarlo más adelante. Hemos agregado la capacidad para que vuelva a poner a Chocolatey en la forma en que estaba antes de `allowGlobalConfirmation` y si las indicaciones lo molestan, probablemente debería considerar hacer este cambio.
 
 <a id="markdown-what-doesnt-the-website-implement-x-security-standard" name="what-doesnt-the-website-implement-x-security-standard"></a>
 ### What doesn't the website implement x security standard?
