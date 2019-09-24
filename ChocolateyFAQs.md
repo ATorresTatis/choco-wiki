@@ -216,7 +216,7 @@ Lo hace de manera predeterminada, según dónde esté instalado. Sin embargo, ha
 Sí, apoyamos ese escenario en Chocolatey for Business. Consulte [Ediciones con licencia](#licensed-editions) para más información.
 
 <a id="markdown-can-i-use-chocolatey-with-existing-installs" name="can-i-use-chocolatey-with-existing-installs"></a>
-### ¿Puedo usar Chocolatey con instalaciones existentes??
+### ¿Puedo usar Chocolatey con instalaciones existentes?
 Fantástica pregunta, vea [¿Puedo usar Chocolatey con software existente?]|(Why#can-i-use-chocolatey-with-existing-software)
 
 <a id="markdown-what-is-the-default-package-source-repository-url-community-feed-url" name="what-is-the-default-package-source-repository-url-community-feed-url"></a>
@@ -236,7 +236,7 @@ También puede instalar paquetes de otras fuentes (nuget.org, rubygems.org, herr
 Con la mayoría de los paquetes cuando ya tiene algo instalado, el proceso de Chocolatey solo realizará la instalación nuevamente de forma silenciosa. La mayoría de las veces esto significa que no hace nada y al final tiene lo que ya tenía.
 
 <a id="markdown-can-i-override-the-installation-directory" name="can-i-override-the-installation-directory"></a>
-### ¿Puedo anular el directorio de instalación??
+### ¿Puedo anular el directorio de instalación?
 Sí se puede. Vea [Anulando el directorio de instalación](GettingStarted#overriding-default-install-directory-or-other-advanced-install-concepts) y [Opción de directorio de instalación ubicua](FeaturesInstallDirectoryOverride).
 
 <a name="AppVsTool"></a>
