@@ -304,7 +304,7 @@ Aunque originalmente se escribió en PowerShell, **Chocolatey NUNCA fue un módu
 Un poco de historia: Chocolatey hasta 0.9.9 se proporcionó completamente escrito en PowerShell, con el enfoque anterior. No conocemos ninguna otra aplicación / herramienta que haya intentado este enfoque cuando lo hicimos, lo que hizo que el cliente original de Chocolatey fuera una rareza. Allanó el camino para cosas como Pester [Pester](https://github.com/pester/Pester) ([Matt Wrock](https://github.com/mwrock) [added mocking](https://github.com/pester/Pester/compare/b103a3db951f123c485289f02eaa1d6ef686c21b...4178c343a6574a8a9521be8a77006572fc49e311) after [Rob Reynolds](https://github.com/ferventcoder) [determined](https://github.com/chocolatey/chocolatey/commit/5b2887240dfbda86629d6a1a296129f3a561e86a#diff-b61a6d542f9036550ba9c401c80f00ef) [the](https://github.com/chocolatey/chocolatey/commit/cc4aca0dc48840c7113167bd08aeddcaf83f65c0#diff-b61a6d542f9036550ba9c401c80f00ef) [general way](https://github.com/chocolatey/chocolatey/commit/ee883242c962dc886cd1282e4dbe4121d4fcc6cd#diff-b61a6d542f9036550ba9c401c80f00ef) [it works](https://github.com/chocolatey/chocolatey/commit/654703b9d4388eb385776986ce6d0ee53485a146#diff-b61a6d542f9036550ba9c401c80f00ef) in PowerShell back in 2012).
 
 <a id="markdown-does-chocolatey-run-on-macoslinux" name="does-chocolatey-run-on-macoslinux"></a>
-### Does Chocolatey run on macOS/Linux?
+### ¿Funciona Chocolatey en macOS/Linux?
 Hablando de entornos POSIX, desde que lanzamos 0.9.9 en 2015, lo hemos ejecutado en Mono, lo que le permite realizar tareas de mantenimiento de paquetes y cosas simples fuera de la administración de instalaciones de software en entornos Linux y macOS.
 
 De hecho, lo mostramos por primera vez en PuppetConf 2014 (antes del lanzamiento oficial de marzo de 2015) - https://www.youtube.com/watch?v=cZl_wKSciVk
@@ -316,81 +316,81 @@ Lo hemos discutido, pero aún no tenemos una postura oficial al respecto. Manten
 ## Solución de problemas
 
 <a id="markdown-im-running-into-some-issue-with-chocolatey-packaging-or-something-else" name="im-running-into-some-issue-with-chocolatey-packaging-or-something-else"></a>
-### I'm running into some issue with Chocolatey, packaging, or something else.
-See [[Troubleshooting|Troubleshooting]]
+### Me encuentro con algún problema con Chocolatey, empaquetando o alguna otra cosa
+Consulte [Solución de problemas](Troubleshooting)
 
 
 
 <a id="markdown-organizational-use" name="organizational-use"></a>
-## Organizational Use
+## Uso organizacional
 
 <a id="markdown-i-would-like-to-use-chocolatey-in-my-organization-is-the-licensing-friendly" name="i-would-like-to-use-chocolatey-in-my-organization-is-the-licensing-friendly"></a>
-### I would like to use Chocolatey in my organization, is the licensing friendly?
+### Me gustaría usar Chocolatey en mi organización, ¿es amigable con las licencias?
 
-Yes, it is. Chocolatey carries a FOSS Apache 2.0 license, which is extremely business friendly. You can use Chocolatey and most of its infrastructure completely free. Chocolatey also has a business edition with features organizations need for better software management . See [Compare](https://chocolatey.org/pricing) for details.
+Sí lo es. Chocolatey tiene una licencia FOSS Apache 2.0, que es extremadamente amigable para los negocios. Puede usar Chocolatey y la mayoría de su infraestructura gratis. Chocolatey también tiene una edición comercial con características que las organizaciones necesitan para una mejor administración de software. vea [Comparar](https://chocolatey.org/pricing) para más detalles.
 
 <a id="markdown-should-my-organization-depend-on-use-the-community-feed-httpschocolateyorgpackages" name="should-my-organization-depend-on-use-the-community-feed-httpschocolateyorgpackages"></a>
-### Should my organization depend on (use) the community feed (https://chocolatey.org/packages)?
+### ¿Debería mi organización depender de (usar) el feed de la comunidad (https://chocolatey.org/packages)?
 
-For production-level scenarios, I couldn't justify giving up that level of control and trust to the internet in an organization. It's recommended that you copy and modify existing packages and/or create your own internal packages and host them internally. That way you can completely guarantee that an install/upgrade/uninstall will always work every time. See [[Security|Security#chocolateyorg-the-community-feed]] for more details.
+Para escenarios de nivel de producción, no podemos justificar renunciar a un nivel de control superior y en su lugar, depositar toda la confianza de su organización a Internet. Se recomienda que copie y modifique los paquetes existentes y/o cree sus propios paquetes internos y los aloje internamente. De esa forma, puede garantizar por completo que una instalación/actualización/desinstalación siempre funcionará. Consulte [Seguridad](Security#chocolateyorg-the-community-feed] para más detalles.
 
-If you are just setting up or updating developer workstations and can tolerate things breaking every once in awhile because internet/uncertainty, it's fine to use the community feed.
+Si solo está configurando o actualizando estaciones de trabajo de desarrollador y puede tolerar que las cosas se rompan de vez en cuando debido a Internet o si puede tolerar algo de incertidumbre, está bien utilizar el feed de la comunidad.
 
 <a id="markdown-chocolatey-is-great-i-need-it-to-do-something-additional-for-my-organization" name="chocolatey-is-great-i-need-it-to-do-something-additional-for-my-organization"></a>
-### Chocolatey is great! I need it to do something additional for my organization.
-Please see https://chocolatey.org/compare - we may already support it doing that for the business edition. If not, feel free to reach out to our team.
+### ¡Chocolatey es genial! Lo necesito para hacer algo adicional para mi organización.
+Consulte https://chocolatey.org/compare - es posible que ya lo soportemos en la edición comercial. Si no, no dude en comunicarse con nuestro equipo.
 
-Also see the [Licensed Editions](#licensed-editions) section below.
+Consulte también la sección de [Ediciones con licencia](#licensed-editions) a continuación.
 
 
 
 <a id="markdown-licensed-editions" name="licensed-editions"></a>
-## Licensed Editions
+## Ediciones con licencia
 
 <a id="markdown-what-is-the-difference-between-foss-and-the-licensed-editions" name="what-is-the-difference-between-foss-and-the-licensed-editions"></a>
-### What is the difference between FOSS and the licensed editions?
-A lot of that is covered in the FAQ on the [pricing](https://chocolatey.org/pricing#faq), but also be sure to check out the [comparison table](https://chocolatey.org/pricing#compare).
+### ¿Cuál es la diferencia entre FOSS y las ediciones con licencia?
+Mucho de eso está cubierto en las Preguntas frecuentes sobre los precios, pero también asegúrese de consultar la [tabla de comparación](https://chocolatey.org/pricing#compare).
 
 <a id="markdown-are-the-licensed-editions-costs-annual" name="are-the-licensed-editions-costs-annual"></a>
-### Are the licensed editions costs annual?
-They are, but we can also do multi-year if you need to support something closer to that model. We also have a perpetual for Chocolatey for Business. For more detail, please see the [pricing FAQ](https://chocolatey.org/pricing#faq).
+### ¿Las ediciones con licencia son anuales?
+Lo son, pero también podemos cubrir varios años si necesita apoyar algo más cercano a ese modelo. También tenemos un licenciamiento perpetuo para Chocolatey for Business. Para obtener más detalles, consulte las [Preguntas frecuentes sobre precios](https://chocolatey.org/pricing#faq).
 
 <a id="markdown-can-you-do-monthly" name="can-you-do-monthly"></a>
-### Can you do monthly?
-Not at this current time. Please see the [pricing FAQ](https://chocolatey.org/pricing#faq) for more details.
+### ¿Se puede hacer mensualmente?
+No en este momento. Consulte las [Preguntas frecuentes sobre precios](https://chocolatey.org/pricing#faq) para obtener más detalles
 
 <a id="markdown-what-is-c4b" name="what-is-c4b"></a>
-### What is C4B?
-That is the short name for Chocolatey for Business.
+### ¿Qué es C4B?
+Ese es el nombre corto de Chocolatey for Business.
 
 <a id="markdown-i-have-not-received-my-license" name="i-have-not-received-my-license"></a>
-### I have not received my license.
-The license email is sent from a support email at chocolatey dot io with an xml file (the license) attachment within 1-3 business days. If it has been 3 business days and you have not received your business license, please reach through the [sales contact](https://chocolatey.org/contact) (choose "Other") (or any method you may already have for contacting sales) to get this resolved.
+### No he recibido mi licencia
+El correo electrónico de la licencia se envía desde un correo electrónico de soporte en chocolatey arroba io con un archivo xml (la licencia) adjunto dentro de 1-3 días hábiles. Si han pasado 3 días hábiles y no ha recibido su licencia comercial, comuníquese con el [contacto de ventas](https://chocolatey.org/contact) (elija  "Otro") (o cualquier otro método que ya tenga para contactar con ventas) para resolver esto.
 
-Any number of things could have happened:
+Muchas cosas podrían haber sucedido:
 
-* The message could be block by your servers
-* The message could be misidentified as spam
+* El servidor podría bloquear el mensaje.
+* El mensaje puede ser identificado erróneamente como spam
 
-To reduce these kind of occurrences, please make sure you have whitelisted the following email domains:
+Para reducir este tipo de ocurrencias, asegúrese de haber incluido en la lista blanca los siguientes dominios de correo electrónico:
 
 * `chocolatey.io`
 * `chocolatey.org`
 
-Once you receive a few emails from there, it will give you an idea of how to lock that down further to fewer email addresses.
+Una vez que reciba algunos correos electrónicos desde allí, le dará una idea de cómo bloquearlo aún más a menos direcciones de correo electrónico.
 
 <a id="markdown-i-just-purchased-and-i-need-my-license-sooner" name="i-just-purchased-and-i-need-my-license-sooner"></a>
-### I just purchased and I need my license sooner!
-Just reply to the order email you receive and let us know so we can bump the priority of your order.
+### ¡Acabo de comprar y necesito mi licencia cuanto antes!
+Simplemente responda el correo electrónico de pedido que recibe y háganos saber para que podamos cambiar la prioridad de su pedido.
 
 <a id="markdown-i-have-a-different-question-about-the-licensed-edition" name="i-have-a-different-question-about-the-licensed-edition"></a>
-### I have a different question about the licensed edition.
-Check out the FAQ on the [pricing](https://chocolatey.org/pricing#faq). If it doesn't answer your questions, please feel free to reach out to the sales team from there!
+### Tengo una pregunta diferente sobre la edición con licencia.
+Consulte las preguntas frecuentes sobre los [precios](https://chocolatey.org/pricing#faq). Si no responde sus preguntas, ¡no dude en comunicarse con el equipo de ventas desde allí!
 
 
 
 <a id="markdown-packaging" name="packaging"></a>
-## Packaging
+## Empaquetado
 
 <a id="markdown-what-can-a-chocolatey-package-consist-of" name="what-can-a-chocolatey-package-consist-of"></a>
 ### What can a Chocolatey Package consist of?
