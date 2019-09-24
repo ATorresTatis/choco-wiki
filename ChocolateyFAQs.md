@@ -18,7 +18,7 @@
   - [¿Por qué tengo que confirmar los paquetes ahora? ¿Hay alguna forma de eliminar esto?](#why-do-i-have-to-confirm-packages-now-is-there-a-way-to-remove-this)
   - [¿Por qué no se implementa el estándar de seguridad X? ](#what-doesnt-the-website-implement-x-security-standard)
   - [Tengo otras preguntas de seguridad](#i-have-other-security-questions)
-- [Using Chocolatey](#using-chocolatey)
+- [Uso de Chocolatey](#using-chocolatey)
   - [¿Puedo usar Chocolatey en un shell cmd.exe?](#can-i-use-chocolatey-in-a-cmdexe-shell)
   - [Tab-completion?](#tab-completion)
   - [¿Cuál es la diferencia entre Open Source Chocolatey, Chocolatey Pro y Chocolatey for Business?](#what-is-the-difference-between-open-source-chocolatey-chocolatey-pro-and-chocolatey-for-business)
