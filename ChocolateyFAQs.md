@@ -287,6 +287,7 @@ Los paquetes * .portable son los paquetes que generalmente darán como resultado
 ¿Quieres más información? Vea http://ferventcoder.com/archive/2012/02/25/chocolatey---guidance-on-packaging-apps-with-both-an-install.aspx
 
 <a id="markdown-when-i-install-a-portable-app-like-autohotkeyportable-how-is-it-on-my-path-without-littering-my-path" name="when-i-install-a-portable-app-like-autohotkeyportable-how-is-it-on-my-path-without-littering-my-path"></a>
+
 ### Cuando instalo un paquete portátil como autohotkey.portable, ¿cómo se agrega al PATH? ¿Sin dañar mi PATH?
 Cuando instala aplicaciones portátiles que tienen ejecutables en el paquete, Chocolatey crea automáticamente un archivo "shim" y lo coloca en una carpeta que se encuentra en la ruta. Eso le permite ejecutar una aplicación portátil solicitándola en la línea de comando.
 
@@ -304,15 +305,15 @@ Un poco de historia: Chocolatey hasta 0.9.9 se proporcionó completamente escrit
 
 <a id="markdown-does-chocolatey-run-on-macoslinux" name="does-chocolatey-run-on-macoslinux"></a>
 ### Does Chocolatey run on macOS/Linux?
-Speaking of POSIX environments, ever since we released 0.9.9 back in 2015, we've had it running in Mono which allows you to do package maintenance and simple things outside of managing software installations on Linux and macOS environments.
+Hablando de entornos POSIX, desde que lanzamos 0.9.9 en 2015, lo hemos ejecutado en Mono, lo que le permite realizar tareas de mantenimiento de paquetes y cosas simples fuera de la administración de instalaciones de software en entornos Linux y macOS.
 
-In fact we first showed it off at PuppetConf 2014 (prior to the official March 2015 release!) - https://www.youtube.com/watch?v=cZl_wKSciVk
+De hecho, lo mostramos por primera vez en PuppetConf 2014 (antes del lanzamiento oficial de marzo de 2015) - https://www.youtube.com/watch?v=cZl_wKSciVk
 
-Do we have plans to support fully running on POSIX environments? We've discussed it, but have no official stance on it yet. Keep your eyes on the [[roadmap|Roadmap]]
+Lo hemos discutido, pero aún no tenemos una postura oficial al respecto. Mantenga sus ojos en la [hoja de ruta](Roadmap)
 
 
 <a id="markdown-troubleshooting" name="troubleshooting"></a>
-## Troubleshooting
+## Solución de problemas
 
 <a id="markdown-im-running-into-some-issue-with-chocolatey-packaging-or-something-else" name="im-running-into-some-issue-with-chocolatey-packaging-or-something-else"></a>
 ### I'm running into some issue with Chocolatey, packaging, or something else.
