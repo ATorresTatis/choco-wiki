@@ -478,28 +478,28 @@ Para que un paquete cambie a confiable, un moderador debe realizar el cambio man
 **Nota:** Otra nota, hemos estado configurando la confianza por paquete. Se planea que eso cambie en algún momento en su mayor parte, ya que el nivel de confianza siempre ha sido sobre el mantenedor y no siempre sobre el paquete en sí.
 
 <a id="markdown-how-do-i-install-a-package-version-under-moderation" name="how-do-i-install-a-package-version-under-moderation"></a>
-### How do I install a package version under moderation?
-Related to the community package repository only (aka the default feed aka https://chocolatey.org/packages).
+### Cómo instalo una versión de paquete bajo moderación?
+Relacionado solo con el repositorio de paquetes de la comunidad (también conocido como el feed predeterminado, ubicado en https://chocolatey.org/packages).
 
-You can install a version of a package version that's still under moderation - however know that if the maintainer needs to fix the package version during the review process, you will never get those fixes locally since they are updating the ***SAME*** version. Package versions are not immutable until they are approved. The caveat for "never" is that if you know it changed (likely you won't and there is no notification, *what you have installed technically never existed*), you could force the reinstall of that same version of the package.
+Puede instalar una versión de un paquete que aún esté bajo moderación; sin embargo, sepa que, si el responsable de mantenimiento necesita corregir la versión del paquete durante el proceso de revisión, nunca obtendrá esas soluciones localmente ya que están actualizando la MISMA versión. Las versiones del paquete son inmutables hasta que se aprueban. Debería intentar no instalar paquetes bajo moderación, ya que si sabe que el paquete cambió o cambiará (no hay notificaciones, _por lo técnicamente ha instalado un paquete que nunca existió_). Aun así, podría forzar la reinstalación de esa versión del paquete
 
-Another thing to consider: if the package version or the package as a whole is rejected (usually for renaming the package to something better to better meet naming standards), you are likely to get weird warnings later and won't see updates at all. Remember, you have installed something that technically never existed, so any thing you see related to choco not knowing about it is to be expected and not a bug.
+Otra cosa para tener en cuenta: si se rechaza la versión del paquete o el paquete en su conjunto (por lo general, para cambiar el nombre del paquete a algo mejor para cumplir con los estándares de nomenclatura), es probable que reciba advertencias extrañas más adelante ya que no verá actualizaciones en lo absoluto. Recuerde, ha instalado algo que técnicamente nunca existió, por lo que cualquier cosa que vea relacionada con el hecho de que Choco no lo sepa es de esperar y definitivamente no es un error.
 
-To actually install, see the next question.
+Para instalar realmente, vea la siguiente pregunta
 
 <a id="markdown-how-do-i-install-an-unlisted-package--package-version" name="how-do-i-install-an-unlisted-package--package-version"></a>
-### How do I install an unlisted package / package version?
-You need to specify name AND version to any package to install the unlisted/unapproved version. This goes for any NuGet compatible feed that understands unlisted packages.
+### ¿Cómo instalo un paquete no listado o una versión particular de un paquete?
+Debe especificar el nombre y la versión del paquete para instalar una versión no listada y/o no aprobada. Esto se aplica a cualquier feed compatible con NuGet que entienda de paquetes no listados.
 
 <a id="markdown-how-do-i-install-a-rejected-package" name="how-do-i-install-a-rejected-package"></a>
-### How do I install a rejected package?
-Related to the community package repository only (aka the default feed aka https://chocolatey.org/packages), we have a concept of packages that have been rejected. You cannot install a rejected package. It could do bad things to your system so we don't allow install from the community repository.
+### ¿Cómo instalo un paquete rechazado?
+En relación con el repositorio de paquetes de la comunidad únicamente (también conocido como el feed predeterminado, ubicado en https://chocolatey.org/packages ), tenemos un concepto de paquetes que han sido rechazados. No puede instalar un paquete rechazado. Podría hacer cosas malas en su sistema, por lo que no permitimos la instalación desde el repositorio de la comunidad.
 
 <a id="markdown-how-do-i-self-reject-a-package" name="how-do-i-self-reject-a-package"></a>
-### How do I self-reject a package?
-**NOTE**: This applies during the moderation process only on the community repository. Once approved, there is no reject.
+### ¿Cómo auto rechazo un paquete?
+**NOTA**: Esto se aplica durante el proceso de moderación solo en el repositorio de la comunidad. Una vez aprobado, no hay rechazo.
 
-If you are a maintainer of a package and you would like to self-reject an older version of a package that is failing verification or validation, we support that. If however you just want to reject a working package because it is older, we don't support that. Rejected != Obsolete. It's really about when the underlying software has the same download url for every release so the older versions do not apply. If you are using checksums to verify the download (and you should be), then your older versions should start failing.
+Si usted es el mantenedor de un paquete y desea rechazar a sí mismo una versión anterior de un paquete que está fallando en la verificación o validación, lo respaldamos. Sin embargo, si solo desea rechazar un paquete que es funcional porque es más antiguo, eso no lo admitimos y será rechazado. Rechazado es diferente de obsoleto. Obsoleto se trata de cuando el software subyacente tiene la misma URL de descarga para cada versión, por lo que las versiones anteriores se invalidarían. Si está utilizando sumas de verificación para verificar la descarga (que debería hacerlo), entonces sus versiones anteriores deberían dejar de estar disponibles.
 
 ![image](https://cloud.githubusercontent.com/assets/63502/12429736/8c67689c-beb1-11e5-83e9-02fe1db91272.png)
 
