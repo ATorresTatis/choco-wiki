@@ -393,36 +393,35 @@ Consulte las preguntas frecuentes sobre los [precios](https://chocolatey.org/pri
 ## Empaquetado
 
 <a id="markdown-what-can-a-chocolatey-package-consist-of" name="what-can-a-chocolatey-package-consist-of"></a>
-### What can a Chocolatey Package consist of?
-See [[What are Chocolatey Packages?|GettingStarted#what-are-chocolatey-packages]]
+### ¿En qué consiste un paquete de chocolate?
+Vea [¿Qué son los paquetes de chocolate?](what-are-chocolatey-packages#GettingStarted)
 
 <a id="markdown-tell-me-about-packaging" name="tell-me-about-packaging"></a>
-### Tell me about packaging
-Chocolatey packages are what we like to think of as just fancy zip files. Zip files that have package metadata about the package and the underlying software a package may represent, dependencies, and optional binaries, files, and/or optional PowerShell automation scripts.
+### Cuéntame sobre el empaquetado
+Los paquetes de chocolate son lo que nos gusta pensar como simples archivos zip. Archivos zip que tienen metadatos de paquete sobre el paquete y el software subyacente que un paquete puede representar, dependencias y binarios opcionales, archivos y/o scripts de automatización de PowerShell opcionales.
 
 <a id="markdown-how-do-i-create-packages" name="how-do-i-create-packages"></a>
-### How do I create packages?
-Try running `choco new test` from a command shell and inspect the output. You will find quite a bit of helpful information and just in time documentation in there.
+### ¿Cómo creo paquetes?
+Intente ejecutar `choco new test` desde un shell de comandos e inspeccione la salida. Encontrará bastante información útil y documentación justo allí.
 
 <a id="markdown-im-creating-packages-with-the-software-contained-in-the-package" name="im-creating-packages-with-the-software-contained-in-the-package"></a>
-### I'm creating packages with the software contained in the package.
-Great! This is the most reliable use of Chocolatey, to embed the binaries directly in the package. See the next question for more details.
+### Estoy creando paquetes con el software contenido en el paquete.
+¡Excelente! Este es el uso más confiable de Chocolatey. Puede incrustar los binarios directamente en el paquete. Vea la siguiente pregunta para más detalles.
 
 <a id="markdown-im-creating-internal-or-offline-packages-what-do-i-need" name="im-creating-internal-or-offline-packages-what-do-i-need"></a>
-### I'm creating internal or offline packages, what do I need?
-Well, if you are not creating packages for the community package repository, you have different rules that apply. Embed as much as possible into the package (as long as it is under 500MB you should see no issues). We typically recommend 500MB as the threshhold for organizations for the following reasons:
+### Estoy creando paquetes internos o fuera de línea, ¿qué necesito?
+Bueno, si no está creando paquetes para el repositorio de paquetes de la comunidad, tiene diferentes reglas que se aplican. Incruste lo más posible en el paquete (siempre que sea inferior a 500 MB no debería tener problemas). Por lo general, recomendamos 500 MB como umbral para las organizaciones por las siguientes razones:
 
-* a nupkg file size takes up some space
-* files in the package directory (can be cleaned up as part of the script)
-* the actual install location if using an installer
-* MSI cache for MSIs - Windows caches the complete MSI binaries (and now you know where all that space went)
+* un tamaño de archivo nupkg ocupa algo de espacio
+* archivos en el directorio del paquete (se pueden limpiar como parte del script)
+* la ubicación de instalación real si usa un instalador
+* Caché de MSI - Windows almacena en caché los binarios completos de MSI (ahora ya sabe a dónde se fue todo ese espacio)
 
-If you are on a licensed edition of Chocolatey, you can turn on Package Reducer and the first two items above no longer take up any significant space. This can reduce space usage in the order of GBs for some installations of Chocolatey. See [[Package Reducer|FeaturesPackageReducer]] for more details.
-
+Si tiene una edición con licencia de Chocolatey, puede activar Package Reducer y los dos primeros elementos anteriores ya no ocuparan un espacio significativo. Esto puede reducir el uso de espacio en el orden de GB para algunas instalaciones de Chocolatey. Consulte [Package Reducer](FeaturesPackageReducer) para más detalles.
 
 
 <a id="markdown-videos--reference" name="videos--reference"></a>
-## Videos / Reference
+## Videos/Referencias
 
 <a id="markdown-where-can-i-learn-more" name="where-can-i-learn-more"></a>
 ### Where can I learn more?
