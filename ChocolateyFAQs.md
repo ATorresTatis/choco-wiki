@@ -424,59 +424,58 @@ Si tiene una edición con licencia de Chocolatey, puede activar Package Reducer 
 ## Videos/Referencias
 
 <a id="markdown-where-can-i-learn-more" name="where-can-i-learn-more"></a>
-### Where can I learn more?
-We have a documentation section of the site at https://chocolatey.org/docs
+### ¿Dónde puedo aprender más?
+Tenemos una sección de documentación en https://chocolatey.org/docs
 
 <a id="markdown-do-you-have-any-references-or-videos-i-can-see" name="do-you-have-any-references-or-videos-i-can-see"></a>
-### Do you have any references or videos I can see?
-Yes we do, take a look at [[videos|Videos]] and [[known posts, presentations, etc|Resources]].
+### ¿Tiene alguna referencia o video que pueda ver?
+Sí, eche un vistazo e [videos]|(Videos) y [publicaciones conocidas, presentaciones, etc](Resources).
 
 <a id="markdown-is-there-a-video-i-can-watch-to-show-me-chocolatey-in-action" name="is-there-a-video-i-can-watch-to-show-me-chocolatey-in-action"></a>
-### Is there a video I can watch to show me Chocolatey in action?
-There is! This is a long video due to slow internet connections, but watch the first 1:30ish minutes and the last 1:30ish minutes and that will give you a general idea. [http://www.youtube.com/watch?v=N-hWOUL8roU](http://www.youtube.com/watch?v=N-hWOUL8roU)
+### ¿Hay algún video que pueda ver para mostrarme a Chocolatey en acción?
+Sip! Este es un video largo debido a la lentitud de las conexiones, pero mire los primeros minutos y los últimos minutos y eso le dará una idea general. [http://www.youtube.com/watch?v=N-hWOUL8roU](http://www.youtube.com/watch?v=N-hWOUL8roU)
 
-**NOTE:** This video shows dependency chaining, so you are seeing it install 11 applications/tools. It's also 6+ years old and there have been many, many improvements since then.
-
+**NOTA:** Este video muestra el encadenamiento de dependencias, por lo que verá que se instalan 11 aplicaciones/herramientas. También tiene más de 6 años de creación por lo que ha habido muchas, muchas mejoras desde entonces.
 
 
 <a id="markdown-community-package-repository" name="community-package-repository"></a>
-## Community Package Repository
+## Repositorio de paquetes comunitarios
 
 <a id="markdown-i-just-took-over-as-the-primary-maintainer-of-a-package-what-do-i-need-to-do" name="i-just-took-over-as-the-primary-maintainer-of-a-package-what-do-i-need-to-do"></a>
-### I just took over as the primary maintainer of a package. What do I need to do?
-See [[Package Maintainer Handover|PackageMaintainerHandover]]
+### Acabo de asumir el cargo de mantenedor principal de un paquete. ¿Que necesito hacer?
+Vea [Package Maintainer Handover](PackageMaintainerHandover)
 
 <a id="markdown-what-is-moderation" name="what-is-moderation"></a>
-### What is moderation?
-Related to the community package repository only (aka the default feed aka https://chocolatey.org/packages), we have a concept called moderation, where submitted packages are held until they are considered safe and of minimal quality for regular consumption.
+### ¿Qué es la moderación?
+En relación con el repositorio de paquetes de la comunidad solamente (también conocido como el feed predeterminado, ubicado en https://chocolatey.org/packages), tenemos un concepto llamado moderación, donde los paquetes enviados se guardan hasta que se consideran seguros y de calidad mínima para el consumo regular.
 
-Moderation involves checking a package version for quality (validation) and correctness, whether it installs and uninstalls correctly (verification). We have two automated services that validate and verify packages. The validator checks the quality of a package. If no requirements are flagged as failing review, it will be passed on to the verifier, which checks that the package actually works as intended (it may help to think of the validator as unit testing and the verifier as integration testing). If both of these automated reviews pass the package version is submitted to a moderator for final review and approval.
+La moderación implica verificar la calidad (validación) y/o las correcciones de una versión de un paquete, bien sea para que se instale o para que se desinstale correctamente. Tenemos dos servicios automatizados que validan y verifican paquetes. El validador verifica la calidad de un paquete. Si no se marcan los requisitos como una revisión fallida, se pasará al verificador, que comprueba que el paquete realmente funcione según lo previsto (puede ayudar pensar en el validador como prueba de unidad y el verificador como una prueba de integración). Si ambas revisiones automatizadas pasan, la versión del paquete se envía a un moderador para su revisión final y aprobación.
 
-Things to note:
-* We have trusted packages, and those packages skip human review/moderation.
-* A maintainer can not moderate his/her own pkgs.
-* You can see if a package has been verified by the green circle next to its name on the package page. If it is green or red, it will also be a clickable link. To see all packages verified, see https://gist.github.com/choco-bot
-* Besides trusted packages, a package version is never approved without a moderator clicking approve.
+Cosas para tener en cuenta:
+* Tenemos paquetes de confianza, y para esos paquetes se omiten la revisión/moderación humana.
+* Un mantenedor no puede moderar sus propios paquetes.
+* Puede ver si un paquete ha sido verificado, observe el círculo verde al lado de su nombre en la página del paquete. Sea verde o rojo, también se provee un enlace en el que se puede hacer clic. Para ver todos los paquetes verificados, consulte https://gist.github.com/choco-bot.
+* Además de los paquetes de confianza, una versión de un paquete nunca se aprueba sin que un moderador haga clic en aprobar.
 
 <a id="markdown-how-does-the-moderation-review-process-work" name="how-does-the-moderation-review-process-work"></a>
-### How does the moderation review process work?
-See [[Review Process|Moderation#package-review-process]].
+### ¿Cómo funciona el proceso de revisión de moderación?
+Consulte [Proceso de revisión](Moderation#package-review-process).
 
 <a id="markdown-what-is-a-trusted-package" name="what-is-a-trusted-package"></a>
-### What is a trusted package?
-Related to the community package repository only (aka the default feed aka https://chocolatey.org/packages).
+### ¿Qué es un paquete confiable?
+Relacionado solo con el repositorio de paquetes de la comunidad (también conocido como el feed predeterminado, ubicado en https://chocolatey.org/packages).
 
-A package that is considered trusted comes from the original software creator or is maintained by someone in the community who has a track record for high quality and safe packages.
+Un paquete que se considera confiable proviene del creador del software original o es mantenido por alguien de la comunidad que tiene un historial de paquetes seguros y de alta calidad.
 
-Two ways your packages can become trusted:
-* You write the underlying software that the package installs. For instance the ReSharper package that comes directly from JetBrains.
-* You put in a lot of good packages and your packages will eventually become trusted.
+Existen dos formas en que sus paquetes pueden ser confiables:
+* Escribir el software subyacente que instala el paquete. Por ejemplo, el paquete ReSharper que viene directamente de JetBrains.
+* Publicar muchos paquetes de calidad para que sus paquetes eventualmente se consideren como confiables.
 
-For a package to switch to trusted, a moderator must manually make the change. It is not an automated process.
+Para que un paquete cambie a confiable, un moderador debe realizar el cambio manualmente. No es un proceso automatizado.
 
-**Note:** Once everything is ready, all packages will go under automated verification and validation and be held for fixes if they don't pass, even trusted packages.
+**Nota:** Una vez que todo esté listo, todos los paquetes pasarán a verificación y validación automáticas y se retendrán para solucionarlos si no pasan las validaciones, incluso si los paquetes se consideran confiables.
 
-**Note:** Another note, we've been setting trust per package. That is planned to change at some point for the most part as the trust level has always been about the maintainer and not always the package itself.
+**Nota:** Otra nota, hemos estado configurando la confianza por paquete. Se planea que eso cambie en algún momento en su mayor parte, ya que el nivel de confianza siempre ha sido sobre el mantenedor y no siempre sobre el paquete en sí.
 
 <a id="markdown-how-do-i-install-a-package-version-under-moderation" name="how-do-i-install-a-package-version-under-moderation"></a>
 ### How do I install a package version under moderation?
