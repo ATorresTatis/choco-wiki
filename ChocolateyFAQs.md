@@ -503,62 +503,62 @@ Si usted es el mantenedor de un paquete y desea rechazar a sí mismo una versió
 
 ![image](https://cloud.githubusercontent.com/assets/63502/12429736/8c67689c-beb1-11e5-83e9-02fe1db91272.png)
 
-* Failing verification -
+* Validación fallida -
 ![image](https://cloud.githubusercontent.com/assets/63502/12429697/509d2b94-beb1-11e5-9e1d-73a156117672.png)
-* Failing validation - a message from the validator telling you it failed validation.
+* Validación fallida: un mensaje del validador que le dice que falló la validación.
 
 <a id="markdown-what-is-the-validator" name="what-is-the-validator"></a>
-### What is the validator?
-The [validator](https://github.com/chocolatey/package-validator) is a service that checks the quality of a package based on requirements, guidelines and suggestions for creating packages for Chocolatey’s community feed. Many of the validation items will automatically roll back into choco and will be displayed when packaging a package. We like to think of the validator as unit testing. It is validating that everything is as it should be and meets the minimum requirements for a package on the community feed.
+### ¿Qué es el validador??
+El [validador](https://github.com/chocolatey/package-validator) es un servicio que verifica la calidad de un paquete según los requisitos, las pautas y las sugerencias para crear paquetes para el feed de la comunidad de Chocolatey. Muchos de los elementos de validación volverán automáticamente a choco y se mostrarán al empaquetar un paquete. Nos gusta pensar en el validador como prueba unitaria. Está validando que todo está como debe ser y que se cumple con los requisitos mínimos para un paquete en el feed de la comunidad.
 
-What does the validator check? https://github.com/chocolatey/package-validator/wiki
+¿Qué verifica el validador? https://github.com/chocolatey/package-validator/wiki
 
 <a id="markdown-what-is-the-verifier" name="what-is-the-verifier"></a>
-### What is the verifier?
-The [verifier](https://github.com/chocolatey/package-verifier) is a service that checks the correctness (that the package actually works), that it installs and uninstalls correctly, has the right dependencies to ensure it is installed properly and can be installed silently. The verifier runs against both submitted packages and existing packages (currently checking once a month that a package can still install and sending notice when it fails). We like to think of the verifier as integration testing. It’s testing all the parts and ensuring everything is good. On the site, you can see the current status of a package based on a little colored ball next to the title. If the ball is green or red, the ball is a link to the results (only on the package page, not in the list screen).
+### ¿Qué es el verificador?
+El [verificador](https://github.com/chocolatey/package-verifier) es un servicio que verifica la corrección (que el paquete realmente funciona), que se instala y desinstala correctamente, que tiene las dependencias correctas para garantizar que se instale correctamente y que se pueda instalar de forma silenciosa. El verificador se ejecuta tanto en paquetes enviados como en paquetes existentes (actualmente verifica una vez al mes que un paquete aún puede instalarse y envía un aviso cuando falla). Nos gusta pensar en el verificador como prueba de integración. Está probando todas las partes y asegurando que todo esté bien. En el sitio, puede ver el estado actual de un paquete basado en una pequeña bola de color al lado del título. Si la bola es verde o roja, la bola es un enlace a los resultados (solo en la página del paquete, no en la pantalla de la lista).
 
-![Passing verification](https://cloud.githubusercontent.com/assets/63502/11872220/bf58f590-a499-11e5-84bb-6fcf6d320227.png)
+![Verificación de aprobación](https://cloud.githubusercontent.com/assets/63502/11872220/bf58f590-a499-11e5-84bb-6fcf6d320227.png)
 
-* Green means good. The ball is a link to the results
-* Orange if still pending verification (has not yet run).
-* Red means it failed verification for some reason. The ball is a link to the results.
-* Grey means unknown or excluded from verification (if excluded, a reason will be listed on the package page).
+* Verde significa bueno. La imagen es un enlace a los resultados.
+* Naranja si aún está pendiente de verificación (todavía no se ha ejecutado).
+* Rojo significa que falló la verificación por alguna razón. La imagen es un enlace a los resultados.
+* Gris significa desconocido o excluido de la verificación (si se excluye, se incluirá una razón en la página del paquete).
 
 <a id="markdown-what-is-the-package-scanner" name="what-is-the-package-scanner"></a>
-### What is the package scanner?
-All packages (and the binaries they contain or download at runtime) on community repository are scanned by 50-60 antivirus scanners. We have partnered with [VirusTotal](https://virustotal.com) to provide this information back to the website so you can know when you are on a package page whether it is something you should be concerned with or not. It falls just under the files section of the package pages.
+### ¿Qué es el escáner de paquetes?
+Todos los paquetes (y los binarios que contienen o descargan en tiempo de ejecución) en el repositorio de la comunidad son escaneados por 50-60 antivirus. Nos hemos asociado con [VirusTotal](https://virustotal.com) para proporcionar esta información al sitio web para que pueda saber desde la página de un paquete si algo existe algo que debería preocuparle o no. Se encuentra justo debajo de la sección de archivos de las páginas del paquete.
 
-**NOTE**: Did you know that 60% or more of the sofware that is submitted to the community repository has its first scans by VirusTotal through Chocolatey's package scanner submissions? It's helped many of those anti-virus manufacturers get a clearer picture of heuristics and hopefully ends up in better anti-virus products with less false positives.
+**NOTA**: ¿Sabía que el 60% o más del software que se envía al repositorio de la comunidad tiene sus primeros escaneos de VirusTotal a través de los envíos del escáner de paquetes de Chocolatey? Ha ayudado a muchos de esos fabricantes de antivirus a obtener una imagen más clara de la heurística y, con suerte, termina en mejores productos antivirus con menos falsos positivos.
 
-**NOTE**: Need runtime malware protection? Learn more about [[runtime malware protection|]]
+**NOTA**: ¿Necesita protección contra malware en tiempo de ejecución? Vea más información sobre (runtime malware protection)
 
 <a id="markdown-what-is-the-package-cacher" name="what-is-the-package-cacher"></a>
-### What is the package cacher?
-On the community repository, we have a CDN cache for those files that would be downloaded by packages - those remote urls are overridden by default in licensed editions of Chocolatey to use those cached binaries. This is to avoid 404 errors you would normally see if those urls changed or were removed. See [[Customer CDN Download Cache|FeaturesPrivateCdn]] for more details.
+### ¿Qué es la caché de paquetes?
+En el repositorio de la comunidad, tenemos un caché de CDN para aquellos archivos que se descargarían mediante paquetes: esas URL remotas se anulan de forma predeterminada en las ediciones con licencia de Chocolatey para usar esos binarios en caché. Esto es para evitar errores 404 que normalmente vería si esas URL cambiaran o se eliminaran. Consulte [CDN de Cache de Clientes|FeaturesPrivateCdn] para obtener más detalles.
 
 
 
 <a id="markdown-comparison" name="comparison"></a>
-## Comparison
+## Comparación
 
 <a id="markdown-how-is-chocolatey-different-than-onegetpowershell-package-management" name="how-is-chocolatey-different-than-onegetpowershell-package-management"></a>
-### How is Chocolatey different than OneGet/PowerShell Package Management?
-OneGet is a package manager ***manager***, which means [it is not really a package manager at all](http://blogs.msdn.com/b/garretts/archive/2015/05/05/10-things-about-oneget-that-are-completely-different-than-you-think.aspx). Chocolatey will have a provider that plugs right into OneGet. At the current time there is a CTP available, but it is based on 2 year old Chocolatey technology (we've had security fixes since then, plus a world of features), so we can't really recommend it. But if you must use it, make sure your PowerShell execution policy is set correctly and you are in an administrative console. See http://www.hanselman.com/blog/AptGetForWindowsOneGetAndChocolateyOnWindows10.aspx for more details.
+### ¿En qué se diferencia Chocolatey de OneGet/PowerShell Package Management?
+OneGet es un ***administrador*** de paquetes, lo que significa que en realidad [no es realmente un gestor de paquetes propiamente dicho](http://blogs.msdn.com/b/garretts/archive/2015/05/05/10-things-about-oneget-that-are-completely-different-than-you-think.aspx). Chocolatey tendrá un proveedor que se conecta directamente a OneGet. En este momento hay un CTP disponible, pero se basa en la tecnología Chocolatey de hace 2 años (desde entonces hemos tenido nuevas soluciones de seguridad, más un mundo de características), por lo que realmente no podemos recomendarlo. Pero si debe usarlo, asegúrese de que su política de ejecución de PowerShell esté configurada correctamente y que esté en una consola administrativa. Consulte  http://www.hanselman.com/blog/AptGetForWindowsOneGetAndChocolateyOnWindows10.aspx obtener más detalles.
 
-Use ChocolateyGet for now.
+Use ChocolateyGet por ahora.
 
 <a id="markdown-how-is-chocolatey-different-than-ninite" name="how-is-chocolatey-different-than-ninite"></a>
-### How is Chocolatey different than Ninite?
-Great question, see [[Chocolatey vs Ninite|ChocolateyVsNinite]].
+### ¿En qué se diferencia Chocolatey de Ninite?
+Gran pregunta, vea [Chocolatey vs Ninite](ChocolateyVsNinite).
 
 <a id="markdown-how-is-chocolatey-different-than-nuget-andor-openwrap" name="how-is-chocolatey-different-than-nuget-andor-openwrap"></a>
-### How is Chocolatey different than NuGet and/or OpenWrap?
-Chocolatey is a machine package manager. Where NuGet/OW are focused on developer library packages, Chocolatey is focused on applications and tools, and not necessarily developer focused.
+### ¿En qué se diferencia Chocolatey de NuGet y/o OpenWrap?
+Chocolatey es un administrador de paquetes de máquinas. Donde NuGet/OW se enfoca en paquetes de bibliotecas de desarrolladores, Chocolatey se enfoca en aplicaciones y herramientas, y no necesariamente en desarrolladores.
 
-A typical way of stating the difference is "Developers use NuGet to get 3rd party libraries that they use to build the .NET tools and applications that they release with Chocolatey!"
+Una forma típica de establecer la diferencia es "Los desarrolladores usan NuGet para obtener bibliotecas de terceros que usan para construir las herramientas y aplicaciones .NET que se lanzan con Chocolatey!"
 
 <a id="markdown-how-iswill-chocolatey-be-different-than-apt" name="how-iswill-chocolatey-be-different-than-apt"></a>
-### How is/will Chocolatey be different than apt?
+### ¿Cómo es/será Chocolatey diferente de apt?
 
- * Chocolatey does not support the idea of source packages, which are packages that must be built to be used. For someone interested in that, check out https://github.com/Microsoft/vcpkg.
- * Library packages are not completely off the plate, but mostly. How would you link the library up to the application/tool?
+ * Chocolatey no admite la idea de paquetes fuente, que son paquetes que deben compilarse para ser utilizados. Si está interesado en eso, visite https://github.com/Microsoft/vcpkg.
+ * Los paquetes de bibliotecas no están completamente fuera de lugar, sino. ¿Cómo los vincularía con la biblioteca con la aplicación/herramienta?
