@@ -7,7 +7,7 @@ Mucha gente siempre quiere señalar que existe Ninite cuando alguien menciona Ch
 - [Enfoque de gestión de paquetes](#package-management-approach)
   - [Ninite](#ninite)
   - [Chocolatey](#chocolatey)
-    - [Packaging solution needs (that brought about Chocolatey in the first place)](#packaging-solution-needs-that-brought-about-chocolatey-in-the-first-place)
+    - [Necesidades de empaquetado de aplicaciones (que inspiraron el desarrollo de Chocolatey)](#packaging-solution-needs-that-brought-about-chocolatey-in-the-first-place)
 - [Chocolatey and  Ninite : Compare and Contrast](#chocolatey-and--ninite--compare-and-contrast)
   - [Interfaces:](#interfaces)
   - [Packages:](#packages)
@@ -54,7 +54,7 @@ Mucha gente siempre quiere señalar que existe Ninite cuando alguien menciona Ch
 * De código abierto y gratuito.
 * Opciones de pago [disponibles](https://chocolatey.org/compare).
 
-#### Necesidades de empaquetado de aplicaciones (que inspiraron le desarrollo de Chocolatey)
+#### Necesidades de empaquetado de aplicaciones (que inspiraron el desarrollo de Chocolatey)
 * Una buena CLI simple de utilizar
 * Un repositorio central que toma contribuciones de paquetes de la comunidad (además de ser mantienido por la comunidad)
 * Capacidad para usar fuentes adicionales/múltiples
