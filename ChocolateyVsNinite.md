@@ -1,10 +1,10 @@
 # Chocolatey vs Ninite
 
-A lot of folks out there are always wanting to point out that there is Ninite when someone mentions Chocolatey. That is fine, Ninite works but it only has like 90+ things you can install. They are limited by what Ninite can rebundle and redistribute. Both are solid solutions in their own right, but you need to understand the needs and what the two solutions provide to really make a choice on them.
+Mucha gente siempre quiere señalar que existe Ninite cuando alguien menciona Chocolatey. Eso está bien, Ninite funciona, pero solo tiene más de 90 cosas que puedes instalar. Están limitados por lo que Ninite se puede reagrupar y redistribuir. Ambas son soluciones sólidas por derecho propio, pero debe comprender las necesidades y lo que proporcionan las dos soluciones para elegir lo que mejor se adecue a sus necesidades
 
 <!-- TOC -->
 
-- [Package Management Approach](#package-management-approach)
+- [Enfoque de gestión de paquetes](#package-management-approach)
   - [Ninite](#ninite)
   - [Chocolatey](#chocolatey)
     - [Packaging solution needs (that brought about Chocolatey in the first place)](#packaging-solution-needs-that-brought-about-chocolatey-in-the-first-place)
@@ -22,50 +22,50 @@ A lot of folks out there are always wanting to point out that there is Ninite wh
 <!-- /TOC -->
 
 
-## Package Management Approach
+## Enfoque de gestión de paquetes
 
 ### Ninite
-* Main purpose: Ninite is an installer that keeps off the crapware.
-* Keeps everything centralized.
-* Has a tight integration with products as the Ninite staff is the only one who updates packages.
-* Guarantees success with installs since they control every aspect of the packages.
-* Does not take contributions.
-* All GUI based unless you pay for Pro version.
-* Update apps simply by running the installer again.
-* Only use case is for folks who have access to install applications on their machines.
-* Only works with software installers.
-* Closed source, but free.
-* Paid options for CLI.
+* Propósito principal: Ninite es un instalador que evita el crapware.
+* Mantiene todo centralizado.
+* Tiene una estrecha integración con los productos, ya que el personal de Ninite es el único que actualiza los paquetes.
+* Garantiza el éxito con las instalaciones, ya que controlan todos los aspectos de los paquetes.
+* No toma contribuciones.
+* Todo está basado en GUI a menos que pague por la versión Pro..
+* Actualiza las aplicaciones simplemente ejecutando el instalador nuevamente.
+* El único caso de uso es para personas que tienen acceso para instalar aplicaciones en sus máquinas.
+* Solo funciona con instaladores de software
+* De fuente cerrada, pero gratuito.
+* Opciones de pago para CLI.
 
 ### Chocolatey
-* Main purpose: Chocolatey is a global PowerShell execution engine that knows about a packaging format.
-* Decentralized with a central community package repository.
-* Multiple sources including private sources.
-* Packages on https://chocolatey.org/packages (the Chocolatey Community Package Repository) are created by the community and reviewed by moderators.
-* Packages can embed software, use UNC paths or download software from another location (like the official distribution locations).
-* Allows for community contributions.
-* Allows for pay for apps to be included as packages.
-* CLI focused, although there is a GUI (ChocolateyGUI).
-* Easily scriptable which allows for adding setup scripts to things like source control.
-* Update apps simply by running `cup packagename` or `choco upgrade all`.
-* Integration with other package managers (Ruby Gems, Python PIP, WebPI, Windows Features, CygWin, etc).
-* Able to be used without needing administrative permissions (portable packages are non-admin).
-* Flexible, packages can work with native installers, set configuration, registry, do other tasks or any combination.
-* Open source and free.
-* Paid options [available](https://chocolatey.org/compare).
+* Propósito principal: Chocolatey es un motor de ejecución de PowerShell global capaz de procesar un formato de empaquetado
+* Descentralizado, pero con un repositorio de paquetes de la comunidad.
+* Múltiples fuentes, incluidas fuentes privadas.
+* Los paquetes en https://chocolatey.org/packages (Repositorio de Paquetes Comunitarios de Chocolatey) son creados por la comunidad y revisados por moderadores.
+* Los paquetes pueden incrustar software, usar rutas UNC o descargar software desde otra ubicación (como las ubicaciones de distribución oficiales).
+* Permite contribuciones de la comunidad.
+* Permite que las aplicaciones de pago se incluyan como paquetes.
+* CLI enfocado, aunque hay una GUI (ChocolateyGUI)
+* Fácilmente programable ya que permite agregar secuencias de comandos de configuración a cosas como el control de fuente.
+* Actualiza aplicaciones simplemente ejecutando`cup packagename` o `choco upgrade all`.
+* Integración con otros gestores de paquetes (Ruby Gems, Python PIP, WebPI, Windows Features, CygWin, etc.).
+* Capaz de usarse sin necesidad de permisos administrativos (los paquetes portátiles no rqeuieren permisos administrativos)
+* Los paquetes pueden funcionar con instaladores nativos, establecer y/o registrar configuraciones, además de realizar otras tareas o cualquier combinación
+* De código abierto y gratuito.
+* Opciones de pago [disponibles](https://chocolatey.org/compare).
 
-#### Packaging solution needs (that brought about Chocolatey in the first place)
-* Good CLI that is simple to use
-* A central repository that takes packages contributions from the community (and is being maintained)
-* Ability to use additional/multiple sources
-* Meta packages that can chain dependencies
-* Virtual packages
-* Packages should be easy to create / maintain
-* Packages should be concise and be able to be created without worrying about distribution rights
-* Unattended installs
-* Installation of multiple packages with one command
-* Script setup of environments
-* A tool that enforces more security automatically
+#### Necesidades de empaquetado de aplicaciones (que inspiraron le desarrollo de Chocolatey)
+* Una buena CLI simple de utilizar
+* Un repositorio central que toma contribuciones de paquetes de la comunidad (además de ser mantienido por la comunidad)
+* Capacidad para usar fuentes adicionales/múltiples
+* Metapaquetes que pueden encadenar dependencias
+* Paquetes virtuales
+* Los paquetes deben ser fáciles de crear/mantener
+* Los paquetes deben ser concisos y deben poder crearse sin preocuparse por los derechos de distribución
+* Instalaciones desatendidas
+* Instalación de múltiples paquetes con un comando
+* Configuración de entornos a través de scripts
+* Una herramienta que impone más seguridad automáticamente
 
 ## Chocolatey and  Ninite : Compare and Contrast
 
