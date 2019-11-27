@@ -67,36 +67,36 @@ Mucha gente siempre quiere señalar que existe Ninite cuando alguien menciona Ch
 * Configuración de entornos a través de scripts
 * Una herramienta que impone más seguridad automáticamente
 
-## Chocolatey and  Ninite : Compare and Contrast
+## Chocolatey y Ninite: comparación y contraste
 
 ### Interfaces:
-* Ninite - choose apps from a website, download installer just for those apps. Pay for the pro version and use the command line.
-* Chocolatey - open a command line. Install app with `choco install appname <options>`. Lather rinse repeat.
+* Ninite: elija las aplicaciones de un sitio web, descargue el instalador solo para esas aplicaciones. Pague la versión pro y use la línea de comando.
+* Chocolatey: abre una línea de comando. Instale las aplicaciones con choco install appname <options>. Repita por cada instalación.
 
-### Packages:
-* Ninite - closed, only items available are what Ninite staff choose to make available.
-* Chocolatey - community packages on a central server
-* Chocolatey (internal use) - create packages on your own internal repository server
+### Paquetes:
+* Ninite: cerrado, solo están disponibles los elementos que el personal de Ninite elige poner a disposición.
+* Chocolatey - paquetes comunitarios en un servidor central
+* Chocolatey (uso interno): cree paquetes en su propio servidor de repositorio interno
 
-### Package sources:
-* Ninite - one at Ninite.com
-* Chocolatey - central community package repository at https://chocolatey.org/packages, create and use public/private sources (folder, network share, OData feed like nuget.org, [chocolatey.org] and/or myget.org). See [[Host Your Own Server|How-To-Host-Feed]] for options.
-* Chocolatey can also install from [[alternative sources|CommandsInstall#alternative-sources]] - choco install bash --source cygwin | choco isntall gemcutter --source ruby | choco install sphynx --source python | choco install IISExpress --source webpi
+### Fuentes del paquete:
+* Ninite - uno en Ninite.com
+* Chocolatey - repositorio central de paquetes de la comunidad en https://chocolatey.org/packages, cree y use fuentes públicas/privadas (carpeta, recurso compartido de red, feed OData como nuget.org, [chocolatey.org] y/o [myget.org]). Consulte  [Hospedar su propio servidor](How-To-Host-Feed) para ver más opciones.
+* Chocolatey también se puede instalar desde [fuentes alternativas ](CommandsInstall#alternative-sources) - choco install bash --source cygwin | choco isntall gemcutter --source ruby | choco install sphynx --source python | choco install IISExpress --source webpi
 
-### Creating packages:
+### Creación de paquetes:
 * Ninite - no
-* Chocolatey - yes and quite simple. Run `choco new test` and look at the output - keep in mind that many times it takes complex tasks for managing software installation down to 1 PowerShell function call. Consider windirstat is: `Install-ChocolateyPackage 'windirstat' 'exe' '/S' 'https://windirstat.info/wds_current_setup.exe' -Checksum 123456 -ChecksumType 'sha256'`
-* Chocolatey is building on technologies you may already know:
-  * PowerShell - take full advantage of PowerShell.
-  * Unattended installations / Silent installation
-* Extend Chocolatey easily with PowerShell modules called [[extension packages|How-To-Create-Extensions]].
-* Use [[Package Builder|FeaturesCreatePackagesFromInstallers]] to point Chocolatey to an installer and have it auto-detect and generate a full software deployment.
-* Use [[Package Internalizer|FeaturesAutomaticallyRecompilePackages]] to internalize existing community packages quickly.
+* Chocolatey - sí y bastante simple. Ejecute  `choco new test` y observe el resultado - tenga en cuenta que muchas veces se requieren tareas complejas para administrar la instalación de algún software hasta 1 llamada a la función PowerShell. Considere por ejemplo  windirstat: `Install-ChocolateyPackage 'windirstat' 'exe' '/S' 'https://windirstat.info/wds_current_setup.exe' -Checksum 123456 -ChecksumType 'sha256'`
+* Chocolatey se basa en tecnologías que quizás ya conozca:
+  * PowerShell: aproveche al máximo PowerShell.
+  * Instalaciones desatendidas/Instalaciones silenciosas.
+* Extienda Chocolatey fácilmente con módulos de PowerShell llamados [paquetes de extensión](How-To-Create-Extensions).
+* Utilice [Package Builder](FeaturesCreatePackagesFromInstallers) para apuntar a Chocolatey a un instalador y hacer que detecte automáticamente y genere una implementación de software completa.
+* Utilice [Package Internalizer](FeaturesAutomaticallyRecompilePackages) para internalizar rápidamente los paquetes comunitarios existentes.
 
-### Available packages:
-* Ninite - Handled by Ninite staff, so there's less chance of anything being broken.
-* Chocolatey (community repository) - Handled by the community, reviewed by moderators. Possibility of breakages unless using [licensed editions of Chocolatey](https://chocolatey.org/compare) due to [[CDN Cache|FeaturesPrivateCdn]].
-* Chocolatey (internal repositories) - Handled by you, embedding software or using internal links you control. Zero chance of breakages that you don't control.
+### Disponibilidad de paquetes:
+* Ninite: manejado por el personal de Ninite, por lo que hay menos posibilidades de que algo se rompa.
+* Chocolatey (repositorio comunitario) - manejado por la comunidad, revisado por moderadores. Posibilidad de roturas a menos que se utilicen [ediciones con licencia de Chocolatey](https://chocolatey.org/compare) debido a [CDN Cache](FeaturesPrivateCdn).
+* Chocolatey (repositorios internos): manejado por usted, integrando software o utilizando enlaces internos que usted controla. Cero posibilidades de roturas que no controlas.
 
 ### Package updates:
 * Ninite and Chocolatey community repository both can suffer from keeping packages up to date.
