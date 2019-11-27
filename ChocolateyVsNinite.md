@@ -110,8 +110,8 @@ Mucha gente siempre quiere señalar que existe Ninite cuando alguien menciona Ch
 * Ninite - de alguna manera, sólo tienes que volver a ejecutar el instalador de vez en cuando.
 * Chocolatey - Si. Utilice `choco upgrade <pkgname> <options>` para actualizar una pieza de software. Considere también `choco upgrade all`/`cup all` como una actualización de Windows para todo su software de terceros.
 
-## Conclusion
-Chocolatey internal use is the best solution for an organization that has a low tolerance for breakages. There are no issues, you have a secure solution with complete control. You are building on top of technologies you know with a small amount of learning for packaging. Because it is PowerShell, you are not limited to just installers, and you can add additional logic before and after installations, and you are not limited to just "installing" software with packaging.
+## Conclusión
+El uso interno de Chocolatey es la mejor solución para una organización que tiene una baja tolerancia a las fallas. No hay problemas, usted tiene una solución segura con control total. Está construyendo sobre tecnologías que conoce con una pequeña cantidad de aprendizaje para el empaquetado. Debido a que se trata de PowerShell, no se limita a los instaladores, y puede añadir lógica adicional antes y después de las instalaciones. Tampoco se limita a "instalar" software empaquetado.
 
 Ninite is a solid solution if you don't mind not being able to script it and only install the applications that it has listed on the Ninite page. You are, however, possibly guaranteed that you have everything you need to install sheerly by having the Ninite Installer. In that way it may be better than using Chocolatey's community repository, which most packages require access to the internet to download installers that do not have distribution rights with them (Ninite may not incur this extra point of failure, but is quite limited in its offerings). Chocolatey community repository with [licensed editions of Chocolatey](https://chocolatey.org/compare) have almost no chance of breakages due to a [[CDN Cache|FeaturesPrivateCdn]] of those downloads.
 
