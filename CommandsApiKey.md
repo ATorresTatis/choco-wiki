@@ -174,7 +174,7 @@ Incluye  [valores predeterminados e interruptores](CommandsReference#default-opt
 
 ~~~
 
-[Referencia de comandos]](CommandsReference)
+[Referencia de comandos](CommandsReference)
 
 
 ***NOTA:*** Esta documentación ha sido generada automáticamente desde `choco apikey -h`.
