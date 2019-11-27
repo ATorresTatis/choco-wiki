@@ -44,28 +44,23 @@ In order to save your API key for https://push.chocolatey.org/,
     choco apikey -k <your key here> -s https://push.chocolatey.org/
 
 
-## Exit Codes
+## Códigos de salida
 
-Exit codes that normally result from running this command.
+Códigos de salida que normalmente resultan de ejecutar este comando.
 
 Normal:
- - 0: operation was successful, no issues detected
- - -1 or 1: an error has occurred
+ -  0: la operación fue exitosa, no se detectaron problemas
+ - -1 o 1: se ha producido un error
 
-If you find other exit codes that we have not yet documented, please
- file a ticket so we can document it at
+Si encuentra otros códigos de salida que aún no hemos documentado, inicie un ticket para que podamos documentarlo en
  https://github.com/chocolatey/choco/issues/new/choose.
 
 
-## Options and Switches
+## Opciones e interruptores
 
-**NOTE:** Options and switches apply to all items passed, so if you are
- running a command like install that allows installing multiple
- packages, and you use `--version=1.0.0`, it is going to look for and
- try to install version 1.0.0 of every package passed. So please split
- out multiple package calls when wanting to pass specific options.
+**NOTA**: Las opciones y los modificadores se aplican a todos los elementos aprobados, por lo que si está ejecutando un comando como instalar que permite instalar varios paquetes, y por ejemplo utiliza `--version=1.0.0`, se buscará e intentará instalar la versión 1.0.0 de cada paquete aprobado. Por lo tanto, divida varias llamadas de paquete cuando desee establecer opciones específicas.
 
-Includes [[default options/switches|CommandsReference#default-options-and-switches]] (included below for completeness).
+Incluye  [valores predeterminados e interruptores](CommandsReference#default-options-and-switches) (se incluye a continuación para completar).
 
 ~~~
 
@@ -179,8 +174,8 @@ Includes [[default options/switches|CommandsReference#default-options-and-switch
 
 ~~~
 
-[[Command Reference|CommandsReference]]
+[Referencia de comandos]](CommandsReference)
 
 
-***NOTE:*** This documentation has been automatically generated from `choco apikey -h`.
+***NOTA:*** Esta documentación ha sido generada automáticamente desde `choco apikey -h`.
 
