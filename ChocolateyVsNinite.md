@@ -98,17 +98,17 @@ Mucha gente siempre quiere señalar que existe Ninite cuando alguien menciona Ch
 * Chocolatey (repositorio comunitario) - manejado por la comunidad, revisado por moderadores. Posibilidad de roturas a menos que se utilicen [ediciones con licencia de Chocolatey](https://chocolatey.org/compare) debido a [CDN Cache](FeaturesPrivateCdn).
 * Chocolatey (repositorios internos): manejado por usted, integrando software o utilizando enlaces internos que usted controla. Cero posibilidades de roturas que no controlas.
 
-### Package updates:
-* Ninite and Chocolatey community repository both can suffer from keeping packages up to date.
-* Chocolatey (internal use) - good to go
+### Actualizaciones de paquetes:
+* Tanto el repositorio de la comunidad de Ninite como el de Chocolatey pueden sufrir por mantener los paquetes actualizados.
+* Chocolatey (uso interno) - listo para usar
 
-### Package dependencies:
-* Ninite - not really
-* Chocolatey - Yes, dependencies are easy! Install Git Extensions, it makes sure Git is also installed.
+### Dependencias de paquetes:
+* Ninite - no realmente
+* Chocolatey - ¡Sí, las dependencias son fáciles! Instala las extensiones de Git, se asegura de que Git también esté instalado.
 
-### Versioning/upgrades:
-* Ninite - sort of, you just rerun the installer every once in awhile
-* Chocolatey - Yes. Consider `choco upgrade <pkgname> <options>` to upgrade a piece of software. Also consider `choco upgrade all`/`cup all` as a Windows Update for all of your 3rd party software.
+### Versiones/actualizaciones:
+* Ninite - de alguna manera, sólo tienes que volver a ejecutar el instalador de vez en cuando.
+* Chocolatey - Si. Utilice `choco upgrade <pkgname> <options>` para actualizar una pieza de software. Considere también `choco upgrade all`/`cup all` como una actualización de Windows para todo su software de terceros.
 
 ## Conclusion
 Chocolatey internal use is the best solution for an organization that has a low tolerance for breakages. There are no issues, you have a secure solution with complete control. You are building on top of technologies you know with a small amount of learning for packaging. Because it is PowerShell, you are not limited to just installers, and you can add additional logic before and after installations, and you are not limited to just "installing" software with packaging.
