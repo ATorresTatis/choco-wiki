@@ -14,11 +14,14 @@ Enumera las claves de API que se configuran o establece una clave de API para un
 
 <!-- /TOC -->
 
+<a id="markdown-usage" name="usage"></a>
+
 ## Uso
 
     choco apikey [<options/switches>]
     choco setapikey [<options/switches>]
 
+<a id="markdown-examples" name="examples"></a>
 ## Ejemplos
 
     choco apikey
@@ -33,6 +36,7 @@ El valor de la clave generalmente es un valor proporcionado por el repositorio d
 
 **NOTA:** Consulte las secuencias de comandos en [cómo pasar argumentos](CommandsReference#how-to-pass-options--switches) (`choco -?`) para saber cómo escribir secuencias de comandos e integraciones adecuadas.
 
+<a id="markdown-connecting-to-chocolateyorg-community-package-repository" name="connecting-to-chocolateyorg-community-package-repository"></a>
 
 ## Conectando con Chocolatey.org (repositorio de paquetes comunitarios)
 
@@ -43,6 +47,7 @@ In order to save your API key for https://push.chocolatey.org/,
 
     choco apikey -k <your key here> -s https://push.chocolatey.org/
 
+<a id="markdown-exit-codes" name="exit-codes"></a>
 
 ## Códigos de salida
 
@@ -55,6 +60,8 @@ Normal:
 Si encuentra otros códigos de salida que aún no hemos documentado, inicie un ticket para que podamos documentarlo en
  https://github.com/chocolatey/choco/issues/new/choose.
 
+
+<a id="markdown-options-and-switches" name="options-and-switches"></a>
 
 ## Opciones e interruptores
 
