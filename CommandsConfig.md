@@ -62,7 +62,7 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
 ~~~
 
  -?, --help, -h
-     Imprime el menú de ayuda..
+     Imprime el menú de ayuda.
 
  -d, --debug
      Debug - Muestra mensajes de depuración.
