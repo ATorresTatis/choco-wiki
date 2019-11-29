@@ -53,23 +53,19 @@ Si encuentra otros códigos de salida que aún no hemos documentado, register un
 ![Configuración en acción](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_config.gif)
 
 
-## Options and Switches
+## Opciones e interruptores
 
-**NOTE:** Options and switches apply to all items passed, so if you are
- running a command like install that allows installing multiple
- packages, and you use `--version=1.0.0`, it is going to look for and
- try to install version 1.0.0 of every package passed. So please split
- out multiple package calls when wanting to pass specific options.
+NOTA: Las opciones y los interruptores se aplican a todos los elementos, así que, si está ejecutando un comando como install que permite instalar múltiples paquetes, y usa la opción `--version=1.0.0`, va a buscar e intentar instalar la versión 1.0.0 de cada paquete. Así que, por favor, divida las llamadas de múltiples paquetes cuando quiera utilizar opciones específicas.
 
-Includes [[default options/switches|CommandsReference#default-options-and-switches]] (included below for completeness).
+[Valores predeterminados](switches|CommandsReference#default-options-and-switches) (se incluyen a continuación para mayor información).
 
 ~~~
 
  -?, --help, -h
-     Prints out the help menu.
+     Imprime el menú de ayuda..
 
  -d, --debug
-     Debug - Show debug messaging.
+     Debug - Muestra mensajes de depuración.
 
  -v, --verbose
      Verbose - Show verbose messaging. Very verbose messaging, avoid using
