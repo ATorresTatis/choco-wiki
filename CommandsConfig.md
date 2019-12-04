@@ -102,7 +102,7 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      --timeout, --execution-timeout=VALUE
      CommandExecutionTimeout (en segundos).
      El tiempo para permitir que un comando finalice antes de que se agote el tiempo de espera. 
-     Anula el tiempo de espera de ejecución predeterminado en la ventana de diálogo configuración de 2700 segundos. 
+     Anula el tiempo de espera de ejecución predeterminado en la ventana de diálogo. 
      Se puede establecer a 0 para esperar indefinidamente. Disponible a partir de la versión 0.10.4+.
 
  -c, --cache, --cachelocation, --cache-location=VALUE
