@@ -84,13 +84,14 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
  Aceptar Licencia - Acepta los diálogos de licencia automáticamente. Reservado para uso futuro.
 
  -y, --yes, --confirm
- Confirmar todos los mensajes.
- Emite una respuesta afirmativa en lugar de preguntar al usuario. 
- Implica --accept-license
+     Confirmar todos los mensajes.
+     Emite una respuesta afirmativa en lugar de preguntar al usuario. 
+     Implica --accept-license
 
  -f, --force
- Forzar - forzar el comportamiento. 
- Evite utilizar este valor durante la operación normal porque invierte algunos de los comportamientos inteligentes de varios comandos.
+     Forzar - forzar el comportamiento. 
+     Evite utilizar este valor durante la operación normal porque invierte algunos de los comportamientos
+     inteligentes de varios comandos.
  
      --noop, --whatif, --what-if
      NoOp / WhatIf - Simula el comportamiento de un comando, pero no hace nada. El comando no se ejecuta.
