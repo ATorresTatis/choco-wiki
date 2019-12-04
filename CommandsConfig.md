@@ -129,7 +129,8 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      --proxy=VALUE
      Establece una ubicación explícita del servidor proxy. 
      Anula el proxy predeterminado ubicación de ''. 
-     Disponible como configuración a partir de la versión 0.9.9.9+, y a través de la CLI desde la versión 0.10.4+.
+     Disponible como configuración a partir de la versión 0.9.9.9+, y
+     a través de la CLI desde la versión 0.10.4+.
 
      --proxy-user=VALUE
      Proxy User Name - Explicit proxy user (optional). Requires explicity
@@ -141,7 +142,8 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Establece un usuario de proxy explícito (opcional). 
      Requiere explícitamente que se utilice con la configuración de proxy (`--proxy`). 
      Invalida al usuario proxy predeterminado '123'. 
-     Disponible para la configuración a partir de la versión 0.9.9.9+, y desde la CLI a partir de la versión 0.10.4+.
+     Disponible para la configuración a partir de la versión 0.9.9.9+, y 
+     desde la CLI a partir de la versión 0.10.4+.
 
      --proxy-bypass-list=VALUE
      Lista separada por comas de ubicaciones para evitar el uso del servidor proxy. 
