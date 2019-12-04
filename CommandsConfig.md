@@ -167,8 +167,8 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
 
 ~~~
 
-[[Command Reference|CommandsReference]]
+[Referencia de comandos](CommandsReference)
 
 
-***NOTE:*** This documentation has been automatically generated from `choco config -h`.
+***NOTA:*** Esta documentación ha sido generada automáticamente desde `choco config -h`.
 
