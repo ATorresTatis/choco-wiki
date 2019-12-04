@@ -68,48 +68,37 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Debug - Muestra mensajes de depuración.
 
  -v, --verbose
-     Verbose - Show verbose messaging. Very verbose messaging, avoid using
-       under normal circumstances.
+     Verbose - Muestra mensajes detallados, mensajes muy detallados. Evite usarlo  en circunstancias normales.
 
      --trace
-     Trace - Show trace messaging. Very, very verbose trace messaging. Avoid
-       except when needing super low-level .NET Framework debugging. Available
-       in 0.10.4+.
+     Trace - Muestra mensajes de seguimiento. Mensajes de seguimiento muy, muy detallados. Evite usarlo, excepto cuando se necesita una depuración de .NET Framework de nivel súper bajo. Disponible a partir de la versión 0.10.4+.
 
      --nocolor, --no-color
-     No Color - Do not show colorization in logging output. This overrides
-       the feature 'logWithoutColor', set to 'False'. Available in 0.10.9+.
+     Omite el uso de colores en la salida. Esto anula la característica 'logWithoutColor', estableciéndola a  'False'. Disponible a partir de la versión 0.10.9+.
 
      --acceptlicense, --accept-license
-     AcceptLicense - Accept license dialogs automatically. Reserved for
-       future use.
+ Aceptar Licencia - Acepta los diálogos de licencia automáticamente. Reservado para uso futuro.
 
  -y, --yes, --confirm
-     Confirm all prompts - Chooses affirmative answer instead of prompting.
-       Implies --accept-license
+ Confirmar todos los mensajes – Emite una respuesta afirmativa en lugar de preguntar al usuario. Implica --accept-license
 
  -f, --force
-     Force - force the behavior. Do not use force during normal operation -
-       it subverts some of the smart behavior for commands.
-
+ Forzar - forzar el comportamiento. Evite utilizar este valor durante la operación normal porque invierte algunos de los comportamientos inteligentes de varios comandos.
+ 
      --noop, --whatif, --what-if
-     NoOp / WhatIf - Don't actually do anything.
+     NoOp / WhatIf - Simula el comportamiento de un comando, pero no hace nada. El comando no se ejecuta.
 
  -r, --limitoutput, --limit-output
-     LimitOutput - Limit the output to essential information
+     LimitOutput - Limita la salida a información esencial.
 
      --timeout, --execution-timeout=VALUE
-     CommandExecutionTimeout (in seconds) - The time to allow a command to
-       finish before timing out. Overrides the default execution timeout in the
-       configuration of 2700 seconds. '0' for infinite starting in 0.10.4.
+     CommandExecutionTimeout (en segundos) -El tiempo para permitir que un comando finalice antes de que se agote el tiempo de espera. Anula el tiempo de espera de ejecución predeterminado en la ventana de diálogo configuración de 2700 segundos. Se puede establecer a 0 para esperar indefinidamente. Disponible a partir de la versión 0.10.4+.
 
  -c, --cache, --cachelocation, --cache-location=VALUE
-     CacheLocation - Location for download cache, defaults to %TEMP% or value
-       in chocolatey.config file.
-
+     Ubicación de la caché de descarga, por defecto la variable %TEMP% o el valor establecido en el archivo chocolatey.config.
+     
      --allowunofficial, --allow-unofficial, --allowunofficialbuild, --allow-unofficial-build
-     AllowUnofficialBuild - When not using the official build you must set
-       this flag for choco to continue.
+     AllowUnofficialBuild - Cuando no se utiliza la versión oficial se debe establecer esta bandera para que choco continúe.
 
      --failstderr, --failonstderr, --fail-on-stderr, --fail-on-standard-error, --fail-on-error-output
      FailOnStandardError - Fail on standard error output (stderr), typically
