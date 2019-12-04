@@ -106,10 +106,12 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Se puede establecer a 0 para esperar indefinidamente. Disponible a partir de la versión 0.10.4+.
 
  -c, --cache, --cachelocation, --cache-location=VALUE
-     Ubicación de la caché de descarga, por defecto la variable %TEMP% o el valor establecido en el archivo chocolatey.config.
+     Ubicación de la caché de descarga, por defecto la variable %TEMP% o 
+     el valor establecido en el archivo chocolatey.config.
      
      --allowunofficial, --allow-unofficial, --allowunofficialbuild, --allow-unofficial-build
-     AllowUnofficialBuild - Cuando no se utiliza la versión oficial se debe establecer esta bandera para que choco continúe.
+     AllowUnofficialBuild - Cuando no se utiliza la versión oficial 
+     se debe establecer esta bandera para que choco continúe.
 
      --failstderr, --failonstderr, --fail-on-stderr, --fail-on-standard-error, --fail-on-error-output
      FailOnStandardError - Fail on standard error output (stderr), typically
