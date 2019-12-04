@@ -71,10 +71,13 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Verbose - Muestra mensajes detallados, mensajes muy detallados. Evite usarlo  en circunstancias normales.
 
      --trace
-     Trace - Muestra mensajes de seguimiento. Mensajes de seguimiento muy, muy detallados. Evite usarlo, excepto cuando se necesita una depuración de .NET Framework de nivel súper bajo. Disponible a partir de la versión 0.10.4+.
+     Trace - Muestra mensajes de seguimiento. Mensajes de seguimiento muy, muy detallados. 
+     Evite usarlo, excepto cuando se necesita una depuración de .NET Framework de nivel súper bajo. 
+     Disponible a partir de la versión 0.10.4+.
 
      --nocolor, --no-color
-     Omite el uso de colores en la salida. Esto anula la característica 'logWithoutColor', estableciéndola a  'False'. Disponible a partir de la versión 0.10.9+.
+     Omite el uso de colores en la salida. Esto anula la característica 'logWithoutColor', estableciéndola a  'False'. 
+     Disponible a partir de la versión 0.10.9+.
 
      --acceptlicense, --accept-license
  Aceptar Licencia - Acepta los diálogos de licencia automáticamente. Reservado para uso futuro.
@@ -83,7 +86,8 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
  Confirmar todos los mensajes – Emite una respuesta afirmativa en lugar de preguntar al usuario. Implica --accept-license
 
  -f, --force
- Forzar - forzar el comportamiento. Evite utilizar este valor durante la operación normal porque invierte algunos de los comportamientos inteligentes de varios comandos.
+ Forzar - forzar el comportamiento. 
+ Evite utilizar este valor durante la operación normal porque invierte algunos de los comportamientos inteligentes de varios comandos.
  
      --noop, --whatif, --what-if
      NoOp / WhatIf - Simula el comportamiento de un comando, pero no hace nada. El comando no se ejecuta.
@@ -92,7 +96,9 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      LimitOutput - Limita la salida a información esencial.
 
      --timeout, --execution-timeout=VALUE
-     CommandExecutionTimeout (en segundos) -El tiempo para permitir que un comando finalice antes de que se agote el tiempo de espera. Anula el tiempo de espera de ejecución predeterminado en la ventana de diálogo configuración de 2700 segundos. Se puede establecer a 0 para esperar indefinidamente. Disponible a partir de la versión 0.10.4+.
+     CommandExecutionTimeout (en segundos) - El tiempo para permitir que un comando finalice antes de que se agote el tiempo de espera. 
+     Anula el tiempo de espera de ejecución predeterminado en la ventana de diálogo configuración de 2700 segundos. 
+     Se puede establecer a 0 para esperar indefinidamente. Disponible a partir de la versión 0.10.4+.
 
  -c, --cache, --cachelocation, --cache-location=VALUE
      Ubicación de la caché de descarga, por defecto la variable %TEMP% o el valor establecido en el archivo chocolatey.config.
