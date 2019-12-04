@@ -123,13 +123,13 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Disponible a partir de la versión 0.9.10+. 125
 
      --no-progress
-     Do Not Show Progress - Do not show download progress percentages.
-       Available in 0.10.4+.
+     Oculta los porcentajes de progreso de descarga. 
+     Disponible a partir de la versión 0.10.4+.
 
      --proxy=VALUE
-     Proxy Location - Explicit proxy location. Overrides the default proxy
-       location of ''. Available for config settings in 0.9.9.9+, this CLI
-       option available in 0.10.4+.
+     Establece una ubicación explícita del servidor proxy. 
+     Anula el proxy predeterminado ubicación de ''. 
+     Disponible como configuración a partir de la versión 0.9.9.9+, y a través de la CLI desde la versión 0.10.4+.
 
      --proxy-user=VALUE
      Proxy User Name - Explicit proxy user (optional). Requires explicity
@@ -138,33 +138,32 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
        available in 0.10.4+.
 
      --proxy-password=VALUE
-     Proxy Password - Explicit proxy password (optional) to be used with
-       username. Requires explicity proxy (`--proxy` or config setting) and
-       user name.  Overrides the default proxy password (encrypted in settings
-       if set). Available for config settings in 0.9.9.9+, this CLI option
-       available in 0.10.4+.
+     Establece un usuario de proxy explícito (opcional). 
+     Requiere explícitamente que se utilice con la configuración de proxy (`--proxy`). 
+     Invalida al usuario proxy predeterminado '123'. 
+     Disponible para la configuración a partir de la versión 0.9.9.9+, y desde la CLI a partir de la versión 0.10.4+.
 
      --proxy-bypass-list=VALUE
-     ProxyBypassList - Comma separated list of regex locations to bypass on
-       proxy. Requires explicity proxy (`--proxy` or config setting). Overrides
-       the default proxy bypass list of ''. Available in 0.10.4+.
+     Lista separada por comas de ubicaciones para evitar el uso del servidor proxy. 
+     Requiere explícitamente que se utilice con la configuración de proxy (`--proxy`). 
+     Anula la lista de omisión de proxy predeterminada ''. 
+     Disponible a partir de la versión 0.10.4+.
 
      --proxy-bypass-on-local
-     Proxy Bypass On Local - Bypass proxy for local connections. Requires
-       explicity proxy (`--proxy` or config setting). Overrides the default
-       proxy bypass on local setting of 'True'. Available in 0.10.4+.
+     Omitir proxy para conexiones locales. 
+     Requiere explícitamente que se utilice con la configuración de proxy (`--proxy`). 
+     Anula el valor predeterminado omisión de proxy en la configuración local. 
+     Disponible a partir de la versión 0.10.4+.
 
      --log-file=VALUE
-     Log File to output to in addition to regular loggers. Available in 0.1-
-       0.8+.
+     Archivo de registro a la salida, además de los registradores regulares. 
+     Disponible a partir de la versión 0.1-0.8+
 
      --name=VALUE
-     Name - the name of the config setting. Required with some actions.
-       Defaults to empty.
+    Nombre de la configuración. Requerido para algunas acciones. Por defecto está vacío.
 
      --value=VALUE
-     Value - the value of the config setting. Required with some actions.
-       Defaults to empty.
+    Valor de la configuración. Requerido para algunas acciones. Por defecto está vacío.
 
 ~~~
 
