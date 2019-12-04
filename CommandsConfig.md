@@ -65,13 +65,13 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Imprime el menú de ayuda.
 
  -d, --debug
-     Debug - Muestra mensajes de depuración.
+     Muestra mensajes de depuración.
 
  -v, --verbose
-     Verbose - Muestra mensajes detallados, mensajes muy detallados. Evite usarlo  en circunstancias normales.
+     Muestra mensajes detallados, mensajes muy detallados. Evite usarlo  en circunstancias normales.
 
      --trace
-     Trace - Muestra mensajes de seguimiento. Mensajes de seguimiento muy, muy detallados. 
+     Muestra mensajes de seguimiento. Mensajes de seguimiento muy, muy detallados. 
      Evite usarlo, excepto cuando se necesita una depuración de .NET Framework de nivel súper bajo. 
      Disponible a partir de la versión 0.10.4+.
 
@@ -81,7 +81,7 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Disponible a partir de la versión 0.10.9+.
 
      --acceptlicense, --accept-license
- Aceptar Licencia - Acepta los diálogos de licencia automáticamente. Reservado para uso futuro.
+    Acepta los diálogos de licencia automáticamente. Reservado para uso futuro.
 
  -y, --yes, --confirm
      Confirmar todos los mensajes.
@@ -94,10 +94,10 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      inteligentes de varios comandos.
  
      --noop, --whatif, --what-if
-     NoOp / WhatIf - Simula el comportamiento de un comando, pero no hace nada. El comando no se ejecuta.
+     Simula el comportamiento de un comando, pero no hace nada. El comando no se ejecuta.
 
  -r, --limitoutput, --limit-output
-     LimitOutput - Limita la salida a información esencial.
+     Limita la salida a información esencial.
 
      --timeout, --execution-timeout=VALUE
      CommandExecutionTimeout (en segundos).
@@ -110,18 +110,17 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      el valor establecido en el archivo chocolatey.config.
      
      --allowunofficial, --allow-unofficial, --allowunofficialbuild, --allow-unofficial-build
-     AllowUnofficialBuild - Cuando no se utiliza la versión oficial 
-     se debe establecer esta bandera para que choco continúe.
+     Cuando no se utiliza la versión oficial se debe establecer esta bandera para que choco continúe.
 
      --failstderr, --failonstderr, --fail-on-stderr, --fail-on-standard-error, --fail-on-error-output
-     FailOnStandardError - Fail on standard error output (stderr), typically
-       received when running external commands during install providers. This
-       overrides the feature failOnStandardError.
+     Establece que se produzca un fallo en la salida de error estándar (stderr), 
+     cuando se ejecutan comandos externos durante la instalación de proveedores. 
+     Esto sobrescribe el comportamiento de la función failOnStandardError.
 
      --use-system-powershell
-     UseSystemPowerShell - Execute PowerShell using an external process
-       instead of the built-in PowerShell host. Should only be used when
-       internal host is failing. Available in 0.9.10+.
+     Ejecuta PowerShell usando un proceso externo en lugar del host incorporado de PowerShell. 
+     Debería utilizarse solo si el host interno está fallando. 
+     Disponible a partir de la versión 0.9.10+. 125
 
      --no-progress
      Do Not Show Progress - Do not show download progress percentages.
