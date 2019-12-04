@@ -76,14 +76,17 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      Disponible a partir de la versión 0.10.4+.
 
      --nocolor, --no-color
-     Omite el uso de colores en la salida. Esto anula la característica 'logWithoutColor', estableciéndola a  'False'. 
+     Omite el uso de colores en la salida. 
+     Esto anula la característica 'logWithoutColor', estableciéndola a  'False'. 
      Disponible a partir de la versión 0.10.9+.
 
      --acceptlicense, --accept-license
  Aceptar Licencia - Acepta los diálogos de licencia automáticamente. Reservado para uso futuro.
 
  -y, --yes, --confirm
- Confirmar todos los mensajes – Emite una respuesta afirmativa en lugar de preguntar al usuario. Implica --accept-license
+ Confirmar todos los mensajes.
+ Emite una respuesta afirmativa en lugar de preguntar al usuario. 
+ Implica --accept-license
 
  -f, --force
  Forzar - forzar el comportamiento. 
@@ -96,7 +99,8 @@ NOTA: Las opciones y los interruptores se aplican a todos los elementos, así qu
      LimitOutput - Limita la salida a información esencial.
 
      --timeout, --execution-timeout=VALUE
-     CommandExecutionTimeout (en segundos) - El tiempo para permitir que un comando finalice antes de que se agote el tiempo de espera. 
+     CommandExecutionTimeout (en segundos).
+     El tiempo para permitir que un comando finalice antes de que se agote el tiempo de espera. 
      Anula el tiempo de espera de ejecución predeterminado en la ventana de diálogo configuración de 2700 segundos. 
      Se puede establecer a 0 para esperar indefinidamente. Disponible a partir de la versión 0.10.4+.
 
