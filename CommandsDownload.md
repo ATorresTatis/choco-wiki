@@ -250,8 +250,8 @@ Incluye [modificadores predeterminados/switches](CommandsReference#default-optio
 
 ~~~
 
-[[Command Reference|CommandsReference]]
+[Referencia de comandos](CommandsReference)
 
 
-***NOTE:*** This documentation has been automatically generated from `choco download -h`.
+***NOTA:*** Esta documentación ha sido generada automáticamente desde  `choco download -h`.
 
