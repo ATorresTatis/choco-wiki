@@ -66,7 +66,7 @@ de cada paquete aprobado. Por lo tanto, divida varias llamadas de paquete cuando
 opciones específicas para cada paquete.
 .
 
-Incluye  [modificadores predeterminados/switches]CommandsReference#default-options-and-switches) (se incluyen a continuación para complementar).
+Incluye [modificadores predeterminados/switches](CommandsReference#default-options-and-switches) (se incluyen a continuación para complementar).
 
 ~~~
 
