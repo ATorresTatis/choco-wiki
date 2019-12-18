@@ -46,14 +46,13 @@ Incluye [modificadores predeterminados](CommandsReference#default-options-and-sw
 ~~~
 
  -?, --help, -h
-     Prints out the help menu.
+     Imprime el menú de ayuda.
 
  -d, --debug
-     Debug - Show debug messaging.
+     Debug - Mostrar mensajes de depuración.
 
  -v, --verbose
-     Verbose - Show verbose messaging. Very verbose messaging, avoid using
-       under normal circumstances.
+     Verbose - Mostrar mensajes detallados. Mensajes muy detallados, evite usarlo bajo circunstancias normales.
 
      --trace
      Trace - Show trace messaging. Very, very verbose trace messaging. Avoid
