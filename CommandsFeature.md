@@ -39,7 +39,7 @@ Si encuentra otros códigos de salida que aún no hemos documentado, por favor r
 
 ## Opciones y modificadores
 
-**NOTA:** NOTA: Las opciones y los modificadores se aplican a todos los elementos, por lo que sí está ejecutando un comando como instalar que permite instalar varios paquetes, y por ejemplo utiliza el modificador `--version=1.0.0`, Chocolatey buscará e intentará instalar la versión 1.0.0 de cada paquete aprobado. Por lo tanto, divida varias llamadas de paquete cuando desee pasar opciones específicas
+**NOTA:** Las opciones y los modificadores se aplican a todos los elementos, por lo que sí está ejecutando un comando como instalar que permite instalar varios paquetes, y por ejemplo utiliza el modificador `--version=1.0.0`, Chocolatey buscará e intentará instalar la versión 1.0.0 de cada paquete aprobado. Por lo tanto, divida varias llamadas de paquete cuando desee pasar opciones específicas
 
 Incluye [modificadores predeterminados](CommandsReference#default-options-and-switches) (se incluye a continuación para complementar).
 
