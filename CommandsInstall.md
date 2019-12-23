@@ -29,6 +29,7 @@ Para obtener más detalles, consulte [cómo pasar argumentos](CommandsReference#
 
 <!-- /TOC -->
 
+<a name="usage"></a>
 ## Uso
 
     choco install <pkg|packages.config> [<pkg2> <pkgN>] [<options/switches>]
@@ -50,7 +51,7 @@ el soporte de recompilación automática, la protección contra malware en tiemp
 el uso de caché de descarga de CDN privada o la sincronización con programas y características, etc. 
 Consulte [compare](https://chocolatey.org/compare) para más información.
 
-
+<a name="examples"></a>
 ## Ejemplos
 
     choco install sysinternals
@@ -115,6 +116,7 @@ In addition to the above exit codes, you may also see reboot exit codes
  the feature 'usePackageExitCodes' to also be turned on to work properly.
  Available in v0.10.12+.
 
+<a name="see-it-in-action"></a>
 ## See It In Action
 
 Chocolatey FOSS install showing tab completion and `refreshenv` (a way
@@ -127,6 +129,7 @@ Chocolatey FOSS install showing tab completion and `refreshenv` (a way
 
 ![Pro install in action](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/chocopro_install_stopped.gif)
 
+<a name="packagesconfig"></a>
 ## Packages.config
 
 Alternative to PackageName. This is a list of packages in an xml manifest for Chocolatey to install. This is like the packages.config that NuGet uses except it also adds other options and switches. This can also be the path to the packages.config file if it is not in the current working directory.
@@ -148,16 +151,19 @@ Alternative to PackageName. This is a list of packages in an xml manifest for Ch
 ~~~
 
 
+<a name="alternative-sources"></a>
 ## Alternative Sources
 
 Available in 0.9.10+.
 
+<a name="ruby"></a>
 ### Ruby
 This specifies the source is Ruby Gems and that we are installing a
  gem. If you do not have ruby installed prior to running this command,
  the command will install that first.
  e.g. `choco install compass -source ruby`
 
+<a name="webpi"></a>
 ### WebPI
 This specifies the source is Web PI (Web Platform Installer) and that
  we are installing a WebPI product, such as IISExpress. If you do not
@@ -165,18 +171,21 @@ This specifies the source is Web PI (Web Platform Installer) and that
  then the product requested.
  e.g. `choco install IISExpress --source webpi`
 
+<a name="cygwin"></a>
 ### Cygwin
 This specifies the source is Cygwin and that we are installing a cygwin
  package, such as bash. If you do not have Cygwin installed, it will
  install that first and then the product requested.
  e.g. `choco install bash --source cygwin`
 
+<a name="python"></a>
 ### Python
 This specifies the source is Python and that we are installing a python
  package, such as Sphinx. If you do not have easy_install and Python
  installed, it will install those first and then the product requested.
  e.g. `choco install sphinx --source python`
 
+<a name="windows-features"></a>
 ### Windows Features
 This specifies that the source is a Windows Feature and we should
  install via the Deployment Image Servicing and Management tool (DISM)
@@ -184,6 +193,7 @@ This specifies that the source is a Windows Feature and we should
  e.g. `choco install IIS-WebServerRole --source windowsfeatures`
 
 
+<a name="resources"></a>
 ## Resources
 
  * How-To: A complete example of how you can use the PackageParameters argument
@@ -194,6 +204,7 @@ This specifies that the source is a Windows Feature and we should
    https://chocolatey.org/docs/getting-started#overriding-default-install-directory-or-other-advanced-install-concepts.
 
 
+<a name="options-and-switches"></a>
 ## Options and Switches
 
 **NOTE:** Options and switches apply to all items passed, so if you are
