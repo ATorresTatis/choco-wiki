@@ -88,7 +88,7 @@ a un solo Ruby y luego usar algo como uru
 
 **NOTA:** Consulte las secuencias de comandos en [cómo pasar argumentos](CommandsReference#how-to-pass-options--switches) (`choco -?`) para saber cómo escribir secuencias de comandos e integraciones adecuadas.
 
-
+<a name="exit-codes"></a>
 ## Códigos de salida
 
 Exit codes that normally result from running this command.
