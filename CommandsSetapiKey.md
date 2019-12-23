@@ -17,11 +17,13 @@ Anything that doesn't contain source and key will list api keys.
 
 <!-- /TOC -->
 
+<a name="usage"></a>
 ## Usage
 
     choco apikey [<options/switches>]
     choco setapikey [<options/switches>]
 
+<a name="examples"></a>
 ## Examples
 
     choco apikey
@@ -47,7 +49,7 @@ https://bit.ly/nexus2apikey).
 **NOTE:** See scripting in [[how to pass arguments|CommandsReference#how-to-pass-options--switches]] (`choco -?`) for how to
  write proper scripts and integrations.
 
-
+<a name="connecting-to-chocolateyorg-community-package-repository"></a>
 ## Connecting to Chocolatey.org (Community Package Repository)
 
 In order to save your API key for https://push.chocolatey.org/,
@@ -58,6 +60,7 @@ In order to save your API key for https://push.chocolatey.org/,
     choco apikey -k <your key here> -s https://push.chocolatey.org/
 
 
+<a name="exit-codes"></a>
 ## Exit Codes
 
 Exit codes that normally result from running this command.
@@ -71,6 +74,7 @@ If you find other exit codes that we have not yet documented, please
  https://github.com/chocolatey/choco/issues/new/choose.
 
 
+<a name="options-and-switches"></a>
 ## Options and Switches
 
 **NOTE:** Options and switches apply to all items passed, so if you are
