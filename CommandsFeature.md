@@ -13,11 +13,13 @@ Chocolatey permite interactuar con algunas características.
 
 <!-- /TOC -->
 <a name="usage"/>
+
 ## Uso
 
     choco feature [list]|disable|enable [<options/switches>]
 
 <a name="examples"/>
+
 ## Ejemplos
 
     choco feature
@@ -29,6 +31,7 @@ Chocolatey permite interactuar con algunas características.
 
 
 <a name="exit-codes"/>
+
 ## Códigos de salida
 
 Códigos de salida que normalmente resultan de ejecutar este comando.
@@ -41,6 +44,7 @@ Si encuentra otros códigos de salida que aún no hemos documentado, por favor r
 
 
 <a name="options-and-switches"/>
+
 ## Opciones y modificadores
 
 **NOTA:** Las opciones y los modificadores se aplican a todos los elementos, por lo que sí está ejecutando un comando como instalar que permite instalar varios paquetes, y por ejemplo utiliza el modificador `--version=1.0.0`, Chocolatey buscará e intentará instalar la versión 1.0.0 de cada paquete aprobado. Por lo tanto, divida varias llamadas de paquete cuando desee pasar opciones específicas
