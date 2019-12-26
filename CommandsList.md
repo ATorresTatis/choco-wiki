@@ -23,11 +23,15 @@ y cambios con un guión (`-`). Para obtener más detalles vea
 
 <!-- /TOC -->
 
+<a name="usage"/>
+
 ## Uso
 
     choco search <filter> [<options/switches>]
     choco list <filter> [<options/switches>]
     clist <filter> [<options/switches>]
+
+<a name="examples"/>
 
 ## Ejemplos
 
@@ -40,6 +44,8 @@ y cambios con un guión (`-`). Para obtener más detalles vea
     choco search bob -s "'https://somewhere/protected'" -u user -p pass
 
 **NOTA:** Consulte las secuencias de comandos en [[cómo pasar argumentos|CommandsReference#how-to-pass-options--switches]] (`choco -?`) para saber cómo escribir secuencias de comandos e integraciones adecuadas.
+
+<a name="exit-codes"/>
 
 ## Códigos de salida
 Códigos de salida que normalmente resultan de ejecutar este comando.
@@ -60,14 +66,20 @@ secuencias de comandos.
 Si encuentra otros códigos de salida que aún no hemos documentado, presente un ticket para que podamos documentarlo  https://github.com/chocolatey/choco/issues/new/choose.
 
 
+<a name="see-it-in-action"/>
+
 ## Verlo en acción
 
 ![choco search](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_search.gif)
 
 
+<a name="alternative-sources"/>
+
 ## Fuentes alternativas
 
 Disponible a partir de la versión 0.9.10+.
+
+<a name="webpi"/>
 
 ### WebPI
 Esto especifica que la fuente es Web PI (Instalador de plataforma web) y 
@@ -76,11 +88,15 @@ Si no tiene instalada la línea de comandos de Web PI,
 la instalará primero y luego realizará la búsqueda solicitada.
 Por ejemplo. `choco list --source webpi`
 
+<a name="windows-features"/>
+
 ### Características de Windows
 Esto especifica que la fuente es una característica de Windows y 
 debemos instalarla a través de la herramienta de administración y 
 mantenimiento de imágenes de implementación (DISM) en la máquina local.
 Por ejemplo. `choco list --source windowsfeatures`
+
+<a name="options-and-switches"/>
 
 ## Opciones y modificadores
 
