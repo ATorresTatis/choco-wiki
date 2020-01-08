@@ -91,21 +91,21 @@ a un solo Ruby y luego usar algo como uru
 <a name="exit-codes"></a>
 ## Códigos de salida
 
-Exit codes that normally result from running this command.
+Códigos de salida que normalmente resultan de ejecutar este comando.
 
 Normal:
- - 0: operation was successful, no issues detected
- - -1 or 1: an error has occurred
+ - 0: la operación fue exitosa, no se detectaron problemas
+ - -1 o 1: se ha producido un error
 
-Package Exit Codes:
- - 1641: success, reboot initiated
- - 3010: success, reboot required
- - other (not listed): likely an error has occurred
+Códigos de salida de paquetes: 
+- 1641: exitoso, reinicio iniciado
+- 3010: exitoso, se requiere reiniciar
+- otro (no listado): es probable que haya ocurrido un error
 
-In addition to normal exit codes, packages are allowed to exit
- with their own codes when the feature 'usePackageExitCodes' is
- turned on. Uninstall command has additional valid exit codes.
- Available in v0.9.10+.
+Además de los códigos de salida normales, los paquetes pueden terminar con sus propios
+códigos cuando está establecida la opción `usePackageExitCodes`
+El comando Desinstalar tiene códigos de salida válidos adicionales. 
+Disponible en versiones 0.9.10 y superiores.
 
 Reboot Exit Codes:
  - 350: pending reboot detected, no action has occurred
