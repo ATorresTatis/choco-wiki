@@ -190,15 +190,11 @@ Especifica que la fuente es una característica de Windows y que debe instalarse
    https://chocolatey.org/docs/getting-started#overriding-default-install-directory-or-other-advanced-install-concepts.
 
 <a name="options-and-switches"></a>
-## Options and Switches
+## Opciones y modificadores
 
-**NOTE:** Options and switches apply to all items passed, so if you are
- running a command like install that allows installing multiple
- packages, and you use `--version=1.0.0`, it is going to look for and
- try to install version 1.0.0 of every package passed. So please split
- out multiple package calls when wanting to pass specific options.
+**NOTA:** Las opciones y los modificadores se aplican a todos los elementos, por lo que sí está ejecutando un comando como instalar que permite instalar varios paquetes, y por ejemplo utiliza el modificador `--version=1.0.0`, Chocolatey buscará e intentará instalar la versión 1.0.0 de cada paquete aprobado. Por lo tanto, divida varias llamadas de paquete cuando desee pasar opciones específicas.
 
-Includes [[default options/switches|CommandsReference#default-options-and-switches]] (included below for completeness).
+Incluye  [[modificadores predeterminados|CommandsReference#default-options-and-switches]] (se incluyen a continuación para complementar).
 
 ~~~
 
@@ -527,8 +523,8 @@ Includes [[default options/switches|CommandsReference#default-options-and-switch
 
 ~~~
 
-[[Command Reference|CommandsReference]]
+[[Referencia de comandos|CommandsReference]]
 
 
-***NOTE:*** This documentation has been automatically generated from `choco install -h`.
+***NOTA:*** Esta documentación ha sido generada automáticamente con `choco install -h`.
 
