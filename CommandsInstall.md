@@ -107,34 +107,29 @@ códigos cuando está establecida la opción `usePackageExitCodes`
 El comando Desinstalar tiene códigos de salida válidos adicionales. 
 Disponible en versiones 0.9.10 y superiores.
 
-Reboot Exit Codes:
- - 350: pending reboot detected, no action has occurred
- - 1604: install suspended, incomplete
+Códigos de salida de reinicio:
+ - 350: reinicio pendiente detectado, no se ha producido ninguna acción.
+ - 1604: instalación suspendida, incompleta.
 
-In addition to the above exit codes, you may also see reboot exit codes
- when the feature 'exitOnRebootDetected' is turned on. It typically requires
- the feature 'usePackageExitCodes' to also be turned on to work properly.
- Available in v0.10.12+.
+Además de los códigos de salida anteriores, también puede ver los códigos de salida de reinicio cuando la función 'exitOnRebootDetected' está activada. Por lo general, requiere que la función 'usePackageExitCodes' también esté activada para funcionar correctamente. Disponible a partir de la versión 0.10.12 y superior.
 
 <a name="see-it-in-action"></a>
-## See It In Action
+## Verlo en acción
 
-Chocolatey FOSS install showing tab completion and `refreshenv` (a way
- to update environment variables without restarting the shell).
+Instalación de Chocolatey FOSS que muestra la finalización de pestañas y `refreshenv` (una forma de actualizar las variables de entorno sin reiniciar el shell)
 
-![FOSS install in action](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_install.gif)
+![Instalacción de FOSS en acción](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/choco_install.gif)
 
-[Chocolatey Professional](https://chocolatey.org/compare) showing private download cache and virus scan
- protection.
+[Chocolatey Professional](https://chocolatey.org/compare) mostrando la caché de descarga privada y la protección de detección de virus.
 
-![Pro install in action](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/chocopro_install_stopped.gif)
+![Instalación Pro en acción](https://raw.githubusercontent.com/wiki/chocolatey/choco/images/gifs/chocopro_install_stopped.gif)
 
 <a name="packagesconfig"></a>
 ## Packages.config
 
-Alternative to PackageName. This is a list of packages in an xml manifest for Chocolatey to install. This is like the packages.config that NuGet uses except it also adds other options and switches. This can also be the path to the packages.config file if it is not in the current working directory.
+Alternativa a PackageName. Esta es una lista de paquetes en un manifiesto xml para instalar Chocolatey. Esto es como los paquetes.config que usa NuGet, excepto que también agrega otras opciones y modificadores. También puede ser la ruta al archivo packages.config si no está en el directorio de trabajo actual.
 
-**NOTE:** The filename is only required to end in .config, the name is not required to be packages.config.
+**NOTA:** El nombre de archivo requiere terminar en .config, pero no es necesario que sea Packages.config
 
 ~~~xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -152,57 +147,47 @@ Alternative to PackageName. This is a list of packages in an xml manifest for Ch
 
 
 <a name="alternative-sources"></a>
-## Alternative Sources
+## Fuentes alternativas
 
-Available in 0.9.10+.
+Disponible a partir de la versión 0.9.10 y superiores.
 
 <a name="ruby"></a>
 ### Ruby
-This specifies the source is Ruby Gems and that we are installing a
- gem. If you do not have ruby installed prior to running this command,
- the command will install that first.
- e.g. `choco install compass -source ruby`
+Especifica que la fuente es Ruby Gems y que estamos instalando una gema. Si no tiene instalado Ruby antes de ejecutar este comando, el comando lo instalará primero.
+
+ ejemplo `choco install compass -source ruby`
 
 <a name="webpi"></a>
 ### WebPI
-This specifies the source is Web PI (Web Platform Installer) and that
- we are installing a WebPI product, such as IISExpress. If you do not
- have the Web PI command line installed, it will install that first and
- then the product requested.
- e.g. `choco install IISExpress --source webpi`
+Especifica que la fuente es Web PI (Instalador de plataforma web) y que estamos instalando un producto WebPI, como IISExpress. Si no tiene instalada la línea de comandos de Web PI, se instalará primero y luego el producto solicitado.
+
+ ejemplo `choco install IISExpress --source webpi`
 
 <a name="cygwin"></a>
 ### Cygwin
-This specifies the source is Cygwin and that we are installing a cygwin
- package, such as bash. If you do not have Cygwin installed, it will
- install that first and then the product requested.
- e.g. `choco install bash --source cygwin`
+Especifica que la fuente es Cygwin y que estamos instalando un paquete cygwin, como bash. Si no tiene instalado Cygwin, se instalará primero y luego el producto solicitado.
+
+ ejemplo `choco install bash --source cygwin`
 
 <a name="python"></a>
 ### Python
-This specifies the source is Python and that we are installing a python
- package, such as Sphinx. If you do not have easy_install and Python
- installed, it will install those first and then the product requested.
- e.g. `choco install sphinx --source python`
+Especifica que la fuente es Python y que estamos instalando un paquete de Python, como Sphinx. Si no tiene easy_install y Python instalado, los instalará primero y luego el producto solicitado.
+
+ ejemplo `choco install sphinx --source python`
 
 <a name="windows-features"></a>
-### Windows Features
-This specifies that the source is a Windows Feature and we should
- install via the Deployment Image Servicing and Management tool (DISM)
- on the local machine.
- e.g. `choco install IIS-WebServerRole --source windowsfeatures`
+### Características de Windows
+Especifica que la fuente es una característica de Windows y que debe instalarse a través de la herramienta de administración y mantenimiento de imágenes de implementación (DISM) en la máquina local.
+
+ ejemplo `choco install IIS-WebServerRole --source windowsfeatures`
 
 
 <a name="resources"></a>
-## Resources
+## Recursos
 
- * How-To: A complete example of how you can use the PackageParameters argument
-   when creating a Chocolatey Package can be seen at
-   https://chocolatey.org/docs/how-to-parse-package-parameters-argument
- * One may want to override the default installation directory of a
-   piece of software. See
+ * Como se hace: Un ejemplo completo de cómo puede usar el argumento PackageParameters al crear un paquete Chocolatey se puede ver en https://chocolatey.org/docs/how-to-parse-package-parameters-argument
+ * Si desea anular el directorio de instalación predeterminado de una pieza de software, vea
    https://chocolatey.org/docs/getting-started#overriding-default-install-directory-or-other-advanced-install-concepts.
-
 
 <a name="options-and-switches"></a>
 ## Options and Switches
