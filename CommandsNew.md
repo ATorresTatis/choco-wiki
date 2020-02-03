@@ -29,6 +29,7 @@ Chocolatey generará archivos de especificación de paquete para un nuevo paquet
 
 <!-- /TOC -->
 
+<a name="usage"></a>
 ## Uso
 
     choco new <name> [<options/switches>] [<property=value> <propertyN=valueN>]
@@ -52,6 +53,7 @@ Posibles propiedades que se pueden utilizar:
   internalizar recursos remotos de paquetes existentes para que los paquetes puedan usarse sin estar conectado a Internet.
   A esto lo llamamos recompilación automática.
 
+<a name="examples"></a>
 ## Ejemplos
 
     choco new bob
@@ -61,6 +63,7 @@ Posibles propiedades que se pueden utilizar:
 
 **NOTA:** Consulte las secuencias de comandos acerca de [[cómo pasar argumentos|CommandsReference#how-to-pass-options--switches]] (`choco -?`) para saber cómo escribir secuencias de comandos e integraciones adecuadas
 
+<a name="exit-codes"></a>
 ## Códigos de salida
 
 Códigos de salida que normalmente resultan de ejecutar este comando.
@@ -72,6 +75,7 @@ Normal:
 Si encuentra otros códigos de salida que aún no hemos documentado, presente un ticket para que podamos documentarlo en  https://github.com/chocolatey/choco/issues/new/choose.
 
 
+<a name="options-and-switches"></a>
 ## Opciones y modificadores
 
 **NOTA:** NOTA: Las opciones y modificadores se aplican a todos los elementos aprobados, 
