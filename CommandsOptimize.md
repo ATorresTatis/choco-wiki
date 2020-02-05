@@ -15,7 +15,7 @@
 <a name="package-optimizer"></a>
 ### Optimizador de paquetes
 
-Las [ediciones licenciadas](https://chocolatey.org/compare) a partir de la versión 1.12.0.
+Disponible en las [ediciones licenciadas](https://chocolatey.org/compare) a partir de la versión 1.12.0.
 
 Similar al Reductor de paquetes, pero reduce los paquetes existentes.
 Con Package Optimizer/Reducer:
