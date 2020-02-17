@@ -199,5 +199,5 @@ Incluye  [[opciones/interruptores predeterminados|CommandsReference#default-opti
 
 [[Referencia de comandos|CommandsReference]]
 
-***NOTA:*** Esta documentación ha sido generada automáticamente desde `choco optimize -h`.
+**NOTA:** Esta documentación ha sido generada automáticamente desde `choco optimize -h`.
 
