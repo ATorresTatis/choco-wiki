@@ -14,38 +14,37 @@
 
 <a name="commands"></a>
 ## Comandos
-This is a listing of all of the different things you can pass to choco.
+Esta es una lista de las diferentes opciones que puede pasar a ` choco`.
 
- * [[list|CommandsList]] - lists remote or local packages
- * [[search|CommandsSearch]] - searches remote or local packages (alias for list)
- * [[info|CommandsInfo]] - retrieves package information. Shorthand for choco search pkgname --exact --verbose
- * [[install|CommandsInstall]] - installs packages from various sources
- * [[pin|CommandsPin]] - suppress upgrades for a package
- * [[outdated|CommandsOutdated]] - retrieves packages that are outdated. Similar to upgrade all --noop
- * [[upgrade|CommandsUpgrade]] - upgrades packages from various sources
- * [[uninstall|CommandsUninstall]] - uninstalls a package
- * [[pack|CommandsPack]] - packages up a nuspec to a compiled nupkg
- * [[push|CommandsPush]] - pushes a compiled nupkg
- * [[new|CommandsNew]] - generates files necessary for a chocolatey package from a template
- * [[sources|CommandsSources]] - view and configure default sources (alias for source)
- * [[source|CommandsSource]] - view and configure default sources
- * [[config|CommandsConfig]] - Retrieve and configure config file settings
- * [[feature|CommandsFeature]] - view and configure choco features
- * [[features|CommandsFeatures]] - view and configure choco features (alias for feature)
- * [[setapikey|CommandsSetapikey]] - retrieves or saves an apikey for a particular source (alias for apikey)
- * [[apikey|CommandsApikey]] - retrieves or saves an apikey for a particular source
- * [[unpackself|CommandsUnpackself]] - have chocolatey set itself up
- * [[version|CommandsVersion]] - [DEPRECATED] will be removed in v1 - use [[`choco outdated`|Commandsoutdated]] or `cup <pkg|all> -whatif` instead
- * [[update|CommandsUpdate]] - [DEPRECATED] RESERVED for future use (you are looking for upgrade, these are not the droids you are looking for)
- * [[support|CommandsSupport]] - provides support information
- * [[download|CommandsDownload]] - downloads packages - optionally internalizing all remote resources
- * [[synchronize|CommandsSynchronize]] - synchronizes against system installed software - generates missing packages
- * [[sync|CommandsSync]] - synchronizes against system installed software - generates missing packages
- * [[optimize|CommandsOptimize]] - optimizes installation, reducing space usage
+ * [[list|CommandsList]] - enumera paquetes remotos o locales
+ * [[search|CommandsSearch]] - busca paquetes remotos o locales (alias para la lista) 
+ * [[info|CommandsInfo]] - recupera la información del paquete. Método abreviado para choco search pkgname --exact --verbose
+ * [[install|CommandsInstall]] - instala paquetes de varias fuentes
+ * [[pin|CommandsPin]] - suprime las actualizaciones para un paquete
+ * [[outdated|CommandsOutdated]] - recupera paquetes desactualizados. Similar a upgrade all --noop 
+ * [[upgrade|CommandsUpgrade]] - actualiza paquetes de varias fuentes
+ * [[uninstall|CommandsUninstall]] - desinstala un paquete
+ * [[pack|CommandsPack]] - empaqueta un archivo nuspec a un nupkg compilado
+ * [[push|CommandsPush]] - empuja/publica un archivo nupkg compilado
+ * [[new|CommandsNew]] - genera los archivos necesarios para un paquete de chocolate a partir de una plantilla
+ * [[sources|CommandsSources]] - ver y configurar fuentes predeterminadas (alias para source)
+ * [[source|CommandsSource]] - ver y configurar fuentes predeterminadas
+ * [[config|CommandsConfig]] - Recuperar y configurar los ajustes de configuración
+ * [[feature|CommandsFeature]] - ver y configurar funciones de choco
+ * [[features|CommandsFeatures]] - ver y configurar características de choco (alias para feature)
+ * [[setapikey|CommandsSetapikey]] - recupera o guarda un apikey para una fuente particular (alias para apikey)
+ * [[apikey|CommandsApikey]] - recupera o guarda una apikey para una fuente en particular
+ * [[unpackself|CommandsUnpackself]] - está chocolatey configurado?
+ * [[version|CommandsVersion]] - [OBSOLETO] será eliminado en v1 - utilice [[`choco outdated`|Commandsoutdated]] o `cup <pkg|all> -whatif` en su lugar
+ * [[update|CommandsUpdate]] - [OBSOLETO] RESERVADO para uso futuro (está buscando una actualización, pero estos no son los resultados que está esperando)
+ * [[support|CommandsSupport]] - proporciona información de soporte
+ * [[download|CommandsDownload]] -  descarga paquetes - opcionalmente internaliza todos los recursos remotos
+ * [[synchronize|CommandsSynchronize]] - se sincroniza con el software instalado del sistema - genera paquetes faltantes
+ * [[sync|CommandsSync]] - sse sincroniza con el software instalado del sistema - genera paquetes faltantes
+ * [[optimize|CommandsOptimize]] - optimiza la instalación, reduciendo el uso de espacio
 
 
-Please run chocolatey with `choco command -help` for specific help on
- each command.
+Ejecute chocolatey `choco command -help` para obtener ayuda específica en cada comando.
 
 
 <a name="how-to-pass-options--switches"></a>
