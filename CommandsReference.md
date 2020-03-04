@@ -40,7 +40,7 @@ Esta es una lista de las diferentes opciones que puede pasar a ` choco`.
  * [[support|CommandsSupport]] - proporciona información de soporte
  * [[download|CommandsDownload]] -  descarga paquetes - opcionalmente internaliza todos los recursos remotos
  * [[synchronize|CommandsSynchronize]] - se sincroniza con el software instalado del sistema - genera paquetes faltantes
- * [[sync|CommandsSync]] - sse sincroniza con el software instalado del sistema - genera paquetes faltantes
+ * [[sync|CommandsSync]] - se sincroniza con el software instalado del sistema - genera paquetes faltantes
  * [[optimize|CommandsOptimize]] - optimiza la instalación, reduciendo el uso de espacio
 
 
